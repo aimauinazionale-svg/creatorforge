@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sparkroll — Demo Video 1: Benvenuto</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0f0f12;
+      color: #f4f4f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    h1 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #a78bfa; }
+    .meta { font-size: 0.875rem; color: #a1a1aa; margin-bottom: 1.5rem; text-align: center; }
+    .slide-wrap {
+      position: relative;
+      max-width: 1280px;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      border: 1px solid #27272a;
+    }
+    .slide-wrap img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: #18181b;
+    }
+    .caption {
+      padding: 1rem 1.25rem;
+      background: #18181b;
+      border-top: 1px solid #27272a;
+    }
+    .caption strong { color: #e4e4e7; }
+    .caption p { margin-top: 0.35rem; font-size: 0.9rem; color: #a1a1aa; line-height: 1.5; }
+    .controls {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    button {
+      background: #7c3aed;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    button:hover { background: #6d28d9; }
+    button.secondary { background: #27272a; color: #e4e4e7; }
+    button.secondary:hover { background: #3f3f46; }
+    .progress { font-size: 0.875rem; color: #71717a; }
+    .hint { margin-top: 1rem; font-size: 0.8rem; color: #52525b; max-width: 640px; text-align: center; }
+    kbd { background: #27272a; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.75rem; }
+  </style>
+</head>
+<body>
+  <h1>Video 1 — Benvenuto su Sparkroll</h1>
+  <p class="meta">Scaletta visiva per OBS · Frecce o spazio per avanzare · <kbd>Esc</kbd> per uscire fullscreen</p>
+
+  <div class="slide-wrap">
+    <img id="slide" src="../video-assets/video-01-welcome/01-hero-landing.png" alt="Slide corrente" />
+    <div class="caption">
+      <strong id="title">Hero landing</strong>
+      <p id="desc">Hook: logo Sparkroll → titolo «Il tuo toolkit per creator, gratuito e con IA». Durata ~8 s.</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button type="button" class="secondary" id="prev">← Precedente</button>
+    <span class="progress" id="progress">1 / 5</span>
+    <button type="button" id="next">Successiva →</button>
+    <button type="button" class="secondary" id="fs">Fullscreen</button>
+  </div>
+  <p class="hint">Per le scene con sidebar e tutorial in-app, registra live su sparkroll-maui-org.vercel.app (vedi VIDEO_VISUAL_GUIDE.md).</p>
+
+  <script>
+    const slides = [
+      {
+        src: '../video-assets/video-01-welcome/01-hero-landing.png',
+        title: 'Hero landing',
+        desc: 'Hook + Intro: titolo principale, badge, CTA «Inizia gratis». ~8 s.',
+      },
+      {
+        src: '../video-assets/video-01-welcome/05-header-nav.png',
+        title: 'Header e navigazione',
+        desc: 'Menu, Accedi, Inizia gratis, selettore lingua. ~5 s.',
+      },
+      {
+        src: '../video-assets/video-01-welcome/02-features-grid.png',
+        title: 'Sezione funzionalità',
+        desc: '«Tutto ciò che ti serve per crescere» — 6 card. Scroll lento o passa il mouse. ~25 s.',
+      },
+      {
+        src: '../video-assets/video-01-welcome/03-how-it-works.png',
+        title: 'Come funziona (3 passi)',
+        desc: 'Collega → Pianifica → Programma. ~15 s.',
+      },
+      {
+        src: '../video-assets/video-01-welcome/04-cta-footer.png',
+        title: 'CTA finale',
+        desc: 'Invito all\'azione + footer. Overlay URL in chiusura. ~8 s.',
+      },
+    ];
+
+    let i = 0;
+    const img = document.getElementById('slide');
+    const titleEl = document.getElementById('title');
+    const descEl = document.getElementById('desc');
+    const progressEl = document.getElementById('progress');
+
+    function render() {
+      const s = slides[i];
+      img.src = s.src;
+      titleEl.textContent = s.title;
+      descEl.textContent = s.desc;
+      progressEl.textContent = `${i + 1} / ${slides.length}`;
+    }
+
+    document.getElementById('next').onclick = () => {
+      i = (i + 1) % slides.length;
+      render();
+    };
+    document.getElementById('prev').onclick = () => {
+      i = (i - 1 + slides.length) % slides.length;
+      render();
+    };
+    document.getElementById('fs').onclick = () => {
+      document.documentElement.requestFullscreen?.();
+    };
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        i = (i + 1) % slides.length;
+        render();
+      } else if (e.key === 'ArrowLeft') {
+        i = (i - 1 + slides.length) % slides.length;
+        render();
+      }
+    });
+  </script>
+</body>
+</html>
