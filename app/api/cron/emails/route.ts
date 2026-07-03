@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { renderWeeklyDigestHtml, sendEmail } from "@/lib/email/send";
+import { SITE_NAME } from "@/lib/site";
 
 export const dynamic = "force-dynamic";
 
@@ -44,7 +45,7 @@ export async function GET(request: Request) {
     const stats = (channel?.stats_cache ?? {}) as Record<string, number>;
     const result = await sendEmail({
       to: pref.email,
-      subject: "Your CreatorForge weekly digest",
+      subject: `Your ${SITE_NAME} weekly digest`,
       html: renderWeeklyDigestHtml({
         subscribers: Number(stats.subscriberCount ?? 0),
         views: Number(stats.viewCount ?? 0),
@@ -62,7 +63,7 @@ export async function GET(request: Request) {
       user_id: pref.user_id,
       to_email: pref.email,
       type: "weekly_digest",
-      subject: "Your CreatorForge weekly digest",
+      subject: `Your ${SITE_NAME} weekly digest`,
       status,
       resend_id: result.ok ? result.id : null,
       error: result.ok ? null : result.error,

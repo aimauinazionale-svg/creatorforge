@@ -1,5 +1,7 @@
 import { Resend } from "resend";
 
+import { SITE_NAME } from "@/lib/site";
+
 export type EmailType =
   | "weekly_digest"
   | "competitor_alert"
@@ -31,21 +33,21 @@ export function renderWeeklyDigestHtml(stats: {
 }): string {
   return `
     <div style="font-family:sans-serif;max-width:560px;margin:0 auto">
-      <h1 style="color:#7c3aed">CreatorForge Weekly Digest</h1>
+      <h1 style="color:#7c3aed">${SITE_NAME} Weekly Digest</h1>
       <p>Here's your channel snapshot:</p>
       <ul>
         <li><strong>Subscribers:</strong> ${stats.subscribers.toLocaleString()}</li>
         <li><strong>Views:</strong> ${stats.views.toLocaleString()}</li>
         <li><strong>Videos:</strong> ${stats.videos.toLocaleString()}</li>
       </ul>
-      <p style="color:#666;font-size:12px">Manage preferences in CreatorForge settings.</p>
+      <p style="color:#666;font-size:12px">Manage preferences in ${SITE_NAME} settings.</p>
     </div>
   `;
 }
 
 export async function sendEmail(input: SendEmailInput): Promise<SendEmailResult> {
   const resend = getResend();
-  const from = process.env.RESEND_FROM_EMAIL ?? "CreatorForge <onboarding@resend.dev>";
+  const from = process.env.RESEND_FROM_EMAIL ?? `${SITE_NAME} <onboarding@resend.dev>`;
 
   if (!resend) {
     return { ok: true, id: null };

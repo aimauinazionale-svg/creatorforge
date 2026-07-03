@@ -5,7 +5,7 @@ export function getSiteUrl(): string {
   return "http://localhost:3000";
 }
 
-export const SITE_NAME = "CreatorForge";
+export const SITE_NAME = "VidPulse";
 
 export const BRAND_COLORS = {
   violet: "#7c3aed",

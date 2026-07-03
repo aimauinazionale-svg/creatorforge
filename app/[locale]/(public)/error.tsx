@@ -2,10 +2,10 @@
 
 import { useEffect } from "react";
 import { AlertTriangle, RefreshCw } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 
-/** Public pages error boundary — no next-intl hooks (layout may be unavailable). */
 export default function PublicError({
   error,
   reset,
@@ -13,6 +13,8 @@ export default function PublicError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = useTranslations("errors");
+
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -23,14 +25,12 @@ export default function PublicError({
         <AlertTriangle className="h-7 w-7 text-destructive" aria-hidden="true" />
       </div>
       <div className="space-y-2">
-        <h1 className="text-2xl font-semibold tracking-tight">Something went wrong</h1>
-        <p className="max-w-md text-sm text-muted-foreground">
-          An unexpected error occurred. Try refreshing the page.
-        </p>
+        <h1 className="text-2xl font-semibold tracking-tight">{t("title")}</h1>
+        <p className="max-w-md text-sm text-muted-foreground">{t("description")}</p>
       </div>
       <Button type="button" onClick={reset}>
         <RefreshCw className="h-4 w-4" aria-hidden="true" />
-        Try again
+        {t("retry")}
       </Button>
     </div>
   );

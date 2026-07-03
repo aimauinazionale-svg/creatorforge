@@ -25,7 +25,7 @@ function No() {
 export function Comparison() {
   const t = useTranslations("landing.comparison");
 
-  const creatorForge = {
+  const vidPulse = {
     freeTools: true,
     aiCredits: true,
     workflow: true,
@@ -67,14 +67,14 @@ export function Comparison() {
           <div className="min-w-[320px]">
           <div className="grid grid-cols-3 gap-0 border-b border-border/60 bg-muted/20 text-xs font-semibold sm:text-sm">
             <div className="px-4 py-3">{t("table.feature")}</div>
-            <div className="px-4 py-3">{t("table.creatorForge")}</div>
+            <div className="px-4 py-3">{t("table.vidPulse")}</div>
             <div className="px-4 py-3">{t("table.alternatives")}</div>
           </div>
           <div className="divide-y divide-border/60">
             {rows.map((r) => (
               <div key={r} className="grid grid-cols-3 gap-0">
                 <div className="px-4 py-4 text-sm font-medium">{t(`rows.${r}`)}</div>
-                <div className="px-4 py-4">{creatorForge[r] ? <Yes /> : <No />}</div>
+                <div className="px-4 py-4">{vidPulse[r] ? <Yes /> : <No />}</div>
                 <div className="px-4 py-4">{alternatives[r] ? <Yes /> : <No />}</div>
               </div>
             ))}

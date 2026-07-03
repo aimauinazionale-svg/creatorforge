@@ -3,6 +3,7 @@
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import type { AuthActionResult, SignOutResult } from "@/lib/actions/types/auth";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { getSiteUrl } from "@/lib/site";
 
 function authErr(
   code: Extract<AuthActionResult, { ok: false }>["error"]["code"],
@@ -29,7 +30,7 @@ export async function signInWithMagicLink(
     }
 
     const supabase = createSupabaseServerClient();
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+    const siteUrl = getSiteUrl();
     const { error } = await supabase.auth.signInWithOtp({
       email: trimmed,
       options: {
@@ -55,7 +56,7 @@ export async function signInWithGoogle(locale: string): Promise<AuthActionResult
     }
 
     const supabase = createSupabaseServerClient();
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+    const siteUrl = getSiteUrl();
 
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",

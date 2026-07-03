@@ -1,4 +1,5 @@
 import { generateCompletion, type GroqMessage } from "@/lib/ai/groq";
+import { SITE_NAME } from "@/lib/site";
 import { getChannelConnectionCookie } from "@/lib/youtube/connection-store";
 
 export type AppLocale = "en" | "it" | "es" | "de" | "fr" | "pt" | "ru" | "ja" | "zh";
@@ -50,7 +51,7 @@ function buildSystemPrompt(locale: AppLocale): string {
     ? `\n\nThe creator has a connected YouTube channel. Use this context when relevant:\n${channelBlock}`
     : "\n\nNo YouTube channel is connected yet. Encourage connecting their channel for personalized advice when helpful.";
 
-  return `You are an expert YouTube creator coach and SEO/analytics specialist working inside CreatorForge.
+  return `You are an expert YouTube creator coach and SEO/analytics specialist working inside ${SITE_NAME}.
 
 Your role:
 - Help creators grow with practical, actionable advice

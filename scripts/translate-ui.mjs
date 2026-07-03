@@ -34,7 +34,7 @@ const patches = {
     },
     landing: {
       meta: {
-        title: "CreatorForge — Toolkit gratuito per creator YouTube con IA",
+        title: "VidPulse — Toolkit gratuito per creator YouTube con IA",
         description:
           "Pianifica, ricerca e pubblica video migliori con un toolkit gratuito: idee, workflow, competitor, calendario e analisi miniature.",
       },
@@ -54,10 +54,10 @@ const patches = {
         kicker: "Pubblica video migliori, più in fretta",
         title: "Il tuo toolkit per creator, gratuito e con IA",
         subtitle:
-          "Dalle idee al calendario: CreatorForge ti aiuta a pianificare, ottimizzare e pubblicare con costanza—senza dieci strumenti diversi.",
+          "Dalle idee al calendario: VidPulse ti aiuta a pianificare, ottimizzare e pubblicare con costanza—senza dieci strumenti diversi.",
         primaryCta: "Inizia gratis",
         secondaryCta: "Vedi i prezzi",
-        mockAlt: "Anteprima dashboard CreatorForge",
+        mockAlt: "Anteprima dashboard VidPulse",
         bullets: {
           "0": "Gratis per iniziare",
           "1": "Progettato per la velocità",
@@ -66,7 +66,7 @@ const patches = {
       },
     },
     onboarding: {
-      title: "Benvenuto su CreatorForge",
+      title: "Benvenuto su VidPulse",
       subtitle: "Configuriamo il tuo spazio di lavoro in pochi passaggi.",
       progress: {
         welcome: "Benvenuto",
@@ -90,7 +90,7 @@ const patches = {
       steps: {
         welcome: {
           title: "Iniziamo la configurazione",
-          subtitle: "Così CreatorForge può adattare i suggerimenti al tuo canale.",
+          subtitle: "Così VidPulse può adattare i suggerimenti al tuo canale.",
           bullets: {
             youtube: "Collega YouTube per sbloccare analisi e sincronizzazione.",
             goals: "Scegli obiettivi per ottimizzare il tuo workflow.",
@@ -158,7 +158,7 @@ const patches = {
     },
     landing: {
       meta: {
-        title: "CreatorForge — Kit gratuito para creadores de YouTube con IA",
+        title: "VidPulse — Kit gratuito para creadores de YouTube con IA",
         description:
           "Planifica, investiga y publica mejores videos con un kit gratuito: ideas, flujo de trabajo, competidores, calendario y análisis de miniaturas.",
       },
@@ -177,15 +177,15 @@ const patches = {
         kicker: "Publica mejores videos, más rápido",
         title: "Tu kit de creador gratuito con IA",
         subtitle:
-          "De la idea al calendario: CreatorForge te ayuda a planificar, optimizar y publicar con constancia—sin diez herramientas distintas.",
+          "De la idea al calendario: VidPulse te ayuda a planificar, optimizar y publicar con constancia—sin diez herramientas distintas.",
         primaryCta: "Empezar gratis",
         secondaryCta: "Ver precios",
-        mockAlt: "Vista previa del panel de CreatorForge",
+        mockAlt: "Vista previa del panel de VidPulse",
         bullets: { "0": "Gratis para empezar", "1": "Diseñado para la velocidad", "2": "Disponible en 9 idiomas" },
       },
     },
     onboarding: {
-      title: "Bienvenido a CreatorForge",
+      title: "Bienvenido a VidPulse",
       subtitle: "Configuremos tu espacio de trabajo en unos pocos pasos.",
       progress: {
         welcome: "Bienvenida",
@@ -209,7 +209,7 @@ const patches = {
       steps: {
         welcome: {
           title: "Empecemos la configuración",
-          subtitle: "Esto ayuda a CreatorForge a adaptar las sugerencias a tu canal.",
+          subtitle: "Esto ayuda a VidPulse a adaptar las sugerencias a tu canal.",
           bullets: {
             youtube: "Conecta YouTube para desbloquear analíticas y sincronización.",
             goals: "Elige objetivos para optimizar tu flujo de trabajo.",
@@ -272,7 +272,7 @@ const patches = {
     },
     landing: {
       meta: {
-        title: "CreatorForge — Kostenloses KI-Toolkit für YouTube-Creator",
+        title: "VidPulse — Kostenloses KI-Toolkit für YouTube-Creator",
         description:
           "Plane, recherchiere und veröffentliche bessere Videos mit einem kostenlosen Toolkit: Ideen, Workflow, Wettbewerber, Kalender und Thumbnail-Checks.",
       },
@@ -291,15 +291,15 @@ const patches = {
         kicker: "Bessere Videos, schneller veröffentlichen",
         title: "Dein kostenloses KI-Creator-Toolkit",
         subtitle:
-          "Von der Idee bis zum Zeitplan: CreatorForge hilft dir, konsistent zu planen, optimieren und veröffentlichen—ohne zehn Tools.",
+          "Von der Idee bis zum Zeitplan: VidPulse hilft dir, konsistent zu planen, optimieren und veröffentlichen—ohne zehn Tools.",
         primaryCta: "Kostenlos starten",
         secondaryCta: "Preise ansehen",
-        mockAlt: "CreatorForge-Dashboard-Vorschau",
+        mockAlt: "VidPulse-Dashboard-Vorschau",
         bullets: { "0": "Kostenlos starten", "1": "Für Geschwindigkeit gebaut", "2": "In 9 Sprachen verfügbar" },
       },
     },
     onboarding: {
-      title: "Willkommen bei CreatorForge",
+      title: "Willkommen bei VidPulse",
       subtitle: "Richten wir deinen Arbeitsbereich in wenigen Schritten ein.",
       progress: {
         welcome: "Willkommen",
@@ -323,7 +323,7 @@ const patches = {
       steps: {
         welcome: {
           title: "Lass uns starten",
-          subtitle: "So kann CreatorForge Vorschläge auf deinen Kanal abstimmen.",
+          subtitle: "So kann VidPulse Vorschläge auf deinen Kanal abstimmen.",
           bullets: {
             youtube: "Verbinde YouTube für Analysen und Synchronisierung.",
             goals: "Wähle Ziele, um deinen Workflow zu optimieren.",
@@ -386,7 +386,7 @@ const patches = {
     },
     landing: {
       meta: {
-        title: "CreatorForge — Boîte à outils gratuite pour créateurs YouTube avec IA",
+        title: "VidPulse — Boîte à outils gratuite pour créateurs YouTube avec IA",
         description:
           "Planifiez, recherchez et publiez de meilleures vidéos avec un kit gratuit : idées, workflow, concurrents, calendrier et analyse de miniatures.",
       },
@@ -405,15 +405,15 @@ const patches = {
         kicker: "De meilleures vidéos, plus vite",
         title: "Votre boîte à outils créateur gratuite avec IA",
         subtitle:
-          "Des idées au calendrier : CreatorForge vous aide à planifier, optimiser et publier régulièrement—sans dix outils différents.",
+          "Des idées au calendrier : VidPulse vous aide à planifier, optimiser et publier régulièrement—sans dix outils différents.",
         primaryCta: "Commencer gratuitement",
         secondaryCta: "Voir les tarifs",
-        mockAlt: "Aperçu du tableau de bord CreatorForge",
+        mockAlt: "Aperçu du tableau de bord VidPulse",
         bullets: { "0": "Gratuit pour commencer", "1": "Conçu pour la vitesse", "2": "Disponible en 9 langues" },
       },
     },
     onboarding: {
-      title: "Bienvenue sur CreatorForge",
+      title: "Bienvenue sur VidPulse",
       subtitle: "Configurons votre espace de travail en quelques étapes.",
       progress: {
         welcome: "Bienvenue",
@@ -437,7 +437,7 @@ const patches = {
       steps: {
         welcome: {
           title: "Commençons la configuration",
-          subtitle: "Cela aide CreatorForge à adapter les suggestions à votre chaîne.",
+          subtitle: "Cela aide VidPulse à adapter les suggestions à votre chaîne.",
           bullets: {
             youtube: "Connectez YouTube pour débloquer analyses et synchronisation.",
             goals: "Choisissez des objectifs pour optimiser votre workflow.",
@@ -500,7 +500,7 @@ const patches = {
     },
     landing: {
       meta: {
-        title: "CreatorForge — Kit gratuito para criadores do YouTube com IA",
+        title: "VidPulse — Kit gratuito para criadores do YouTube com IA",
         description:
           "Planeje, pesquise e publique vídeos melhores com um kit gratuito: ideias, fluxo de trabalho, concorrentes, calendário e análise de miniaturas.",
       },
@@ -519,15 +519,15 @@ const patches = {
         kicker: "Publique vídeos melhores, mais rápido",
         title: "Seu kit de criador gratuito com IA",
         subtitle:
-          "Das ideias ao calendário: o CreatorForge ajuda você a planejar, otimizar e publicar com consistência—sem dez ferramentas.",
+          "Das ideias ao calendário: o VidPulse ajuda você a planejar, otimizar e publicar com consistência—sem dez ferramentas.",
         primaryCta: "Começar grátis",
         secondaryCta: "Ver preços",
-        mockAlt: "Prévia do painel CreatorForge",
+        mockAlt: "Prévia do painel VidPulse",
         bullets: { "0": "Grátis para começar", "1": "Feito para velocidade", "2": "Disponível em 9 idiomas" },
       },
     },
     onboarding: {
-      title: "Bem-vindo ao CreatorForge",
+      title: "Bem-vindo ao VidPulse",
       subtitle: "Vamos configurar seu espaço de trabalho em poucos passos.",
       progress: {
         welcome: "Boas-vindas",
@@ -551,7 +551,7 @@ const patches = {
       steps: {
         welcome: {
           title: "Vamos começar",
-          subtitle: "Isso ajuda o CreatorForge a adaptar sugestões ao seu canal.",
+          subtitle: "Isso ajuda o VidPulse a adaptar sugestões ao seu canal.",
           bullets: {
             youtube: "Conecte o YouTube para desbloquear análises e sincronização.",
             goals: "Escolha metas para otimizar seu fluxo de trabalho.",
@@ -614,7 +614,7 @@ const patches = {
     },
     landing: {
       meta: {
-        title: "CreatorForge — Бесплатный ИИ-набор для YouTube-авторов",
+        title: "VidPulse — Бесплатный ИИ-набор для YouTube-авторов",
         description:
           "Планируйте, исследуйте и публикуйте лучшие видео с бесплатным набором: идеи, workflow, конкуренты, календарь и анализ превью.",
       },
@@ -633,15 +633,15 @@ const patches = {
         kicker: "Лучшие видео — быстрее",
         title: "Ваш бесплатный ИИ-набор для авторов",
         subtitle:
-          "От идей до расписания: CreatorForge помогает планировать, оптимизировать и публиковать регулярно—без десяти разных инструментов.",
+          "От идей до расписания: VidPulse помогает планировать, оптимизировать и публиковать регулярно—без десяти разных инструментов.",
         primaryCta: "Начать бесплатно",
         secondaryCta: "Смотреть цены",
-        mockAlt: "Превью панели CreatorForge",
+        mockAlt: "Превью панели VidPulse",
         bullets: { "0": "Бесплатный старт", "1": "Создан для скорости", "2": "Доступен на 9 языках" },
       },
     },
     onboarding: {
-      title: "Добро пожаловать в CreatorForge",
+      title: "Добро пожаловать в VidPulse",
       subtitle: "Настроим рабочее пространство за пару шагов.",
       progress: {
         welcome: "Приветствие",
@@ -665,7 +665,7 @@ const patches = {
       steps: {
         welcome: {
           title: "Начнём настройку",
-          subtitle: "Это поможет CreatorForge подстроить рекомендации под ваш канал.",
+          subtitle: "Это поможет VidPulse подстроить рекомендации под ваш канал.",
           bullets: {
             youtube: "Подключите YouTube для аналитики и синхронизации.",
             goals: "Выберите цели для оптимизации workflow.",
@@ -728,7 +728,7 @@ const patches = {
     },
     landing: {
       meta: {
-        title: "CreatorForge — 無料のAI YouTubeクリエイターツールキット",
+        title: "VidPulse — 無料のAI YouTubeクリエイターツールキット",
         description:
           "無料ツールで動画を企画・調査・公開：アイデア生成、ワークフロー、競合追跡、スケジュール、サムネイル分析。",
       },
@@ -747,15 +747,15 @@ const patches = {
         kicker: "より良い動画を、より速く",
         title: "無料のAIクリエイターツールキット",
         subtitle:
-          "アイデアからスケジュールまで：CreatorForgeは計画・最適化・継続的な公開を支援—10個のツールは不要です。",
+          "アイデアからスケジュールまで：VidPulseは計画・最適化・継続的な公開を支援—10個のツールは不要です。",
         primaryCta: "無料で始める",
         secondaryCta: "料金を見る",
-        mockAlt: "CreatorForgeダッシュボードのプレビュー",
+        mockAlt: "VidPulseダッシュボードのプレビュー",
         bullets: { "0": "無料で開始", "1": "スピード重視", "2": "9言語対応" },
       },
     },
     onboarding: {
-      title: "CreatorForgeへようこそ",
+      title: "VidPulseへようこそ",
       subtitle: "数ステップでワークスペースを設定しましょう。",
       progress: {
         welcome: "ようこそ",
@@ -842,7 +842,7 @@ const patches = {
     },
     landing: {
       meta: {
-        title: "CreatorForge — 免费 AI YouTube 创作者工具包",
+        title: "VidPulse — 免费 AI YouTube 创作者工具包",
         description: "用免费工具规划、研究并发布更好的视频：创意生成、工作流、竞品追踪、排期和缩略图分析。",
       },
       structuredData: {
@@ -859,15 +859,15 @@ const patches = {
       hero: {
         kicker: "更快发布更好的视频",
         title: "你的免费 AI 创作者工具包",
-        subtitle: "从创意到排期：CreatorForge 帮助你规划、优化并持续发布——无需十个工具。",
+        subtitle: "从创意到排期：VidPulse 帮助你规划、优化并持续发布——无需十个工具。",
         primaryCta: "免费开始",
         secondaryCta: "查看定价",
-        mockAlt: "CreatorForge 仪表盘预览",
+        mockAlt: "VidPulse 仪表盘预览",
         bullets: { "0": "免费起步", "1": "为速度而生", "2": "支持 9 种语言" },
       },
     },
     onboarding: {
-      title: "欢迎使用 CreatorForge",
+      title: "欢迎使用 VidPulse",
       subtitle: "只需几步即可设置你的工作区。",
       progress: {
         welcome: "欢迎",
@@ -891,7 +891,7 @@ const patches = {
       steps: {
         welcome: {
           title: "开始设置",
-          subtitle: "这有助于 CreatorForge 根据你的频道定制建议。",
+          subtitle: "这有助于 VidPulse 根据你的频道定制建议。",
           bullets: {
             youtube: "连接 YouTube 以解锁分析与同步。",
             goals: "选择目标以优化你的工作流。",

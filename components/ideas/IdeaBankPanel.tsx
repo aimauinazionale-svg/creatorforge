@@ -129,7 +129,7 @@ export function IdeaBankPanel() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "creatorforge-ideas.json";
+    a.download = "vidpulse-ideas.json";
     a.click();
     URL.revokeObjectURL(url);
   }

@@ -60,7 +60,7 @@ export function EmailPreferencesForm() {
     toast({ title: t("toast.savedTitle"), description: t("toast.savedBody") });
   }
 
-  if (loading) return <p className="text-sm text-muted-foreground">Loading…</p>;
+  if (loading) return <p className="text-sm text-muted-foreground">{t("loading")}</p>;
 
   return (
     <Card>

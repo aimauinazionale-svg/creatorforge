@@ -44,7 +44,7 @@ function LogoMark({ className, gradientId }: { className?: string; gradientId: s
   );
 }
 
-/** CreatorForge logo mark with optional wordmark. Works in light and dark themes. */
+/** VidPulse logo mark with optional wordmark. Works in light and dark themes. */
 export function BrandLogo({
   label,
   showText = true,

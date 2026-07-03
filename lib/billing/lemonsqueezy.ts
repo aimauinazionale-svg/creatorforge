@@ -1,3 +1,5 @@
+import { SITE_NAME } from "@/lib/site";
+
 import crypto from "node:crypto";
 
 import {
@@ -77,7 +79,7 @@ export async function getCheckoutUrl(
     productOptions: {
       redirectUrl: `${siteUrl}/settings/billing?checkout=success`,
       receiptButtonText: "Go to billing",
-      receiptThankYouNote: "Thank you for upgrading to CreatorForge Pro!",
+      receiptThankYouNote: `Thank you for upgrading to ${SITE_NAME} Pro!`,
     },
   });
 

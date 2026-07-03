@@ -44,7 +44,7 @@ export function PublicHeader() {
           <LanguageSwitcher className="hidden sm:inline-flex" />
 
           <Button asChild className="hidden gap-2 sm:inline-flex">
-            <Link href="/login">
+            <Link href="/register">
               {t("cta.getStartedFree")}
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -79,7 +79,7 @@ export function PublicHeader() {
                 </nav>
                 <LanguageSwitcher />
                 <Button asChild className="min-h-11 gap-2">
-                  <Link href="/login" onClick={() => setOpen(false)}>
+                  <Link href="/register" onClick={() => setOpen(false)}>
                     {t("cta.getStartedFree")}
                     <ArrowRight className="h-4 w-4" />
                   </Link>

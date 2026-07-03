@@ -4,7 +4,7 @@
   },
   "layout": {
     "brand": {
-      "name": "CreatorForge"
+      "name": "VidPulse"
     },
     "header": {
       "breadcrumb": "Навигация",
@@ -68,7 +68,7 @@
     }
   },
   "auth": {
-    "title": "Вход в CreatorForge",
+    "title": "Вход в VidPulse",
     "subtitle": "Бесплатно для авторов. Без банковской карты.",
     "cardTitle": "С возвращением",
     "cardSubtitle": "Выберите способ входа.",
@@ -92,6 +92,14 @@
       "AUTH_ERROR": "Ошибка входа. Попробуйте снова.",
       "MISSING_CONFIG": "Sign-in is unavailable until Supabase is configured.",
       "UNKNOWN": "Server unavailable. Please try again."
+    },
+    "register": {
+      "cardTitle": "Create your account",
+      "cardSubtitle": "Sign up with Google or email — it only takes a moment.",
+      "hasAccount": "Already have an account?",
+      "noAccount": "Don't have an account?",
+      "signInLink": "Sign in",
+      "signUpLink": "Create account"
     }
   },
   "seoLab": {
@@ -830,7 +838,7 @@
     "settings": "Настройки"
   },
   "header": {
-    "brand": "CreatorForge",
+    "brand": "VidPulse",
     "aria": {
       "breadcrumb": "Навигационная цепочка",
       "language": "Язык",
@@ -1042,7 +1050,7 @@
     }
   },
   "onboarding": {
-    "title": "Добро пожаловать в CreatorForge",
+    "title": "Добро пожаловать в VidPulse",
     "subtitle": "Настроим рабочее пространство за пару шагов.",
     "progress": {
       "welcome": "Приветствие",
@@ -1075,7 +1083,7 @@
     "steps": {
       "welcome": {
         "title": "Начнём настройку",
-        "subtitle": "Это поможет CreatorForge подстроить рекомендации под ваш канал.",
+        "subtitle": "Это поможет VidPulse подстроить рекомендации под ваш канал.",
         "bullets": {
           "youtube": "Подключите YouTube для аналитики и синхронизации.",
           "goals": "Выберите цели для оптимизации workflow.",
@@ -1402,7 +1410,7 @@
   "emails": {
     "settings": {
       "title": "Settings",
-      "subtitle": "Manage your CreatorForge preferences.",
+      "subtitle": "Manage your VidPulse preferences.",
       "unauthenticated": "Please sign in to manage settings.",
       "emailLink": "Email notifications",
       "emailTitle": "Email notifications",
@@ -1454,16 +1462,17 @@
       "savedBody": "Your email preferences were updated.",
       "errorTitle": "Could not save",
       "errorBody": "Please try again."
-    }
+    },
+    "loading": "Loading…"
   },
   "landing": {
-    "brand": "CreatorForge",
+    "brand": "VidPulse",
     "meta": {
-      "title": "CreatorForge — Бесплатный ИИ-набор для YouTube-авторов",
+      "title": "VidPulse — Бесплатный ИИ-набор для YouTube-авторов",
       "description": "Планируйте, исследуйте и публикуйте лучшие видео с бесплатным набором: идеи, workflow, конкуренты, календарь и анализ превью."
     },
     "structuredData": {
-      "name": "CreatorForge",
+      "name": "VidPulse",
       "description": "Бесплатный ИИ-набор для YouTube-авторов: идеи, планирование и оптимизация."
     },
     "nav": {
@@ -1481,10 +1490,10 @@
     "hero": {
       "kicker": "Лучшие видео — быстрее",
       "title": "Ваш бесплатный ИИ-набор для авторов",
-      "subtitle": "От идей до расписания: CreatorForge помогает планировать, оптимизировать и публиковать регулярно—без десяти разных инструментов.",
+      "subtitle": "От идей до расписания: VidPulse помогает планировать, оптимизировать и публиковать регулярно—без десяти разных инструментов.",
       "primaryCta": "Начать бесплатно",
       "secondaryCta": "Смотреть цены",
-      "mockAlt": "Превью панели CreatorForge",
+      "mockAlt": "Превью панели VidPulse",
       "bullets": {
         "0": "Бесплатный старт",
         "1": "Создан для скорости",
@@ -1543,11 +1552,11 @@
       }
     },
     "comparison": {
-      "title": "CreatorForge vs. alternatives",
+      "title": "VidPulse vs. alternatives",
       "subtitle": "Stop stitching together free tools and spreadsheets.",
       "table": {
         "feature": "Feature",
-        "creatorForge": "CreatorForge",
+        "vidPulse": "VidPulse",
         "alternatives": "Other tools"
       },
       "rows": {
@@ -1629,7 +1638,7 @@
       "subtitle": "Everything you need to know before you start.",
       "items": {
         "0": {
-          "q": "Is CreatorForge really free?",
+          "q": "Is VidPulse really free?",
           "a": "Yes. The Free plan includes the core toolkit and limited AI usage."
         },
         "1": {
@@ -1638,7 +1647,7 @@
         },
         "2": {
           "q": "Which languages are supported?",
-          "a": "CreatorForge supports 9 languages including English, Italian, Spanish, German, French, Portuguese, Russian, Japanese, and Chinese."
+          "a": "VidPulse supports 9 languages including English, Italian, Spanish, German, French, Portuguese, Russian, Japanese, and Chinese."
         },
         "3": {
           "q": "Can I use my own workflow?",
@@ -1661,7 +1670,7 @@
       "secondaryCta": "View pricing"
     },
     "footer": {
-      "brand": "CreatorForge",
+      "brand": "VidPulse",
       "tagline": "A free toolkit for modern YouTube creators.",
       "sections": {
         "product": "Product",
@@ -1682,7 +1691,7 @@
         "terms": "Terms",
         "privacy": "Privacy"
       },
-      "copyright": "© {year} CreatorForge. All rights reserved."
+      "copyright": "© {year} VidPulse. All rights reserved."
     }
   },
   "common": {
@@ -1729,7 +1738,7 @@
     "dismiss": "Dismiss"
   },
   "login": {
-    "pageTitle": "Sign in to CreatorForge",
+    "pageTitle": "Sign in to VidPulse",
     "pageSubtitle": "Use Google or a magic link to access your creator toolkit.",
     "title": "Welcome back",
     "subtitle": "Choose how you'd like to sign in.",
@@ -1786,24 +1795,24 @@
   "legalPages": {
     "terms": {
       "title": "Terms of Service",
-      "description": "CreatorForge terms of service.",
-      "body": "CreatorForge is provided as-is for creators. By using the service you agree to use it responsibly and comply with applicable laws. We may update these terms; continued use constitutes acceptance."
+      "description": "VidPulse terms of service.",
+      "body": "VidPulse is provided as-is for creators. By using the service you agree to use it responsibly and comply with applicable laws. We may update these terms; continued use constitutes acceptance."
     },
     "privacy": {
       "title": "Privacy Policy",
-      "description": "How CreatorForge handles your data.",
+      "description": "How VidPulse handles your data.",
       "body": "We store account data and workspace content to provide the service. We do not sell personal data. You can request deletion by contacting support. Third-party providers (Supabase, Google, YouTube) process data according to their policies."
     },
     "blog": {
       "title": "Blog",
-      "description": "CreatorForge updates and creator tips.",
+      "description": "VidPulse updates and creator tips.",
       "comingSoon": "Our blog is coming soon. Check back for product updates and YouTube growth tips."
     }
   },
   "pricing": {
     "meta": {
       "title": "Pricing",
-      "description": "Simple pricing for CreatorForge — start free, upgrade to Pro when you need unlimited AI, competitor tracking, and advanced SEO tools."
+      "description": "Simple pricing for VidPulse — start free, upgrade to Pro when you need unlimited AI, competitor tracking, and advanced SEO tools."
     },
     "title": "Pricing that stays simple",
     "subtitle": "Start free. Upgrade when you need more power for your channel.",
@@ -1837,7 +1846,7 @@
   },
   "billing": {
     "title": "Billing",
-    "subtitle": "Manage your CreatorForge subscription.",
+    "subtitle": "Manage your VidPulse subscription.",
     "currentPlan": "Current plan",
     "planFree": "Free",
     "planPro": "Pro",
@@ -1858,5 +1867,11 @@
       "2": "Upgrades apply immediately after checkout.",
       "3": "Downgrades take effect when your subscription ends."
     }
+  },
+  "register": {
+    "pageTitle": "Create your VidPulse account",
+    "pageSubtitle": "Start free with Google — no credit card required.",
+    "title": "Get started",
+    "subtitle": "Create your account in seconds."
   }
 }
