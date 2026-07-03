@@ -1612,7 +1612,7 @@
         },
         "pro": {
           "label": "Pro",
-          "price": "$9/mes",
+          "price": "€9,99/mes",
           "description": "Más automatización y planificación profunda.",
           "cta": "Probar Pro",
           "features": {
@@ -2020,7 +2020,7 @@
     },
     "pro": {
       "label": "Pro",
-      "price": "$9/mo",
+      "price": "€9,99/mo",
       "description": "Unlimited AI, competitor tracking, and advanced SEO Lab.",
       "features": {
         "0": "Unlimited AI Assistant",

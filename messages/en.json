@@ -1712,7 +1712,7 @@
         },
         "pro": {
           "label": "Pro",
-          "price": "$9/mo",
+          "price": "€9.99/mo",
           "description": "More automation and deeper planning.",
           "cta": "Try Pro",
           "features": {
@@ -1825,7 +1825,7 @@
     },
     "pro": {
       "label": "Pro",
-      "price": "$9/mo",
+      "price": "€9.99/mo",
       "description": "Unlimited AI, competitor tracking, and advanced SEO Lab.",
       "features": {
         "0": "Unlimited AI Assistant",

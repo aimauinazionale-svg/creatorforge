@@ -1612,7 +1612,7 @@
         },
         "pro": {
           "label": "Pro",
-          "price": "$9/月",
+          "price": "€9.99/月",
           "description": "より多くの自動化と深い計画機能。",
           "cta": "Proを試す",
           "features": {
@@ -2010,7 +2010,7 @@
     },
     "pro": {
       "label": "Pro",
-      "price": "$9/mo",
+      "price": "€9.99/mo",
       "description": "Unlimited AI, competitor tracking, and advanced SEO Lab.",
       "features": {
         "0": "Unlimited AI Assistant",

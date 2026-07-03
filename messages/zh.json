@@ -1554,7 +1554,7 @@
         },
         "pro": {
           "label": "Pro",
-          "price": "$9/月",
+          "price": "€9.99/月",
           "description": "更多自动化与深度规划。",
           "cta": "试用 Pro",
           "features": {
@@ -2010,7 +2010,7 @@
     },
     "pro": {
       "label": "Pro",
-      "price": "$9/mo",
+      "price": "€9.99/mo",
       "description": "Unlimited AI, competitor tracking, and advanced SEO Lab.",
       "features": {
         "0": "Unlimited AI Assistant",
