@@ -5,7 +5,7 @@ import {
   PLAN_COOKIE_NAME,
   PRO_PLAN,
   type PlanType,
-} from "@/lib/billing/constants";
+} from "./constants";
 
 function normalizePlanType(value: string | null | undefined): PlanType {
   return value === PRO_PLAN ? PRO_PLAN : FREE_PLAN;
