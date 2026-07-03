@@ -15,7 +15,7 @@
     },
     "errors": {
       "UNAUTHENTICATED": "Please sign in to continue.",
-      "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+      "RATE_LIMITED": "You reached this month's AI limit. Try again next month.",
       "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to unlock this feature.",
       "INVALID_INPUT": "Invalid input. Please check and try again.",
       "NOT_FOUND": "We couldn't find that item.",
@@ -269,11 +269,11 @@
         "growthStrategy": "Growth strategy for my channel"
       },
       "rateLimit": {
-        "nearDescription": "You've used {used}/{limit} requests today. {remaining} remaining."
+        "nearDescription": "You've used {used}/{limit} requests this month. {remaining} remaining."
       },
       "errors": {
         "UNAUTHENTICATED": "Please sign in to use the AI assistant.",
-        "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+        "RATE_LIMITED": "You reached this month's AI limit. Try again next month.",
         "MISSING_CONFIG": "AI is not configured. {details}",
         "TIMEOUT": "The request timed out. Please try again.",
         "INVALID_INPUT": "Invalid message. Please try again.",
@@ -308,7 +308,7 @@
     },
     "errors": {
       "UNAUTHENTICATED": "Please sign in to use AI tools.",
-      "RATE_LIMITED": "You reached today’s limit. Try again tomorrow.",
+      "RATE_LIMITED": "You reached this month's AI limit. Try again next month.",
       "MISSING_CONFIG": "Missing configuration. {details}",
       "TIMEOUT": "The AI request timed out. Please try again.",
       "INVALID_INPUT": "Invalid input. Please check your topic and try again.",
@@ -363,13 +363,13 @@
       "title": "Something went wrong",
       "unauthenticated": "Please sign in to use AI tools.",
       "invalidInput": "Invalid input. Please try again.",
-      "rateLimited": "You reached today’s limit. Try again tomorrow.",
+      "rateLimited": "You reached this month's AI limit. Try again next month.",
       "invalidJson": "The AI response could not be parsed. Please try again.",
       "generic": "Unexpected error. {details}"
     },
     "rateLimit": {
-      "nearTitle": "You’re close to today’s limit",
-      "nearDescription": "You’ve used {used}/{limit} requests today. {remaining} remaining."
+      "nearTitle": "You're close to this month's limit",
+      "nearDescription": "You've used {used}/{limit} requests this month. {remaining} remaining."
     },
     "difficulty": {
       "low": "Low",
@@ -1796,7 +1796,7 @@
       "features": {
         "0": "Dashboard & workflow board",
         "1": "Basic calendar scheduling",
-        "2": "Limited AI requests per day",
+        "2": "Limited AI requests per month",
         "3": "Thumbnail analyzer",
         "4": "Ideas bank & script outlines"
       }

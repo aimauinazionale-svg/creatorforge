@@ -201,7 +201,7 @@
       },
       "errors": {
         "UNAUTHENTICATED": "Войдите, чтобы использовать AI-ассистент.",
-        "RATE_LIMITED": "Достигнут дневной лимит. Попробуйте завтра.",
+        "RATE_LIMITED": "Вы достигли месячного лимита ИИ. Попробуйте в следующем месяце.",
         "MISSING_CONFIG": "ИИ не настроен. {details}",
         "TIMEOUT": "Время запроса истекло. Попробуйте снова.",
         "INVALID_INPUT": "Недопустимое сообщение. Попробуйте снова.",
@@ -236,7 +236,7 @@
     },
     "errors": {
       "UNAUTHENTICATED": "Войдите, чтобы использовать AI-инструменты.",
-      "RATE_LIMITED": "Вы достигли дневного лимита. Попробуйте завтра.",
+      "RATE_LIMITED": "Вы достигли месячного лимита ИИ. Попробуйте в следующем месяце.",
       "MISSING_CONFIG": "Не хватает конфигурации. {details}",
       "TIMEOUT": "Запрос к AI истёк. Попробуйте снова.",
       "INVALID_INPUT": "Некорректный ввод. Проверьте тему и попробуйте снова.",
@@ -291,7 +291,7 @@
       "title": "Что-то пошло не так",
       "unauthenticated": "Войдите, чтобы использовать AI инструменты.",
       "invalidInput": "Некорректный ввод. Попробуйте снова.",
-      "rateLimited": "Вы достигли дневного лимита. Попробуйте завтра.",
+      "rateLimited": "Вы достигли месячного лимита ИИ. Попробуйте в следующем месяце.",
       "invalidJson": "Не удалось разобрать ответ AI. Попробуйте снова.",
       "generic": "Неожиданная ошибка. {details}"
     },
@@ -1688,7 +1688,7 @@
   "common": {
     "errors": {
       "UNAUTHENTICATED": "Please sign in to continue.",
-      "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+      "RATE_LIMITED": "Вы достигли месячного лимита ИИ. Попробуйте в следующем месяце.",
       "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "INVALID_INPUT": "Invalid input. Please check and try again.",
@@ -1817,7 +1817,7 @@
       "features": {
         "0": "Dashboard & workflow board",
         "1": "Basic calendar scheduling",
-        "2": "Limited AI requests per day",
+        "2": "Ограниченное число запросов ИИ в месяц",
         "3": "Thumbnail analyzer",
         "4": "Ideas bank & script outlines"
       }

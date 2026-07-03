@@ -79,6 +79,7 @@ export function ChatPanel() {
     used: number;
     limit: number;
     remaining: number;
+    nearLimit?: boolean;
   } | null>(null);
 
   const scrollRef = React.useRef<HTMLDivElement>(null);
@@ -89,11 +90,7 @@ export function ChatPanel() {
     setHydrated(true);
     void callServerAction(() => getChatRateLimitAction()).then((res) => {
       if (res.ok) {
-        setRateLimit({
-          used: res.data.used,
-          limit: res.data.limit,
-          remaining: res.data.remaining,
-        });
+        setRateLimit(res.data);
       }
     });
   }, [locale]);
@@ -200,7 +197,7 @@ export function ChatPanel() {
         ) : null}
       </div>
 
-      {rateLimit && rateLimit.remaining <= 2 ? (
+      {rateLimit?.nearLimit ? (
         <div className="border-b border-amber-500/20 bg-amber-500/5 px-4 py-2 text-xs text-amber-800 dark:text-amber-200">
           {t("rateLimit.nearDescription", {
             used: rateLimit.used,

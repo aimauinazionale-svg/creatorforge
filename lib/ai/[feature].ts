@@ -130,7 +130,7 @@ function buildPrompt(input: GenerateIdeasInput): { system: string; user: string 
 }
 
 /**
- * Groq-powered idea generation with per-user daily limiting (UTC).
+ * Groq-powered idea generation with per-user monthly limiting (UTC).
  * Also logs every successful attempt into `ai_requests`.
  */
 export async function generateIdeasWithGroq(

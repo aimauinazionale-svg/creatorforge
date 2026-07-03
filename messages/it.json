@@ -197,11 +197,11 @@
         "growthStrategy": "Strategia di crescita per il mio canale"
       },
       "rateLimit": {
-        "nearDescription": "Hai usato {used}/{limit} richieste oggi. Ne restano {remaining}."
+        "nearDescription": "Hai usato {used}/{limit} richieste questo mese. Ne restano {remaining}."
       },
       "errors": {
         "UNAUTHENTICATED": "Accedi per usare l'assistente AI.",
-        "RATE_LIMITED": "Hai raggiunto il limite di oggi. Riprova domani.",
+        "RATE_LIMITED": "Hai raggiunto il limite mensile AI. Riprova il prossimo mese.",
         "MISSING_CONFIG": "L'AI non è configurata. {details}",
         "TIMEOUT": "La richiesta è scaduta. Riprova.",
         "INVALID_INPUT": "Messaggio non valido. Riprova.",
@@ -236,7 +236,7 @@
     },
     "errors": {
       "UNAUTHENTICATED": "Accedi per usare gli strumenti AI.",
-      "RATE_LIMITED": "Hai raggiunto il limite di oggi. Riprova domani.",
+      "RATE_LIMITED": "Hai raggiunto il limite mensile AI. Riprova il prossimo mese.",
       "MISSING_CONFIG": "Configurazione mancante. {details}",
       "TIMEOUT": "La richiesta AI è scaduta. Riprova.",
       "INVALID_INPUT": "Input non valido. Controlla l’argomento e riprova.",
@@ -291,13 +291,13 @@
       "title": "Qualcosa è andato storto",
       "unauthenticated": "Accedi per usare gli strumenti AI.",
       "invalidInput": "Input non valido. Riprova.",
-      "rateLimited": "Hai raggiunto il limite di oggi. Riprova domani.",
+      "rateLimited": "Hai raggiunto il limite mensile AI. Riprova il prossimo mese.",
       "invalidJson": "La risposta AI non è stata elaborata. Riprova.",
       "generic": "Errore inatteso. {details}"
     },
     "rateLimit": {
-      "nearTitle": "Sei vicino al limite di oggi",
-      "nearDescription": "Hai usato {used}/{limit} richieste oggi. Ne restano {remaining}."
+      "nearTitle": "Sei vicino al limite mensile",
+      "nearDescription": "Hai usato {used}/{limit} richieste questo mese. Ne restano {remaining}."
     },
     "difficulty": {
       "low": "Bassa",
@@ -1688,7 +1688,7 @@
   "common": {
     "errors": {
       "UNAUTHENTICATED": "Accedi per continuare.",
-      "RATE_LIMITED": "Hai raggiunto il limite giornaliero. Riprova domani.",
+      "RATE_LIMITED": "Hai raggiunto il limite mensile AI. Riprova il prossimo mese.",
       "YOUTUBE_NOT_CONNECTED": "Collega il tuo canale YouTube per usare questa funzione.",
       "NOT_CONNECTED": "Collega il tuo canale YouTube per usare questa funzione.",
       "INVALID_INPUT": "Input non valido. Controlla e riprova.",
@@ -1817,7 +1817,7 @@
       "features": {
         "0": "Dashboard & workflow board",
         "1": "Basic calendar scheduling",
-        "2": "Limited AI requests per day",
+        "2": "Richieste AI limitate al mese",
         "3": "Thumbnail analyzer",
         "4": "Ideas bank & script outlines"
       }

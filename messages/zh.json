@@ -201,7 +201,7 @@
       },
       "errors": {
         "UNAUTHENTICATED": "请登录后使用 AI 助手。",
-        "RATE_LIMITED": "已达到今日上限，请明天再试。",
+        "RATE_LIMITED": "已达到本月 AI 使用上限，请下月再试。",
         "MISSING_CONFIG": "AI 未配置。{details}",
         "TIMEOUT": "请求超时，请重试。",
         "INVALID_INPUT": "消息无效，请重试。",
@@ -236,7 +236,7 @@
     },
     "errors": {
       "UNAUTHENTICATED": "请先登录再使用 AI 工具。",
-      "RATE_LIMITED": "已达到今日额度限制，请明天再试。",
+      "RATE_LIMITED": "已达到本月 AI 使用上限，请下月再试。",
       "MISSING_CONFIG": "缺少配置。{details}",
       "TIMEOUT": "AI 请求超时，请重试。",
       "INVALID_INPUT": "输入无效，请检查主题后重试。",
@@ -291,7 +291,7 @@
       "title": "出现错误",
       "unauthenticated": "请先登录再使用 AI 工具。",
       "invalidInput": "输入无效，请重试。",
-      "rateLimited": "已达到今日额度，请明天再试。",
+      "rateLimited": "已达到本月 AI 使用上限，请下月再试。",
       "invalidJson": "无法解析 AI 返回内容，请重试。",
       "generic": "发生未知错误。{details}"
     },
@@ -1631,7 +1631,7 @@
   "common": {
     "errors": {
       "UNAUTHENTICATED": "Please sign in to continue.",
-      "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+      "RATE_LIMITED": "已达到本月 AI 使用上限，请下月再试。",
       "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "INVALID_INPUT": "Invalid input. Please check and try again.",
@@ -1817,7 +1817,7 @@
       "features": {
         "0": "Dashboard & workflow board",
         "1": "Basic calendar scheduling",
-        "2": "Limited AI requests per day",
+        "2": "每月 AI 请求有限",
         "3": "Thumbnail analyzer",
         "4": "Ideas bank & script outlines"
       }

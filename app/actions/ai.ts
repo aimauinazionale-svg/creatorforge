@@ -5,7 +5,7 @@ import { z } from "zod";
 import { sendChatCompletion } from "@/lib/ai/chat";
 import {
   checkAiRateLimitFlexible,
-  FREE_DAILY_LIMIT,
+  FREE_MONTHLY_LIMIT,
   incrementAiRequestFlexible,
   statusFromUsed,
 } from "@/lib/ai/rate-limit";
@@ -28,7 +28,7 @@ export type SendChatMessageInput = z.infer<typeof SendChatSchema>;
 
 export type SendChatMessageResult = {
   message: ChatMessage;
-  rateLimit: { used: number; limit: number; remaining: number };
+  rateLimit: { used: number; limit: number; remaining: number; nearLimit?: boolean };
 };
 
 function mapGroqError(
@@ -93,6 +93,7 @@ export async function sendChatMessageAction(
         used: status.used,
         limit: status.limit,
         remaining: status.remaining,
+        nearLimit: status.nearLimit,
       },
     });
   }, "sendChatMessage");
@@ -107,16 +108,16 @@ export async function getChatRateLimitAction(): Promise<
     if (!status.ok) {
       if (status.error.code === "RATE_LIMITED") {
         return actionOk({
-          limit: status.error.limit ?? FREE_DAILY_LIMIT,
-          used: status.error.used ?? FREE_DAILY_LIMIT,
+          limit: status.error.limit ?? FREE_MONTHLY_LIMIT,
+          used: status.error.used ?? FREE_MONTHLY_LIMIT,
           remaining: status.error.remaining ?? 0,
           nearLimit: true,
         });
       }
       return actionOk({
-        limit: FREE_DAILY_LIMIT,
+        limit: FREE_MONTHLY_LIMIT,
         used: 0,
-        remaining: FREE_DAILY_LIMIT,
+        remaining: FREE_MONTHLY_LIMIT,
         nearLimit: false,
       });
     }

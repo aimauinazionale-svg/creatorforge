@@ -5,7 +5,7 @@ import { z } from "zod";
 import { generateDescription } from "@/lib/ai/descriptions";
 import { optimizeTitle } from "@/lib/ai/titles";
 import { generateTags } from "@/lib/ai/tags";
-import { checkAiRateLimitFlexible, FREE_DAILY_LIMIT } from "@/lib/ai/rate-limit";
+import { checkAiRateLimitFlexible, FREE_MONTHLY_LIMIT } from "@/lib/ai/rate-limit";
 import { requireAuth } from "@/lib/actions/auth-context";
 import { actionErr, actionOk, type ActionResult } from "@/lib/actions/result";
 import { safeAction } from "@/lib/actions/safe";
@@ -19,7 +19,7 @@ export async function getAiRateLimitAction(): Promise<
     if (status.error.code === "RATE_LIMITED") {
       return actionErr("RATE_LIMITED");
     }
-    return actionOk({ limit: FREE_DAILY_LIMIT, used: 0, remaining: FREE_DAILY_LIMIT, nearLimit: false });
+    return actionOk({ limit: FREE_MONTHLY_LIMIT, used: 0, remaining: FREE_MONTHLY_LIMIT, nearLimit: false });
   }
   return actionOk(status.data);
 

@@ -201,7 +201,7 @@
       },
       "errors": {
         "UNAUTHENTICATED": "Bitte melde dich an, um den KI-Assistenten zu nutzen.",
-        "RATE_LIMITED": "Du hast das Tageslimit erreicht. Versuche es morgen erneut.",
+        "RATE_LIMITED": "Du hast das monatliche KI-Limit erreicht. Versuche es nächsten Monat erneut.",
         "MISSING_CONFIG": "KI ist nicht konfiguriert. {details}",
         "TIMEOUT": "Die Anfrage ist abgelaufen. Bitte erneut versuchen.",
         "INVALID_INPUT": "Ungültige Nachricht. Bitte erneut versuchen.",
@@ -236,7 +236,7 @@
     },
     "errors": {
       "UNAUTHENTICATED": "Bitte anmelden, um KI-Tools zu nutzen.",
-      "RATE_LIMITED": "Tageslimit erreicht. Morgen erneut versuchen.",
+      "RATE_LIMITED": "Du hast das monatliche KI-Limit erreicht. Versuche es nächsten Monat erneut.",
       "MISSING_CONFIG": "Konfiguration fehlt. {details}",
       "TIMEOUT": "KI-Anfrage ist abgelaufen. Bitte erneut versuchen.",
       "INVALID_INPUT": "Ungültige Eingabe. Bitte prüfen und erneut versuchen.",
@@ -291,7 +291,7 @@
       "title": "Etwas ist schiefgelaufen",
       "unauthenticated": "Bitte melde dich an, um KI-Tools zu nutzen.",
       "invalidInput": "Ungültige Eingabe. Bitte erneut versuchen.",
-      "rateLimited": "Du hast das Tageslimit erreicht. Versuche es morgen erneut.",
+      "rateLimited": "Du hast das monatliche KI-Limit erreicht. Versuche es nächsten Monat erneut.",
       "invalidJson": "Die KI-Antwort konnte nicht verarbeitet werden. Bitte erneut versuchen.",
       "generic": "Unerwarteter Fehler. {details}"
     },
@@ -1688,7 +1688,7 @@
   "common": {
     "errors": {
       "UNAUTHENTICATED": "Please sign in to continue.",
-      "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+      "RATE_LIMITED": "Du hast das monatliche KI-Limit erreicht. Versuche es nächsten Monat erneut.",
       "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "INVALID_INPUT": "Invalid input. Please check and try again.",
@@ -1817,7 +1817,7 @@
       "features": {
         "0": "Dashboard & workflow board",
         "1": "Basic calendar scheduling",
-        "2": "Limited AI requests per day",
+        "2": "Begrenzte KI-Anfragen pro Monat",
         "3": "Thumbnail analyzer",
         "4": "Ideas bank & script outlines"
       }

@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 
-import { checkAIRateLimit } from "@/lib/ai/rate-limit";
+import { checkAIRateLimit, FREE_MONTHLY_LIMIT } from "@/lib/ai/rate-limit";
 
 export type GroqMessage = {
   role: "system" | "user" | "assistant";
@@ -107,8 +107,8 @@ export async function generateCompletion(
             code: "RATE_LIMITED",
             retryable: false,
             rateLimit: {
-              limit: limit.error.limit ?? 10,
-              used: limit.error.used ?? 10,
+              limit: limit.error.limit ?? FREE_MONTHLY_LIMIT,
+              used: limit.error.used ?? FREE_MONTHLY_LIMIT,
               remaining: limit.error.remaining ?? 0,
             },
           },

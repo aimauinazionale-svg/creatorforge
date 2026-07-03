@@ -201,7 +201,7 @@
       },
       "errors": {
         "UNAUTHENTICATED": "Connectez-vous pour utiliser l'assistant IA.",
-        "RATE_LIMITED": "Vous avez atteint la limite du jour. Réessayez demain.",
+        "RATE_LIMITED": "Vous avez atteint la limite mensuelle d'IA. Réessayez le mois prochain.",
         "MISSING_CONFIG": "L'IA n'est pas configurée. {details}",
         "TIMEOUT": "La requête a expiré. Veuillez réessayer.",
         "INVALID_INPUT": "Message invalide. Veuillez réessayer.",
@@ -236,7 +236,7 @@
     },
     "errors": {
       "UNAUTHENTICATED": "Veuillez vous connecter pour utiliser les outils IA.",
-      "RATE_LIMITED": "Limite du jour atteinte. Réessayez demain.",
+      "RATE_LIMITED": "Vous avez atteint la limite mensuelle d'IA. Réessayez le mois prochain.",
       "MISSING_CONFIG": "Configuration manquante. {details}",
       "TIMEOUT": "La requête IA a expiré. Réessayez.",
       "INVALID_INPUT": "Entrée invalide. Vérifiez le sujet et réessayez.",
@@ -291,7 +291,7 @@
       "title": "Une erreur est survenue",
       "unauthenticated": "Connectez-vous pour utiliser les outils IA.",
       "invalidInput": "Entrée invalide. Veuillez réessayer.",
-      "rateLimited": "Vous avez atteint la limite du jour. Réessayez demain.",
+      "rateLimited": "Vous avez atteint la limite mensuelle d'IA. Réessayez le mois prochain.",
       "invalidJson": "La réponse IA n’a pas pu être analysée. Réessayez.",
       "generic": "Erreur inattendue. {details}"
     },
@@ -1688,7 +1688,7 @@
   "common": {
     "errors": {
       "UNAUTHENTICATED": "Please sign in to continue.",
-      "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+      "RATE_LIMITED": "Vous avez atteint la limite mensuelle d'IA. Réessayez le mois prochain.",
       "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "INVALID_INPUT": "Invalid input. Please check and try again.",
@@ -1817,7 +1817,7 @@
       "features": {
         "0": "Dashboard & workflow board",
         "1": "Basic calendar scheduling",
-        "2": "Limited AI requests per day",
+        "2": "Requêtes IA limitées par mois",
         "3": "Thumbnail analyzer",
         "4": "Ideas bank & script outlines"
       }

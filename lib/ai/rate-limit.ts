@@ -1,4 +1,8 @@
+import { cookies } from "next/headers";
+
 import { getCookieAiUsage, incrementCookieAiRequest } from "@/lib/ai/fallback-rate-limit";
+import { PLAN_COOKIE_NAME, PRO_PLAN, type PlanType } from "@/lib/billing/constants";
+import { isProPlan } from "@/lib/billing/plan";
 import { getOrCreateGuestId } from "@/lib/onboarding/fallback";
 import { isSupabaseSchemaError, logSupabaseError } from "@/lib/supabase/errors";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
@@ -16,32 +20,65 @@ export type AiRateLimitStatus = {
   used: number;
   remaining: number;
   nearLimit: boolean;
+  unlimited?: boolean;
 };
 
 export type AiRateLimitResult =
   | { ok: true; data: AiRateLimitStatus }
   | { ok: false; error: AiRateLimitError };
 
-export const FREE_DAILY_LIMIT = 10;
+/** Free-tier AI requests per calendar month (UTC). */
+export const FREE_MONTHLY_LIMIT = 100;
 
-function utcDayBounds(date = new Date()): { start: string; end: string } {
-  const start = new Date(
-    Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), 0, 0, 0)
-  );
-  const end = new Date(
-    Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + 1, 0, 0, 0)
-  );
+/** @deprecated Use FREE_MONTHLY_LIMIT */
+export const FREE_DAILY_LIMIT = FREE_MONTHLY_LIMIT;
+
+const NEAR_LIMIT_RATIO = 0.8;
+
+function utcMonthBounds(date = new Date()): { start: string; end: string } {
+  const start = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), 1, 0, 0, 0));
+  const end = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth() + 1, 1, 0, 0, 0));
   return { start: start.toISOString(), end: end.toISOString() };
 }
 
-export function statusFromUsed(used: number): AiRateLimitStatus {
-  const remaining = Math.max(0, FREE_DAILY_LIMIT - used);
+function unlimitedStatus(): AiRateLimitStatus {
   return {
-    limit: FREE_DAILY_LIMIT,
+    limit: FREE_MONTHLY_LIMIT,
+    used: 0,
+    remaining: FREE_MONTHLY_LIMIT,
+    nearLimit: false,
+    unlimited: true,
+  };
+}
+
+export function statusFromUsed(used: number): AiRateLimitStatus {
+  const remaining = Math.max(0, FREE_MONTHLY_LIMIT - used);
+  const nearThreshold = Math.floor(FREE_MONTHLY_LIMIT * NEAR_LIMIT_RATIO);
+  return {
+    limit: FREE_MONTHLY_LIMIT,
     used,
     remaining,
-    nearLimit: used >= 8,
+    nearLimit: used >= nearThreshold,
   };
+}
+
+async function resolveUserHasUnlimitedAi(userId: string): Promise<boolean> {
+  try {
+    const cookiePlan = cookies().get(PLAN_COOKIE_NAME)?.value;
+    if (cookiePlan === PRO_PLAN) return true;
+
+    const supabase = createSupabaseServerClient();
+    const { data } = await supabase
+      .from("users")
+      .select("plan_type")
+      .eq("id", userId)
+      .maybeSingle();
+
+    const plan: PlanType = data?.plan_type === PRO_PLAN ? PRO_PLAN : "free";
+    return isProPlan(plan);
+  } catch {
+    return false;
+  }
 }
 
 async function countDbRequests(userId: string): Promise<
@@ -50,7 +87,7 @@ async function countDbRequests(userId: string): Promise<
   | { ok: false; useFallback: false; error: AiRateLimitError }
 > {
   const supabase = createSupabaseServerClient();
-  const { start, end } = utcDayBounds();
+  const { start, end } = utcMonthBounds();
   const { count, error } = await supabase
     .from("ai_requests")
     .select("id", { count: "exact", head: true })
@@ -80,17 +117,20 @@ export async function checkAIRateLimit(userId: string): Promise<AiRateLimitResul
     return { ok: false, error: { code: "UNAUTHENTICATED" } };
   }
 
-  const counted = await countDbRequests(userId);
-  const used =
-    counted.ok ? counted.used : getCookieAiUsage(userId);
+  if (await resolveUserHasUnlimitedAi(userId)) {
+    return { ok: true, data: unlimitedStatus() };
+  }
 
-  if (used >= FREE_DAILY_LIMIT) {
-    const remaining = Math.max(0, FREE_DAILY_LIMIT - used);
+  const counted = await countDbRequests(userId);
+  const used = counted.ok ? counted.used : getCookieAiUsage(userId);
+
+  if (used >= FREE_MONTHLY_LIMIT) {
+    const remaining = Math.max(0, FREE_MONTHLY_LIMIT - used);
     return {
       ok: false,
       error: {
         code: "RATE_LIMITED",
-        limit: FREE_DAILY_LIMIT,
+        limit: FREE_MONTHLY_LIMIT,
         used,
         remaining,
       },
@@ -104,6 +144,10 @@ export async function incrementAIRequest(
   userId: string,
   requestType: string
 ): Promise<{ ok: true } | { ok: false; error: AiRateLimitError }> {
+  if (await resolveUserHasUnlimitedAi(userId)) {
+    return { ok: true };
+  }
+
   const supabase = createSupabaseServerClient();
   const { error } = await supabase.from("ai_requests").insert({
     user_id: userId,
@@ -123,8 +167,7 @@ export async function incrementAIRequest(
 }
 
 /**
- * If the system counts rows by day, there is nothing to reset.
- * This is kept for compatibility and future quota implementations.
+ * Kept for compatibility. Monthly limits reset automatically at UTC month boundaries.
  */
 export async function resetDailyCounter(
   _userId: string
@@ -164,12 +207,12 @@ export async function checkAiRateLimitFlexible(): Promise<AiRateLimitResult> {
   }
 
   const used = getCookieAiUsage(actorId);
-  if (used >= FREE_DAILY_LIMIT) {
+  if (used >= FREE_MONTHLY_LIMIT) {
     return {
       ok: false,
       error: {
         code: "RATE_LIMITED",
-        limit: FREE_DAILY_LIMIT,
+        limit: FREE_MONTHLY_LIMIT,
         used,
         remaining: 0,
       },

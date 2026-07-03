@@ -201,7 +201,7 @@
       },
       "errors": {
         "UNAUTHENTICATED": "AIアシスタントを使うにはログインしてください。",
-        "RATE_LIMITED": "本日の上限に達しました。明日もう一度お試しください。",
+        "RATE_LIMITED": "今月のAI利用上限に達しました。来月再度お試しください。",
         "MISSING_CONFIG": "AIが設定されていません。{details}",
         "TIMEOUT": "リクエストがタイムアウトしました。もう一度お試しください。",
         "INVALID_INPUT": "無効なメッセージです。もう一度お試しください。",
@@ -236,7 +236,7 @@
     },
     "errors": {
       "UNAUTHENTICATED": "AIツールを使うにはサインインしてください。",
-      "RATE_LIMITED": "本日の上限に達しました。明日お試しください。",
+      "RATE_LIMITED": "今月のAI利用上限に達しました。来月再度お試しください。",
       "MISSING_CONFIG": "設定が不足しています。{details}",
       "TIMEOUT": "AIリクエストがタイムアウトしました。再試行してください。",
       "INVALID_INPUT": "入力が無効です。トピックを確認して再試行してください。",
@@ -291,7 +291,7 @@
       "title": "問題が発生しました",
       "unauthenticated": "AIツールを使うにはサインインしてください。",
       "invalidInput": "入力が無効です。もう一度お試しください。",
-      "rateLimited": "本日の上限に達しました。明日お試しください。",
+      "rateLimited": "今月のAI利用上限に達しました。来月再度お試しください。",
       "invalidJson": "AIの応答を解析できませんでした。もう一度お試しください。",
       "generic": "予期しないエラーです。{details}"
     },
@@ -1688,7 +1688,7 @@
   "common": {
     "errors": {
       "UNAUTHENTICATED": "Please sign in to continue.",
-      "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+      "RATE_LIMITED": "今月のAI利用上限に達しました。来月再度お試しください。",
       "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
       "INVALID_INPUT": "Invalid input. Please check and try again.",
@@ -1817,7 +1817,7 @@
       "features": {
         "0": "Dashboard & workflow board",
         "1": "Basic calendar scheduling",
-        "2": "Limited AI requests per day",
+        "2": "月間AIリクエスト制限あり",
         "3": "Thumbnail analyzer",
         "4": "Ideas bank & script outlines"
       }

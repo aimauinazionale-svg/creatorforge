@@ -23,7 +23,12 @@ import { ActionErrorAlert } from "@/components/errors/ActionErrorAlert";
 export function AiAssistantTabs() {
   const t = useTranslations("ai");
   const locale = useLocale();
-  const [rateLimit, setRateLimit] = React.useState<{ used: number; limit: number; remaining: number } | null>(null);
+  const [rateLimit, setRateLimit] = React.useState<{
+    used: number;
+    limit: number;
+    remaining: number;
+    nearLimit?: boolean;
+  } | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [pending, startTransition] = React.useTransition();
 
@@ -38,7 +43,7 @@ export function AiAssistantTabs() {
 
   React.useEffect(() => {
     void getAiRateLimitAction().then((res) => {
-      if (res.ok) setRateLimit({ used: res.data.used, limit: res.data.limit, remaining: res.data.remaining });
+      if (res.ok) setRateLimit(res.data);
     });
   }, []);
 
@@ -51,7 +56,7 @@ export function AiAssistantTabs() {
 
   return (
     <div className="space-y-4">
-      {rateLimit?.remaining !== undefined && rateLimit.remaining <= 2 ? (
+      {rateLimit?.nearLimit ? (
         <Card className="border-amber-500/30 bg-amber-500/5">
           <CardContent className="p-4 text-sm">
             {t("rateLimit.nearDescription", {
