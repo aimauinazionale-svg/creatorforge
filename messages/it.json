@@ -2037,61 +2037,63 @@
   },
   "pricing": {
     "meta": {
-      "title": "Pricing",
-      "description": "Simple pricing for Sparkroll — start free, upgrade to Pro when you need unlimited AI, competitor tracking, and advanced SEO tools."
+      "title": "Prezzi",
+      "description": "Prezzi semplici per Sparkroll — inizia gratis, passa a Pro quando ti servono AI illimitata, monitoraggio competitor e strumenti SEO avanzati."
     },
-    "title": "Pricing that stays simple",
-    "subtitle": "Start free. Upgrade when you need more power for your channel.",
-    "highlight": "Most popular",
-    "finePrint": "You can start on the Free plan and upgrade anytime. Cancel from your billing portal.",
+    "title": "Prezzi chiari e semplici",
+    "subtitle": "Inizia gratis. Passa al piano superiore quando ti serve più potenza per il tuo canale.",
+    "highlight": "Più popolare",
+    "finePrint": "Puoi iniziare con il piano Free e passare al superiore in qualsiasi momento. Puoi annullare dal portale di fatturazione.",
     "free": {
       "label": "Free",
-      "price": "$0",
-      "description": "Essentials to plan and publish consistently.",
-      "cta": "Start free",
+      "price": "0 €",
+      "description": "L'essenziale per pianificare e pubblicare con costanza.",
+      "cta": "Inizia gratis",
       "features": {
-        "0": "Dashboard & workflow board",
-        "1": "Basic calendar scheduling",
+        "0": "Dashboard e board workflow",
+        "1": "Pianificazione calendario base",
         "2": "Richieste AI limitate al mese",
-        "3": "Thumbnail analyzer",
-        "4": "Ideas bank & script outlines"
+        "3": "Analizzatore thumbnail",
+        "4": "Banca idee e scalette script"
       }
     },
     "pro": {
       "label": "Pro",
-      "price": "€9,99/mo",
-      "description": "Unlimited AI, competitor tracking, and advanced SEO Lab.",
+      "price": "€9,99/mese",
+      "description": "AI illimitata, monitoraggio competitor e SEO Lab avanzato.",
       "features": {
-        "0": "Unlimited AI Assistant",
-        "1": "Competitor tracking & niche discovery",
-        "2": "Advanced SEO Lab & video analyzer",
-        "3": "Higher rate limits across tools",
-        "4": "Priority feature updates"
+        "0": "AI Assistant illimitato",
+        "1": "Monitoraggio competitor e scoperta nicchie",
+        "2": "SEO Lab avanzato e analizzatore video",
+        "3": "Limiti più alti su tutti gli strumenti",
+        "4": "Aggiornamenti funzionalità prioritari"
       }
     }
   },
   "billing": {
-    "title": "Billing",
-    "subtitle": "Manage your Sparkroll subscription.",
-    "currentPlan": "Current plan",
+    "title": "Fatturazione",
+    "subtitle": "Gestisci il tuo abbonamento Sparkroll.",
+    "currentPlan": "Piano attuale",
     "planFree": "Free",
     "planPro": "Pro",
-    "planFreeDescription": "You are on the Free plan. Upgrade to unlock Pro features.",
-    "planProDescription": "You have full access to Pro features.",
-    "statusLabel": "Subscription status",
-    "upgrade": "Upgrade to Pro",
-    "upgradeLoading": "Opening checkout…",
-    "upgradeError": "Could not start checkout. Please try again.",
-    "manage": "Manage subscription",
-    "manageLoading": "Opening portal…",
-    "manageError": "Could not open the billing portal.",
-    "loginRequired": "Sign in to upgrade your plan.",
-    "includedTitle": "What's included in your plan",
+    "planFreeDescription": "Sei sul piano Free. Passa a Pro per sbloccare tutte le funzionalità.",
+    "planProDescription": "Hai accesso completo alle funzionalità Pro.",
+    "statusLabel": "Stato abbonamento",
+    "upgrade": "Passa a Pro",
+    "upgradeLoading": "Apertura checkout…",
+    "upgradeError": "Impossibile avviare il checkout. Riprova.",
+    "notConfigured": "La fatturazione non è ancora configurata. Riprova più tardi o contatta l'assistenza.",
+    "manage": "Gestisci abbonamento",
+    "manageLoading": "Apertura portale…",
+    "manageError": "Impossibile aprire il portale di fatturazione.",
+    "manageNotPro": "Serve un abbonamento Pro attivo per gestire la fatturazione.",
+    "loginRequired": "Accedi per passare al piano superiore.",
+    "includedTitle": "Cosa include il tuo piano",
     "included": {
-      "0": "Pro unlocks AI Assistant, Competitors, and SEO Lab.",
-      "1": "Manage payment method and invoices in the LemonSqueezy portal.",
-      "2": "Upgrades apply immediately after checkout.",
-      "3": "Downgrades take effect when your subscription ends."
+      "0": "Pro sblocca AI Assistant, Competitor e SEO Lab.",
+      "1": "Gestisci metodo di pagamento e fatture nel portale LemonSqueezy.",
+      "2": "L'upgrade si applica subito dopo il checkout.",
+      "3": "Il downgrade ha effetto alla scadenza dell'abbonamento."
     }
   },
   "register": {

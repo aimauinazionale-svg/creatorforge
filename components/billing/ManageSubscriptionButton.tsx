@@ -25,10 +25,13 @@ export function ManageSubscriptionButton({ className }: ManageSubscriptionButton
       const result = await getCustomerPortalAction();
 
       if (!result.ok) {
-        toast({
-          title: result.error.details ?? t("manageError"),
-          variant: "destructive",
-        });
+        const message =
+          result.error.code === "MISSING_CONFIG"
+            ? t("notConfigured")
+            : result.error.code === "NOT_PRO"
+              ? t("manageNotPro")
+              : t("manageError");
+        toast({ title: message, variant: "destructive" });
         return;
       }
 

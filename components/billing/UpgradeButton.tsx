@@ -34,7 +34,9 @@ export function UpgradeButton({
         const message =
           result.error.code === "UNAUTHENTICATED"
             ? t("loginRequired")
-            : result.error.details ?? t("upgradeError");
+            : result.error.code === "MISSING_CONFIG"
+              ? t("notConfigured")
+              : t("upgradeError");
         toast({ title: message, variant: "destructive" });
         return;
       }

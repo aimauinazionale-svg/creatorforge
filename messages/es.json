@@ -2043,9 +2043,11 @@
     "upgrade": "Upgrade to Pro",
     "upgradeLoading": "Opening checkout…",
     "upgradeError": "Could not start checkout. Please try again.",
+    "notConfigured": "Billing is not configured yet. Please try again later or contact support.",
     "manage": "Manage subscription",
     "manageLoading": "Opening portal…",
     "manageError": "Could not open the billing portal.",
+    "manageNotPro": "You need an active Pro subscription to manage billing.",
     "loginRequired": "Sign in to upgrade your plan.",
     "includedTitle": "What's included in your plan",
     "included": {
