@@ -26,7 +26,7 @@ export default async function OnboardingPage({ params }: { params: { locale: str
 
   return (
 
-    <div className="min-h-dvh bg-gradient-to-b from-background via-background to-violet-500/5 px-4 py-8">
+    <div className="min-h-dvh bg-gradient-to-b from-background via-background to-rose-500/5 px-4 py-8">
 
       <OnboardingWizard initialStep={onboarding.step} />
 

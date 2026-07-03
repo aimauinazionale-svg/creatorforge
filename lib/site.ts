@@ -52,7 +52,8 @@ export function getSiteUrl(): string {
 export const SITE_NAME = "Sparkroll";
 
 export const BRAND_COLORS = {
-  violet: "#7c3aed",
-  fuchsia: "#d946ef",
-  amber: "#fbbf24",
+  orange: "#F97316",
+  red: "#E11D48",
+  magenta: "#EC4899",
+  navy: "#0a0a12",
 } as const;

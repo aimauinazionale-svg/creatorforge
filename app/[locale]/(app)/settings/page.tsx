@@ -43,8 +43,8 @@ export default async function SettingsPage() {
 
       <Card>
         <CardContent className="flex items-center gap-4 p-6">
-          <div className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-violet-500/15 to-fuchsia-500/15">
-            <User className="h-6 w-6 text-violet-600 dark:text-violet-400" />
+          <div className="grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-orange-500/15 via-rose-500/15 to-pink-500/15">
+            <User className="h-6 w-6 text-rose-600 dark:text-pink-400" />
           </div>
           <div>
             <p className="font-medium">{user?.name ?? t("profileFallback")}</p>

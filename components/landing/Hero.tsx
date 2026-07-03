@@ -14,9 +14,9 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-32 left-1/2 h-96 w-[70rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-violet-500/20 via-fuchsia-500/15 to-transparent blur-3xl" />
-        <div className="absolute -bottom-40 right-[-10rem] h-80 w-[52rem] rounded-full bg-gradient-to-tl from-amber-400/10 via-fuchsia-500/10 to-transparent blur-3xl" />
-        <div className="absolute left-[-8rem] top-1/3 h-64 w-64 rounded-full bg-violet-600/10 blur-3xl" />
+        <div className="absolute -top-32 left-1/2 h-96 w-[70rem] -translate-x-1/2 rounded-full bg-gradient-to-br from-orange-500/20 via-rose-500/15 to-transparent blur-3xl" />
+        <div className="absolute -bottom-40 right-[-10rem] h-80 w-[52rem] rounded-full bg-gradient-to-tl from-orange-400/10 via-pink-500/10 to-transparent blur-3xl" />
+        <div className="absolute left-[-8rem] top-1/3 h-64 w-64 rounded-full bg-rose-600/10 blur-3xl" />
       </div>
 
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">

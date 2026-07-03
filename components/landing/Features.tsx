@@ -50,7 +50,7 @@ export function Features() {
                 )}
               >
                 <div className="flex items-start gap-4">
-                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-violet-500/15 to-fuchsia-500/15 text-violet-600 dark:text-violet-400">
+                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-orange-500/15 via-rose-500/15 to-pink-500/15 text-rose-600 dark:text-pink-400">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div className="min-w-0">

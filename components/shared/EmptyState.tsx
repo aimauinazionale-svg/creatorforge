@@ -21,7 +21,7 @@ export function EmptyState({ icon: Icon, title, description, action, className }
         className
       )}
     >
-      <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-violet-500/15 to-fuchsia-500/15 text-violet-600 dark:text-violet-400">
+      <div className="mb-4 grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-orange-500/15 via-rose-500/15 to-pink-500/15 text-rose-600 dark:text-pink-400">
         <Icon className="h-7 w-7" aria-hidden="true" />
       </div>
       <h3 className="text-base font-semibold tracking-tight">{title}</h3>

@@ -480,11 +480,11 @@ export function CompetitorsTracker() {
 
       {discovering ? (
 
-        <Card className="border-violet-500/20 bg-violet-500/5">
+        <Card className="border-rose-500/20 bg-rose-500/5">
 
           <CardContent className="flex items-center gap-3 p-4 text-sm text-muted-foreground">
 
-            <Loader2 className="h-4 w-4 animate-spin text-violet-500" aria-hidden="true" />
+            <Loader2 className="h-4 w-4 animate-spin text-rose-500" aria-hidden="true" />
 
             <span>{t("discovery.analyzing")}</span>
 
@@ -530,7 +530,7 @@ export function CompetitorsTracker() {
 
       {showNicheForm && channelConnected && items.length === 0 && !discovering ? (
 
-        <Card className="border-violet-500/20 bg-violet-500/5">
+        <Card className="border-rose-500/20 bg-rose-500/5">
 
           <CardHeader>
 
@@ -698,7 +698,7 @@ export function CompetitorsTracker() {
 
       {hints.length > 0 ? (
 
-        <Card className="border-violet-500/20 bg-violet-500/5">
+        <Card className="border-rose-500/20 bg-rose-500/5">
 
           <CardHeader>
 

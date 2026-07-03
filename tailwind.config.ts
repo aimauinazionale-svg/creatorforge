@@ -50,6 +50,16 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: {
+          orange: "#F97316",
+          red: "#E11D48",
+          magenta: "#EC4899",
+          navy: "#0a0a12",
+        },
+      },
+      backgroundImage: {
+        "brand-gradient": "linear-gradient(135deg, #F97316 0%, #E11D48 50%, #EC4899 100%)",
+        "brand-gradient-h": "linear-gradient(90deg, #F97316 0%, #E11D48 50%, #EC4899 100%)",
       },
     },
   },
@@ -57,4 +67,3 @@ const config: Config = {
 };
 
 export default config;
-

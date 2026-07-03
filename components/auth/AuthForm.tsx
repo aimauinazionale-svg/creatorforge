@@ -147,7 +147,7 @@ export function AuthForm({ mode = "login" }: AuthFormProps) {
           {isRegister ? t("register.hasAccount") : t("register.noAccount")}{" "}
           <Link
             href={isRegister ? "/login" : "/register"}
-            className="font-medium text-violet-600 hover:underline dark:text-violet-400"
+            className="font-medium text-rose-600 hover:underline dark:text-pink-400"
           >
             {isRegister ? t("register.signInLink") : t("register.signUpLink")}
           </Link>

@@ -27,8 +27,8 @@ export function StatsCard({ title, value, icon: Icon, trend, className }: StatsC
     <Card className={cn("h-full transition-all duration-200 hover:shadow-md", className)}>
       <CardHeader className="flex-row items-center justify-between gap-4 space-y-0 pb-2">
         <CardTitle className="text-sm font-medium text-muted-foreground">{title}</CardTitle>
-        <div className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-violet-500/10 to-fuchsia-500/10">
-          <Icon className="h-4 w-4 text-violet-600 dark:text-violet-400" aria-hidden="true" />
+        <div className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-orange-500/10 via-rose-500/10 to-pink-500/10">
+          <Icon className="h-4 w-4 text-rose-600 dark:text-pink-400" aria-hidden="true" />
         </div>
       </CardHeader>
       <CardContent className="space-y-2">

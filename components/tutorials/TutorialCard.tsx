@@ -15,7 +15,7 @@ export function TutorialCard({ tutorial }: TutorialCardProps) {
   const t = useTranslations("tutorials");
 
   return (
-    <Card className="overflow-hidden border-border/60 bg-card/50 transition-colors hover:border-violet-500/30">
+    <Card className="overflow-hidden border-border/60 bg-card/50 transition-colors hover:border-rose-500/30">
       <CardHeader className="space-y-1 p-0">
         <TutorialVideoEmbed
           youtubeVideoId={tutorial.youtubeVideoId}
@@ -25,7 +25,7 @@ export function TutorialCard({ tutorial }: TutorialCardProps) {
       <CardContent className="space-y-2 p-4">
         <div className="flex items-start justify-between gap-2">
           <CardTitle className="text-base leading-snug">{t(`items.${tutorial.id}.title`)}</CardTitle>
-          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-violet-500/10 px-2 py-0.5 text-xs text-violet-600 dark:text-violet-400">
+          <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-rose-500/10 px-2 py-0.5 text-xs text-rose-600 dark:text-pink-400">
             <Clock className="h-3 w-3" aria-hidden="true" />
             {t("duration", { minutes: tutorial.durationMinutes })}
           </span>

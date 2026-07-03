@@ -64,19 +64,19 @@ function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
               "group relative flex min-h-11 items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200",
               "hover:bg-accent hover:text-accent-foreground",
               active
-                ? "bg-gradient-to-r from-violet-500/10 to-fuchsia-500/10 text-foreground shadow-sm"
+                ? "bg-gradient-to-r from-orange-500/10 via-rose-500/10 to-pink-500/10 text-foreground shadow-sm"
                 : "text-muted-foreground"
             )}
             aria-current={active ? "page" : undefined}
           >
             {active ? (
               <span
-                className="absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-gradient-to-b from-violet-500 to-fuchsia-500"
+                className="absolute inset-y-1.5 left-0 w-0.5 rounded-full bg-gradient-to-b from-orange-500 via-rose-500 to-pink-500"
                 aria-hidden="true"
               />
             ) : null}
             <Icon
-              className={cn("h-4 w-4 shrink-0", active && "text-violet-600 dark:text-violet-400")}
+              className={cn("h-4 w-4 shrink-0", active && "text-rose-600 dark:text-pink-400")}
               aria-hidden={true}
             />
             <span className="truncate">{t(item.labelKey)}</span>

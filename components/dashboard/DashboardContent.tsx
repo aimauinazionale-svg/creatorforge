@@ -196,10 +196,10 @@ export function DashboardContent() {
         <StatsCard title={t("stats.subscribers")} value={formatNumber(channel.subscriberCount)} icon={Users} />
         <StatsCard title={t("stats.views")} value={formatNumber(channel.viewCount)} icon={Eye} />
         <StatsCard title={t("stats.videos")} value={formatNumber(channel.videoCount)} icon={Video} />
-        <Card className="h-full border-violet-500/20 bg-violet-500/5">
+        <Card className="h-full border-rose-500/20 bg-rose-500/5">
           <CardHeader className="pb-2">
             <CardTitle className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-              <Heart className="h-4 w-4 text-violet-500" />
+              <Heart className="h-4 w-4 text-rose-500" />
               {t("channelHealth.title")}
             </CardTitle>
           </CardHeader>
@@ -265,7 +265,7 @@ export function DashboardContent() {
                     href={a.href}
                     className="flex items-center gap-3 rounded-lg border border-border/60 p-3 transition-colors hover:bg-muted/50"
                   >
-                    <Icon className="h-4 w-4 text-violet-500" />
+                    <Icon className="h-4 w-4 text-rose-500" />
                     <div className="min-w-0 flex-1">
                       <p className="text-sm font-medium">{a.title}</p>
                       <p className="text-xs text-muted-foreground">{a.desc}</p>

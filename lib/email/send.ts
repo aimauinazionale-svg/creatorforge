@@ -33,7 +33,7 @@ export function renderWeeklyDigestHtml(stats: {
 }): string {
   return `
     <div style="font-family:sans-serif;max-width:560px;margin:0 auto">
-      <h1 style="color:#7c3aed">${SITE_NAME} Weekly Digest</h1>
+      <h1 style="color:#E11D48">${SITE_NAME} Weekly Digest</h1>
       <p>Here's your channel snapshot:</p>
       <ul>
         <li><strong>Subscribers:</strong> ${stats.subscribers.toLocaleString()}</li>

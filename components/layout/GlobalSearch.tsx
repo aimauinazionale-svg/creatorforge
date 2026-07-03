@@ -65,7 +65,7 @@ export function GlobalSearch({ className }: { className?: string }) {
           onFocus={() => setOpen(true)}
           placeholder={t("placeholder")}
           aria-label={t("aria")}
-          className="h-9 rounded-full border-border/60 bg-muted/30 pl-8 transition-all duration-200 focus-visible:bg-background focus-visible:ring-violet-500/30"
+          className="h-9 rounded-full border-border/60 bg-muted/30 pl-8 transition-all duration-200 focus-visible:bg-background focus-visible:ring-rose-500/30"
         />
         {loading ? (
           <Loader2

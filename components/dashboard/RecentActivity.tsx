@@ -19,8 +19,8 @@ export type RecentActivityProps = {
 const typeColors: Record<string, string> = {
   scheduled: "bg-sky-500",
   idea: "bg-amber-500",
-  workflow: "bg-violet-500",
-  ai: "bg-fuchsia-500",
+  workflow: "bg-rose-500",
+  ai: "bg-pink-500",
 };
 
 export function RecentActivity({ items, loading }: RecentActivityProps) {
@@ -30,7 +30,7 @@ export function RecentActivity({ items, loading }: RecentActivityProps) {
     <Card>
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-base">
-          <Activity className="h-4 w-4 text-violet-600 dark:text-violet-400" aria-hidden="true" />
+          <Activity className="h-4 w-4 text-rose-600 dark:text-pink-400" aria-hidden="true" />
           {t("title")}
         </CardTitle>
       </CardHeader>
