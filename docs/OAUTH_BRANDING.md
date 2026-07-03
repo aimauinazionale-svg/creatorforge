@@ -28,7 +28,7 @@ Google OAuth shows the Supabase project hostname (`*.supabase.co`) during sign-i
 
 ## Code-side mitigations (already applied)
 
-- `getSiteUrl()` resolves `NEXT_PUBLIC_SITE_URL`, then `VERCEL_URL`, then localhost—so production redirects never fall back to `localhost:3000` on Vercel.
+- `getSiteUrl()` prefers `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_APP_URL`, but **ignores localhost values on Vercel/production** and falls back to `VERCEL_PROJECT_PRODUCTION_URL` or `VERCEL_URL`.
 - OAuth `redirectTo` points to `https://creatorforge-xi.vercel.app/auth/callback?next=/{locale}/dashboard`.
 
 ## What Supabase `queryParams` cannot change
