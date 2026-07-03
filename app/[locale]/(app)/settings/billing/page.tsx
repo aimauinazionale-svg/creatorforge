@@ -4,6 +4,7 @@ import { Crown } from "lucide-react";
 import { getUserSubscriptionStatus } from "@/app/actions/billing";
 import { CheckoutSuccessSync } from "@/components/billing/CheckoutSuccessSync";
 import { ManageSubscriptionButton } from "@/components/billing/ManageSubscriptionButton";
+import { SyncSubscriptionButton } from "@/components/billing/SyncSubscriptionButton";
 import { UpgradeButton } from "@/components/billing/UpgradeButton";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { Badge } from "@/components/ui/badge";
@@ -51,6 +52,7 @@ export default async function BillingSettingsPage() {
 
           <div className="flex flex-wrap gap-3">
             {isPro ? <ManageSubscriptionButton /> : <UpgradeButton />}
+            {!isPro ? <SyncSubscriptionButton /> : null}
           </div>
         </CardContent>
       </Card>

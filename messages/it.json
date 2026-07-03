@@ -2092,6 +2092,10 @@
     "checkoutSuccess": "Benvenuto in Pro! Il tuo abbonamento è attivo.",
     "checkoutSyncPending": "Pagamento ricevuto — l'attivazione potrebbe richiedere un momento.",
     "checkoutSyncHint": "Aggiorna questa pagina tra un minuto, o contatta il supporto se Pro non compare.",
+    "syncPlan": "Aggiorna abbonamento",
+    "syncLoading": "Verifica abbonamento…",
+    "syncError": "Impossibile aggiornare l'abbonamento. Riprova più tardi.",
+    "syncNoSubscription": "Nessun abbonamento Pro attivo trovato per il tuo account.",
     "includedTitle": "Cosa include il tuo piano",
     "included": {
       "0": "Pro sblocca AI Assistant, Competitor e SEO Lab.",

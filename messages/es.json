@@ -2053,6 +2053,10 @@
     "checkoutSuccess": "Welcome to Pro! Your subscription is active.",
     "checkoutSyncPending": "Payment received — activation may take a moment.",
     "checkoutSyncHint": "Refresh this page in a minute, or contact support if Pro does not appear.",
+    "syncPlan": "Refresh subscription",
+    "syncLoading": "Checking subscription…",
+    "syncError": "Could not refresh subscription. Try again later.",
+    "syncNoSubscription": "No active Pro subscription found for your account.",
     "includedTitle": "What's included in your plan",
     "included": {
       "0": "Pro unlocks AI Assistant, Competitors, and SEO Lab.",
