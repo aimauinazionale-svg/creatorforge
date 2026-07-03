@@ -53,6 +53,10 @@ supabase/.branches
 *.swp
 *.swo
 
+# Playwright video temp + saved auth (never commit)
+public/video-exports/.tmp/
+.playwright-auth-state.json
+
 .vercel
 .env
 .env.local

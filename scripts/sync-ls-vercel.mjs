@@ -3,6 +3,7 @@ import { spawnSync } from "node:child_process";
 
 const content = fs.readFileSync(".env.local", "utf8");
 const keys = [
+  "SUPABASE_SERVICE_ROLE_KEY",
   "LEMONSQUEEZY_API_KEY",
   "LEMONSQUEEZY_STORE_ID",
   "LEMONSQUEEZY_VARIANT_ID",
@@ -61,6 +62,18 @@ function syncVar(key, value, target) {
   };
 }
 
+
+const LENGTH_HINTS = {
+  SUPABASE_SERVICE_ROLE_KEY: 200,
+  LEMONSQUEEZY_WEBHOOK_SECRET: 32,
+};
+
+for (const [key, minLen] of Object.entries(LENGTH_HINTS)) {
+  const len = map[key]?.length ?? 0;
+  if (len > 0 && len < minLen) {
+    console.warn(`WARN: ${key} local_len=${len} (expected ~${minLen}+ before webhooks can work reliably)`);
+  }
+}
 for (const key of keys) {
   const value = map[key];
   if (!value) {

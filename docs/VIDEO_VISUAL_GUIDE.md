@@ -2,13 +2,76 @@
 
 Materiali catturati dalla produzione **https://sparkroll-maui-org.vercel.app** per accompagnare gli script in `docs/VIDEO_SCRIPTS.md`.
 
-**Risoluzione screenshot:** 1920×1080 (ideale per OBS a 1080p)  
-**Percorso asset:** `public/video-assets/`  
-**Slideshow demo:** `public/video-demos/demo-01.html` (video 1 — Benvenuto)
+**Risoluzione:** 1920×1080  
+**Screenshot statici:** `public/video-assets/`  
+**MP4 silenziosi (doppiaggio):** `public/video-exports/`  
+**Slideshow demo:** `public/video-demos/demo-XX.html`
 
 ---
 
-## Come registrare con OBS
+## MP4 automatici (Playwright)
+
+Registrazioni silenti pronte per il doppiaggio in CapCut:
+
+| Video | File MP4 | Contenuto |
+|-------|----------|-----------|
+| 1 Benvenuto | `public/video-exports/video-01-welcome.mp4` | Landing `/it` — hero, feature, come funziona, CTA |
+| 2 Account | `public/video-exports/video-02-account.mp4` | Login + register — Google, magic link |
+| 10 Pro | `public/video-exports/video-10-pricing.mp4` | Prezzi — Free vs Pro, pulsante upgrade |
+| 13 Tutorial | `public/video-exports/video-13-tutorials.mp4` | Hub tutorial — categorie, filtro, card |
+
+**Placeholder login (area protetta):**
+
+| Video | File MP4 | Note |
+|-------|----------|------|
+| 3 AI | `public/video-exports/video-03-ai-assistant-login-gate.mp4` | Gate login (senza auth) |
+| 8 Dashboard | `public/video-exports/video-08-dashboard-login-gate.mp4` | Gate login (senza auth) |
+
+**Registrazioni autenticate (`--auth`):**
+
+| Video | File MP4 | Contenuto |
+|-------|----------|-----------|
+| 3 AI | `public/video-exports/video-03-ai-assistant.mp4` | Chat, chip prompt, risposta AI, Copia |
+| 4 Idee | `public/video-exports/video-04-ideas-generator.mp4` | Banco idee, nuova idea |
+| 5 SEO Lab | `public/video-exports/video-05-seo-lab-basics.mp4` | Keyword seme, analisi |
+| 8 Dashboard | `public/video-exports/video-08-dashboard.mp4` | Metriche, azioni rapide, focus, report |
+
+Rigenerare tutti gli MP4 pubblici:
+
+```bash
+npx playwright install chromium
+npm run video:record
+```
+
+Registrare aree protette (credenziali in `.env.local`, sessione in `.playwright-auth-state.json` — entrambi gitignored):
+
+```bash
+npx playwright install chromium
+# Prima volta o sessione scaduta:
+npm run video:save-auth
+# Registra video autenticati:
+npm run video:record:auth
+# Solo alcuni video:
+node scripts/record-tutorial-videos.mjs --auth --only=03,08
+```
+
+Richiede **ffmpeg** sul PATH oppure `ffmpeg-static` (devDependency npm) per convertire WebM → MP4 senza traccia audio. Dettagli area protetta: `public/video-exports/README-login-required.md`.
+
+---
+
+## Doppiaggio con CapCut (workflow consigliato)
+
+1. **Importa** l’MP4 silenzioso da `public/video-exports/` in CapCut (desktop o web).
+2. **Aggiungi traccia audio** — registra la voce seguendo `docs/VIDEO_SCRIPTS.md` (usa le pause ~2,5 s tra schermate).
+3. **Sincronizza** — taglia o allunga clip video dove serve; le pause sono volutamente lunghe per il dub.
+4. **Sottotitoli** (opzionale) — CapCut → Sottotitoli automatici → correggi in italiano.
+5. **Export** — 1080p, H.264, 30 fps; carica su YouTube e collega l’ID in `lib/tutorials.ts`.
+
+**Alternativa live:** OBS su produzione seguendo le sezioni 🔴 sotto, oppure registra `public/video-demos/demo-XX.html` in fullscreen.
+
+---
+
+## Come registrare con OBS (live)
 
 1. **Sorgente browser** — Aggiungi «Cattura finestra» o «Browser» puntando a `sparkroll-maui-org.vercel.app/it` (meglio registrazione live che slideshow statiche).
 2. **Secondo monitor opzionale** — Apri questa guida o `demo-01.html` sul monitor secondario come scaletta visiva.
@@ -18,7 +81,7 @@ Materiali catturati dalla produzione **https://sparkroll-maui-org.vercel.app** p
 Per rigenerare gli screenshot pubblici:
 
 ```bash
-node scripts/capture-video-screenshots.mjs
+npm run video:capture
 ```
 
 ---
@@ -150,6 +213,18 @@ node scripts/capture-video-screenshots.mjs
 
 ```
 public/
+├── video-exports/              (MP4 silenziosi Playwright)
+│   ├── video-01-welcome.mp4
+│   ├── video-02-account.mp4
+│   ├── video-03-ai-assistant-login-gate.mp4
+│   ├── video-03-ai-assistant.mp4          (--auth)
+│   ├── video-04-ideas-generator.mp4       (--auth)
+│   ├── video-05-seo-lab-basics.mp4        (--auth)
+│   ├── video-08-dashboard-login-gate.mp4
+│   ├── video-08-dashboard.mp4             (--auth)
+│   ├── video-10-pricing.mp4
+│   ├── video-13-tutorials.mp4
+│   └── README-login-required.md
 ├── video-assets/
 │   ├── video-01-welcome/       (5 screenshot)
 │   ├── video-02-account/       (7 screenshot)
@@ -158,9 +233,12 @@ public/
 │   ├── video-10-upgrade-pro/   (4 screenshot + live)
 │   └── video-13-tutorials/     (3 screenshot)
 ├── video-demos/
-│   └── demo-01.html            (slideshow video 1)
+│   ├── demo-01.html            (slideshow video 1)
+│   ├── demo-03.html            (slideshow video 3 — auto-advance)
+│   └── demo-08.html            (slideshow video 8 — auto-advance)
 scripts/
-└── capture-video-screenshots.mjs
+├── capture-video-screenshots.mjs
+└── record-tutorial-videos.mjs
 ```
 
 **Totale screenshot statici:** 21

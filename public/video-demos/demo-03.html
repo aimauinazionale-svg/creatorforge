@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sparkroll — Demo Video 3: Assistente AI</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0f0f12;
+      color: #f4f4f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    h1 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: #a78bfa; }
+    .meta { font-size: 0.875rem; color: #a1a1aa; margin-bottom: 1.5rem; text-align: center; }
+    .slide-wrap {
+      position: relative;
+      max-width: 1280px;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      border: 1px solid #27272a;
+    }
+    .slide-wrap img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; background: #18181b; }
+    .caption { padding: 1rem 1.25rem; background: #18181b; border-top: 1px solid #27272a; }
+    .caption strong { color: #e4e4e7; }
+    .caption p { margin-top: 0.35rem; font-size: 0.9rem; color: #a1a1aa; line-height: 1.5; }
+    .controls { display: flex; gap: 0.75rem; margin-top: 1.25rem; align-items: center; flex-wrap: wrap; justify-content: center; }
+    button { background: #E11D48; color: white; border: none; padding: 0.6rem 1.25rem; border-radius: 8px; font-size: 0.95rem; cursor: pointer; font-weight: 500; }
+    button:hover { background: #6d28d9; }
+    button.secondary { background: #27272a; color: #e4e4e7; }
+    .progress { font-size: 0.875rem; color: #71717a; }
+    .hint { margin-top: 1rem; font-size: 0.8rem; color: #52525b; max-width: 640px; text-align: center; }
+    .auto { color: #22c55e; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <h1>Video 3 — Assistente AI</h1>
+  <p class="meta">Auto-avanzamento ogni <span id="sec">8</span>s · <span class="auto" id="autoLabel">Auto ON</span></p>
+
+  <div class="slide-wrap">
+    <img id="slide" src="../video-assets/video-03-ai-assistant/00-login-required-ai.png" alt="Slide corrente" />
+    <div class="caption">
+      <strong id="title">Area riservata</strong>
+      <p id="desc">Registra manualmente dopo il login.</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button type="button" class="secondary" id="prev">← Precedente</button>
+    <span class="progress" id="progress">1 / 4</span>
+    <button type="button" id="next">Successiva →</button>
+    <button type="button" class="secondary" id="toggleAuto">Pausa auto</button>
+    <button type="button" class="secondary" id="fs">Fullscreen</button>
+  </div>
+  <p class="hint">Per chat e risposte AI reali, registra live su /it/ai-assistant con account loggato.</p>
+
+  <script>
+    const INTERVAL_MS = 8000;
+    const slides = [
+      { src: '../video-assets/video-03-ai-assistant/00-login-required-ai.png', title: 'Login richiesto', desc: '«Per usare l\'Assistente AI serve un account.» ~8 s.', duration: 8000 },
+      { src: '../video-assets/video-03-ai-assistant/00-login-required-ai.png', title: 'Apri /it/ai-assistant', desc: 'Dopo login: messaggio benvenuto e chip prompt suggeriti. ~10 s (registra live).', duration: 10000 },
+      { src: '../video-assets/video-03-ai-assistant/00-login-required-ai.png', title: 'Invia un messaggio', desc: 'Mostra «Sto pensando…» → risposta AI. ~30 s (registra live).', duration: 30000 },
+      { src: '../video-assets/video-03-ai-assistant/00-login-required-ai.png', title: 'Copia e Cancella chat', desc: 'Pulsante Copia + menu Cancella chat. ~10 s (registra live).', duration: 10000 },
+    ];
+    let i = 0, auto = true, timer;
+    const img = document.getElementById('slide'), titleEl = document.getElementById('title'), descEl = document.getElementById('desc'), progressEl = document.getElementById('progress');
+    function render() {
+      const s = slides[i]; img.src = s.src; titleEl.textContent = s.title; descEl.textContent = s.desc;
+      progressEl.textContent = `${i + 1} / ${slides.length}`; document.getElementById('sec').textContent = (s.duration / 1000).toFixed(0);
+      schedule();
+    }
+    function schedule() { clearTimeout(timer); if (!auto) return; timer = setTimeout(() => { i = (i + 1) % slides.length; render(); }, slides[i].duration); }
+    document.getElementById('next').onclick = () => { i = (i + 1) % slides.length; render(); };
+    document.getElementById('prev').onclick = () => { i = (i - 1 + slides.length) % slides.length; render(); };
+    document.getElementById('toggleAuto').onclick = () => { auto = !auto; document.getElementById('autoLabel').textContent = auto ? 'Auto ON' : 'Auto OFF'; schedule(); };
+    document.getElementById('fs').onclick = () => document.documentElement.requestFullscreen?.();
+    render();
+  </script>
+</body>
+</html>
