@@ -70,13 +70,59 @@ if (userErr) {
   process.exit(1);
 }
 
-if (!userRow) {
-  console.error(`No user found for email: ${email}`);
-  process.exit(1);
+/** @type {{ id: string; email: string; plan_type: string; subscription_status: string | null } | null} */
+let resolvedUser = userRow;
+
+if (!resolvedUser) {
+  console.log(`No public.users row for ${email} — checking auth.users...`);
+  let page = 1;
+  /** @type {{ id: string; email: string | undefined } | undefined} */
+  let authMatch;
+
+  while (page <= 10) {
+    const { data, error } = await admin.auth.admin.listUsers({ page, perPage: 200 });
+    if (error) {
+      console.error("Auth list failed:", error.message);
+      process.exit(1);
+    }
+    if (!data.users.length) break;
+
+    authMatch = data.users.find((u) => u.email?.trim().toLowerCase() === email);
+    if (authMatch) break;
+    if (data.users.length < 200) break;
+    page += 1;
+  }
+
+  if (!authMatch) {
+    console.error(`No auth user found for email: ${email}`);
+    process.exit(1);
+  }
+
+  const { error: insertErr } = await admin.from("users").upsert(
+    {
+      id: authMatch.id,
+      email: authMatch.email ?? email,
+      plan_type: "free",
+    },
+    { onConflict: "id", ignoreDuplicates: true }
+  );
+
+  if (insertErr) {
+    console.error("Failed to create public.users row:", insertErr.message);
+    process.exit(1);
+  }
+
+  resolvedUser = {
+    id: authMatch.id,
+    email: authMatch.email ?? email,
+    plan_type: "free",
+    subscription_status: null,
+  };
+  console.log(`Created public.users row for ${email}`);
 }
 
-console.log(`User: ${userRow.id}`);
-console.log(`Before: plan_type=${userRow.plan_type} status=${userRow.subscription_status ?? "null"}`);
+console.log(`User: ${resolvedUser.id}`);
+console.log(`Before: plan_type=${resolvedUser.plan_type} status=${resolvedUser.subscription_status ?? "null"}`);
 
 const ls = await listSubscriptions({
   filter: { storeId: Number(storeId), userEmail: email },
@@ -106,7 +152,7 @@ const { error: updateErr } = await admin
     lemonsqueezy_subscription_id: active.id,
     subscription_status: status,
   })
-  .eq("id", userRow.id);
+  .eq("id", resolvedUser.id);
 
 if (updateErr) {
   console.error("Supabase update failed:", updateErr.message);

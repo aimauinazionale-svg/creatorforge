@@ -32,27 +32,48 @@ export function CheckoutSuccessSync() {
     let cancelled = false;
 
     async function poll() {
-      while (!cancelled && attempts < MAX_ATTEMPTS) {
-        attempts += 1;
-        const result = await syncSubscriptionAction();
+      try {
+        while (!cancelled && attempts < MAX_ATTEMPTS) {
+          attempts += 1;
+          const result = await syncSubscriptionAction();
 
-        if (result.ok && result.data.planType === "pro") {
-          toast({ title: t("checkoutSuccess") });
-          router.replace(window.location.pathname);
-          router.refresh();
-          setSyncing(false);
-          return;
+          if (!result.ok) {
+            toast({
+              title: t("syncError"),
+              description: result.error.details ?? undefined,
+              variant: "destructive",
+            });
+            router.replace(window.location.pathname);
+            setSyncing(false);
+            return;
+          }
+
+          if (result.data.synced && result.data.planType === "pro") {
+            toast({ title: t("checkoutSuccess") });
+            router.replace(window.location.pathname);
+            router.refresh();
+            setSyncing(false);
+            return;
+          }
+
+          await new Promise((resolve) => setTimeout(resolve, POLL_MS));
         }
 
-        await new Promise((resolve) => setTimeout(resolve, POLL_MS));
-      }
-
-      if (!cancelled) {
-        toast({
-          title: t("checkoutSyncPending"),
-          description: t("checkoutSyncHint"),
-        });
-        setSyncing(false);
+        if (!cancelled) {
+          toast({
+            title: t("checkoutSyncPending"),
+            description: t("checkoutSyncHint"),
+            variant: "destructive",
+          });
+          router.replace(window.location.pathname);
+          setSyncing(false);
+        }
+      } catch {
+        if (!cancelled) {
+          toast({ title: t("syncError"), variant: "destructive" });
+          router.replace(window.location.pathname);
+          setSyncing(false);
+        }
       }
     }
 

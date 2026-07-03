@@ -10,6 +10,7 @@ import {
   LemonSqueezyCheckoutError,
 } from "@/lib/billing/lemonsqueezy";
 import { PRO_PLAN, type PlanType } from "@/lib/billing/constants";
+import { ensurePublicUserRow } from "@/lib/billing/ensure-user-row";
 import { syncUserPlanFromLemonSqueezy } from "@/lib/billing/sync-plan";
 import type {
   BillingActionResult,
@@ -122,6 +123,11 @@ export async function syncSubscriptionAction(): Promise<BillingActionResult<Sync
     const user = await getServerUser();
     if (!user?.email) {
       return billingErr("UNAUTHENTICATED");
+    }
+
+    const ensured = await ensurePublicUserRow(user.id, user.email);
+    if (!ensured.ok) {
+      return billingErr("UNKNOWN", ensured.message);
     }
 
     const sync = await syncUserPlanFromLemonSqueezy(user.id, user.email);

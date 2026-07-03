@@ -21,11 +21,15 @@ export function SyncSubscriptionButton() {
     try {
       const result = await syncSubscriptionAction();
       if (!result.ok) {
-        toast({ title: t("syncError"), variant: "destructive" });
+        toast({
+          title: t("syncError"),
+          description: result.error.details ?? undefined,
+          variant: "destructive",
+        });
         return;
       }
 
-      if (result.data.planType === "pro") {
+      if (result.data.synced && result.data.planType === "pro") {
         toast({ title: t("checkoutSuccess") });
         router.refresh();
         return;

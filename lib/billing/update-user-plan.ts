@@ -1,4 +1,5 @@
 import { FREE_PLAN, PRO_PLAN, type PlanType } from "@/lib/billing/constants";
+import { ensurePublicUserRow } from "@/lib/billing/ensure-user-row";
 import { tryCreateSupabaseAdminClient } from "@/lib/supabase/admin";
 import type { Database } from "@/types/database";
 
@@ -29,6 +30,11 @@ export async function applyUserPlanUpdate(
     };
   }
 
+  const ensured = await ensurePublicUserRow(userId);
+  if (!ensured.ok) {
+    return { ok: false, reason: "db_error", message: ensured.message };
+  }
+
   const patch: UserUpdate = { plan_type: planType };
 
   if (extras?.customerId) {
@@ -41,16 +47,29 @@ export async function applyUserPlanUpdate(
     patch.subscription_status = extras.subscriptionStatus;
   }
 
-  const { error } = await admin.from("users").update(patch).eq("id", userId);
+  const { data: updated, error } = await admin
+    .from("users")
+    .update(patch)
+    .eq("id", userId)
+    .select("id")
+    .maybeSingle();
 
   if (error) {
     return { ok: false, reason: "db_error", message: error.message };
   }
 
+  if (!updated) {
+    return {
+      ok: false,
+      reason: "db_error",
+      message: "User row missing after ensure step.",
+    };
+  }
+
   return { ok: true, userId, planType };
 }
 
-/** Finds a user id by email (case-insensitive). */
+/** Finds a user id by email (case-insensitive), backfilling public.users from auth when needed. */
 export async function findUserIdByEmail(email: string): Promise<string | null> {
   const admin = tryCreateSupabaseAdminClient();
   if (!admin) return null;
@@ -62,5 +81,27 @@ export async function findUserIdByEmail(email: string): Promise<string | null> {
     .ilike("email", normalized)
     .maybeSingle();
 
-  return data?.id ?? null;
+  if (data?.id) return data.id;
+
+  let page = 1;
+  while (page <= 10) {
+    const { data: listData, error } = await admin.auth.admin.listUsers({
+      page,
+      perPage: 200,
+    });
+    if (error || !listData.users.length) break;
+
+    const match = listData.users.find(
+      (user) => user.email?.trim().toLowerCase() === normalized
+    );
+    if (match) {
+      const ensured = await ensurePublicUserRow(match.id, match.email);
+      return ensured.ok ? match.id : null;
+    }
+
+    if (listData.users.length < 200) break;
+    page += 1;
+  }
+
+  return null;
 }
