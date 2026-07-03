@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { LegalDocument } from "@/components/legal/LegalDocument";
+
 export async function generateMetadata({
   params,
 }: {
@@ -15,12 +17,6 @@ export async function generateMetadata({
 
 export default async function TermsPage({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale);
-  const t = await getTranslations("legalPages.terms");
 
-  return (
-    <div className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6">
-      <h1 className="text-3xl font-semibold tracking-tight">{t("title")}</h1>
-      <p className="mt-6 text-muted-foreground leading-relaxed">{t("body")}</p>
-    </div>
-  );
+  return <LegalDocument namespace="legalPages.terms" />;
 }

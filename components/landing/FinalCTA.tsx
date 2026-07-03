@@ -40,6 +40,17 @@ export function FinalCTA() {
                 <Link href="/#pricing">{t("secondaryCta")}</Link>
               </Button>
             </div>
+
+            <p className="mt-6 text-xs text-muted-foreground">
+              {t("legalNotice")}{" "}
+              <Link href="/privacy" className="underline-offset-4 hover:underline">
+                {t("privacyLink")}
+              </Link>
+              {" · "}
+              <Link href="/terms" className="underline-offset-4 hover:underline">
+                {t("termsLink")}
+              </Link>
+            </p>
           </div>
         </m.div>
       </div>

@@ -1667,7 +1667,10 @@
       "title": "Pronto para publicar com consistência?",
       "subtitle": "Comece grátis e publique seu próximo vídeo com menos atrito.",
       "primaryCta": "Começar grátis",
-      "secondaryCta": "Ver preços"
+      "secondaryCta": "Ver preços",
+      "legalNotice": "Ao se cadastrar, você concorda com nossa",
+      "privacyLink": "Política de privacidade",
+      "termsLink": "Termos de serviço"
     },
     "footer": {
       "brand": "Sparkroll",
@@ -1794,14 +1797,157 @@
   },
   "legalPages": {
     "terms": {
-      "title": "Terms of Service",
-      "description": "Sparkroll terms of service.",
-      "body": "Sparkroll is provided as-is for creators. By using the service you agree to use it responsibly and comply with applicable laws. We may update these terms; continued use constitutes acceptance."
+      "title": "Termos de serviço",
+      "description": "Termos que regem o uso do Sparkroll, o kit de ferramentas gratuito para criadores do YouTube com inteligência artificial.",
+      "lastUpdated": "Última atualização: 3 de julho de 2026",
+      "intro": "Estes Termos de serviço (\"Termos\") regem o seu acesso e uso do Sparkroll, um kit de ferramentas gratuito para criadores do YouTube com inteligência artificial disponível em creatorforge-xi.vercel.app. Ao criar uma conta ou utilizar o serviço, você concorda com estes Termos.",
+      "sections": {
+        "acceptance": {
+          "title": "Aceitação dos termos",
+          "body": "Se você não aceitar estes Termos, não utilize o Sparkroll. Podemos atualizar os Termos periodicamente. Alterações substanciais serão publicadas nesta página. O uso continuado após as alterações constitui aceitação."
+        },
+        "description": {
+          "title": "Descrição do serviço",
+          "body": "O Sparkroll oferece ferramentas para criadores do YouTube, incluindo geração de ideias, gestão de fluxo de trabalho, monitoramento de concorrentes, planejamento, análise SEO, revisão de miniaturas e um assistente de IA. As funcionalidades podem mudar e algumas exigem a conexão de um canal do YouTube via Google OAuth."
+        },
+        "accounts": {
+          "title": "Contas e autenticação",
+          "body": "Você pode entrar com o Google (via Supabase Auth) ou com um link mágico por e-mail. Você é responsável por manter o acesso à sua conta e por todas as atividades realizadas por meio dela. Deve fornecer informações precisas e nos informar se suspeitar de acesso não autorizado."
+        },
+        "acceptableUse": {
+          "title": "Uso aceitável",
+          "body": "Você concorda em não:",
+          "items": {
+            "0": "Utilizar o Sparkroll para fins ilegais, prejudiciais ou abusivos.",
+            "1": "Tentar contornar limites de taxa, controles de segurança ou acessar dados de outros usuários.",
+            "2": "Realizar scraping, engenharia reversa ou revender o serviço sem autorização.",
+            "3": "Enviar conteúdo que viole direitos de propriedade intelectual ou as políticas do YouTube.",
+            "4": "Utilizar ferramentas automatizadas para sobrecarregar nossa infraestrutura ou APIs de terceiros."
+          }
+        },
+        "youtubeAndGoogle": {
+          "title": "YouTube e Google",
+          "body": "Ao conectar o YouTube, você autoriza o Sparkroll a acessar dados do YouTube em modo somente leitura (escopo youtube.readonly) em seu nome. Você deve cumprir os Termos de serviço do YouTube e a Política de dados do usuário dos Serviços de API do Google. Pode revogar o acesso a qualquer momento nas configurações de segurança da sua Conta Google ou desconectando o Sparkroll. O Sparkroll não carrega, modifica nem exclui o conteúdo do seu canal do YouTube."
+        },
+        "aiFeatures": {
+          "title": "Funcionalidades de IA",
+          "body": "Sugestões geradas por IA (títulos, tags, roteiros, respostas de chat) são fornecidas para inspiração e produtividade. Você é o único responsável por revisar e publicar o conteúdo. Os resultados da IA podem ser imprecisos ou incompletos; não confie neles como aconselhamento profissional, jurídico ou financeiro."
+        },
+        "subscriptions": {
+          "title": "Assinaturas e faturamento",
+          "body": "O Sparkroll oferece um plano gratuito e uma assinatura Pro opcional gerenciada pela Lemon Squeezy. Planos pagos são renovados conforme os termos exibidos no checkout. Você pode gerenciar ou cancelar assinaturas no portal de faturamento. Reembolsos são tratados conforme as políticas da Lemon Squeezy, salvo o exigido pela lei aplicável."
+        },
+        "intellectualProperty": {
+          "title": "Propriedade intelectual",
+          "body": "Você mantém a propriedade do conteúdo que cria no Sparkroll e dos dados do seu canal do YouTube. O Sparkroll, sua marca e o software subjacente permanecem de nossa propriedade ou de nossos licenciadores. Você nos concede uma licença limitada para processar seu conteúdo apenas com o fim de fornecer o serviço."
+        },
+        "disclaimer": {
+          "title": "Isenção de garantias",
+          "body": "O Sparkroll é fornecido \"no estado em que se encontra\" e \"conforme disponibilidade\" sem garantias de qualquer tipo, expressas ou implícitas, incluindo comercialização, adequação a um propósito específico e não violação. Não garantimos acesso ininterrupto, resultados de crescimento específicos ou funcionamento livre de erros."
+        },
+        "limitation": {
+          "title": "Limitação de responsabilidade",
+          "body": "Na máxima extensão permitida por lei, o Sparkroll e seus operadores não serão responsáveis por danos indiretos, incidentais, especiais, consequenciais ou punitivos, nem por perda de lucros, dados ou fundo de comércio decorrentes do uso do serviço. Nossa responsabilidade total por qualquer reclamação não excederá o valor pago por você nos doze meses anteriores à reclamação, ou zero se você usar o plano gratuito."
+        },
+        "termination": {
+          "title": "Rescisão",
+          "body": "Você pode deixar de usar o Sparkroll a qualquer momento. Podemos suspender ou encerrar o acesso se você violar estes Termos, representar risco à segurança ou se exigido por lei. Após a rescisão, o direito de usar o serviço termina, mas as cláusulas que por natureza devem sobreviver (isenções, limites de responsabilidade) permanecem em vigor."
+        },
+        "governingLaw": {
+          "title": "Lei aplicável",
+          "body": "Estes Termos são regidos pela lei aplicável na jurisdição em que o operador do serviço está estabelecido, sem consideração a conflitos de leis. As proteções obrigatórias do consumidor em seu país de residência aplicam-se quando exigido."
+        },
+        "changes": {
+          "title": "Alterações nos Termos",
+          "body": "Podemos revisar estes Termos para refletir atualizações do produto, requisitos legais ou mudanças operacionais. A data \"Última atualização\" no topo indica a última revisão. Consulte esta página periodicamente."
+        }
+      },
+      "contact": {
+        "title": "Contato",
+        "body": "Dúvidas sobre estes Termos? Escreva para {email}.",
+        "email": "support@sparkroll.app"
+      }
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "How Sparkroll handles your data.",
-      "body": "We store account data and workspace content to provide the service. We do not sell personal data. You can request deletion by contacting support. Third-party providers (Supabase, Google, YouTube) process data according to their policies."
+      "title": "Política de privacidade",
+      "description": "Como o Sparkroll coleta, utiliza e protege seus dados pessoais.",
+      "lastUpdated": "Última atualização: 3 de julho de 2026",
+      "intro": "O Sparkroll (\"nós\") é um kit de ferramentas gratuito para criadores do YouTube com inteligência artificial. Esta Política de privacidade explica quais dados pessoais coletamos, por que os coletamos, como os compartilhamos com prestadores de serviços e quais escolhas você tem. Ao utilizar o Sparkroll, você reconhece esta política.",
+      "sections": {
+        "dataWeCollect": {
+          "title": "Informações que coletamos",
+          "body": "Dependendo de como você usa o Sparkroll, podemos coletar:",
+          "items": {
+            "0": "Dados da conta: endereço de e-mail, nome e foto de perfil do Google Sign-In, processados via Supabase Auth.",
+            "1": "Dados do canal do YouTube: ID do canal, título, descrição, miniaturas, inscritos e estatísticas de visualizações ao conectar o YouTube (YouTube Data API, escopo youtube.readonly).",
+            "2": "Dados de vídeo: títulos, descrições, tags, estatísticas, miniaturas e datas de publicação dos seus vídeos e dos canais concorrentes que você escolhe monitorar.",
+            "3": "Comentários: threads e respostas nos seus vídeos ao usar o recurso de Comentários.",
+            "4": "Conteúdo do workspace: ideias, roteiros, tarefas de fluxo de trabalho, entradas de calendário, listas de concorrentes e notas SEO criadas no Sparkroll.",
+            "5": "Entradas e saídas de IA: prompts enviados e texto gerado pelas funcionalidades de IA, processados via Groq.",
+            "6": "Dados de uso e técnicos: uso de funcionalidades, logs de erros, contadores de limite de taxa e informações básicas de dispositivo/navegador necessárias para operar e proteger o serviço.",
+            "7": "Cookies e armazenamento local: tokens de sessão para autenticação e preferências de interface salvas no navegador."
+          }
+        },
+        "howWeUse": {
+          "title": "Como utilizamos suas informações",
+          "body": "Utilizamos dados pessoais para:",
+          "items": {
+            "0": "Autenticá-lo e manter sua conta Sparkroll.",
+            "1": "Exibir painéis do YouTube, análises, calendário e insights sobre concorrentes.",
+            "2": "Alimentar funcionalidades de IA como geração de ideias, sugestões SEO e assistente de IA.",
+            "3": "Salvar e sincronizar o conteúdo do workspace entre sessões.",
+            "4": "Aplicar limites dos planos gratuito e Pro e prevenir abusos.",
+            "5": "Processar assinaturas e faturamento via Lemon Squeezy (plano Pro).",
+            "6": "Melhorar a confiabilidade, diagnosticar erros e proteger contra fraudes.",
+            "7": "Cumprir obrigações legais e responder a solicitações legítimas."
+          }
+        },
+        "legalBasis": {
+          "title": "Base legal (usuários do EEE/Reino Unido)",
+          "body": "Quando o RGPD se aplica, tratamos dados com base em: (a) execução do contrato — para fornecer o serviço solicitado; (b) interesse legítimo — segurança, análises e melhoria do produto, equilibrados com seus direitos; (c) consentimento — ao conectar o YouTube ou habilitar funcionalidades opcionais; (d) obrigação legal — quando exigido por lei."
+        },
+        "thirdParties": {
+          "title": "Prestadores de serviços terceiros",
+          "body": "Confiamos em processadores de dados confiáveis para operar o Sparkroll. Eles acessam os dados apenas para prestar seus serviços:",
+          "items": {
+            "0": "Supabase — autenticação, banco de dados e armazenamento de arquivos (hospedagem UE/EUA conforme a região do projeto).",
+            "1": "Google / YouTube — acesso OAuth e YouTube Data API em modo somente leitura ao conectar seu canal.",
+            "2": "Groq — geração de texto por IA para ferramentas de criadores e assistente de IA.",
+            "3": "Vercel — hospedagem da aplicação, funções serverless e entrega edge.",
+            "4": "Lemon Squeezy — processamento de pagamentos para assinaturas Pro (se você fizer upgrade).",
+            "5": "Upstash Redis (se habilitado) — cache de curto prazo para reduzir o uso de APIs."
+          }
+        },
+        "cookies": {
+          "title": "Cookies e tecnologias similares",
+          "body": "Utilizamos cookies essenciais e armazenamento do navegador para sessões de autenticação (Supabase) e para lembrar preferências como tema e idioma. Não utilizamos cookies publicitários de terceiros. Você pode excluir cookies nas configurações do navegador, mas algumas funcionalidades podem não funcionar sem os cookies de sessão."
+        },
+        "dataRetention": {
+          "title": "Retenção de dados",
+          "body": "Retemos dados da conta e do workspace enquanto sua conta estiver ativa. Se você excluir sua conta ou solicitar exclusão, removemos ou anonimizamos dados pessoais em prazo razoável, salvo retenção exigida por motivos legais, de segurança ou de faturamento. Respostas de API em cache podem expirar antes conforme os TTLs configurados."
+        },
+        "yourRights": {
+          "title": "Seus direitos e escolhas",
+          "body": "Dependendo da sua localização, você pode ter direito de acessar, corrigir, excluir ou exportar seus dados pessoais, e de se opor ou limitar determinados tratamentos. Você pode revogar o acesso ao YouTube na sua Conta Google a qualquer momento. Para exercer seus direitos de privacidade, entre em contato pelo e-mail abaixo. Você também pode apresentar reclamação à autoridade local de proteção de dados."
+        },
+        "children": {
+          "title": "Privacidade de menores",
+          "body": "O Sparkroll não é destinado a menores de 13 anos (ou à idade mínima exigida em sua jurisdição). Não coletamos conscientemente dados pessoais de menores. Se acreditar que um menor nos forneceu dados, entre em contato e os excluiremos."
+        },
+        "international": {
+          "title": "Transferências internacionais",
+          "body": "Seus dados podem ser processados nos países onde nossos prestadores operam (incluindo Estados Unidos e União Europeia). Confiamos em garantias adequadas como cláusulas contratuais padrão quando exigido para transferências transfronteiriças."
+        },
+        "changes": {
+          "title": "Alterações nesta política",
+          "body": "Podemos atualizar esta Política de privacidade para refletir mudanças de produto, legais ou operacionais. Publicaremos a política revisada nesta página e atualizaremos a data \"Última atualização\". Alterações significativas podem ser comunicadas no aplicativo ou por e-mail quando apropriado."
+        }
+      },
+      "contact": {
+        "title": "Fale conosco",
+        "body": "Para questões de privacidade, acesso a dados ou solicitações de exclusão, escreva para {email}.",
+        "email": "support@sparkroll.app"
+      }
     },
     "blog": {
       "title": "Blog",

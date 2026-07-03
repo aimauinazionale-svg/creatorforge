@@ -1609,7 +1609,10 @@
       "title": "准备好持续发布了吗？",
       "subtitle": "免费开始，更顺畅地发布下一个视频。",
       "primaryCta": "免费开始",
-      "secondaryCta": "查看定价"
+      "secondaryCta": "查看定价",
+      "legalNotice": "注册即表示您同意我们的",
+      "privacyLink": "隐私政策",
+      "termsLink": "服务条款"
     },
     "footer": {
       "brand": "Sparkroll",
@@ -1794,14 +1797,157 @@
   },
   "legalPages": {
     "terms": {
-      "title": "Terms of Service",
-      "description": "Sparkroll terms of service.",
-      "body": "Sparkroll is provided as-is for creators. By using the service you agree to use it responsibly and comply with applicable laws. We may update these terms; continued use constitutes acceptance."
+      "title": "服务条款",
+      "description": "规范您对 Sparkroll（免费 AI 驱动的 YouTube 创作者工具包）使用的条款。",
+      "lastUpdated": "最后更新：2026年7月3日",
+      "intro": "本服务条款（\"条款\"）规范您对 Sparkroll 的访问和使用。Sparkroll 是一款免费的 AI 驱动 YouTube 创作者工具包，可在 creatorforge-xi.vercel.app 访问。创建账户或使用本服务即表示您同意本条款。",
+      "sections": {
+        "acceptance": {
+          "title": "接受条款",
+          "body": "如果您不接受本条款，请勿使用 Sparkroll。我们可能会定期更新条款。重大变更将发布在本页面。变更后继续使用即视为接受。"
+        },
+        "description": {
+          "title": "服务说明",
+          "body": "Sparkroll 为 YouTube 创作者提供工具，包括创意生成、工作流管理、竞争对手追踪、内容规划、SEO 分析、缩略图审核和 AI 助手。功能可能变更，部分功能需要通过 Google OAuth 连接 YouTube 频道。"
+        },
+        "accounts": {
+          "title": "账户与身份验证",
+          "body": "您可通过 Google（经 Supabase Auth）或电子邮件魔法链接登录。您有责任维护账户访问权限，并对通过该账户进行的所有活动负责。您须提供准确信息，并在怀疑存在未经授权访问时通知我们。"
+        },
+        "acceptableUse": {
+          "title": "可接受的使用",
+          "body": "您同意不得：",
+          "items": {
+            "0": "将 Sparkroll 用于非法、有害或滥用目的。",
+            "1": "试图绕过速率限制、安全控制或访问其他用户的数据。",
+            "2": "未经授权进行抓取、逆向工程或转售本服务。",
+            "3": "提交侵犯知识产权或违反 YouTube 政策的内容。",
+            "4": "使用自动化工具使我们的基础设施或第三方 API 过载。"
+          }
+        },
+        "youtubeAndGoogle": {
+          "title": "YouTube 与 Google",
+          "body": "连接 YouTube 时，您授权 Sparkroll 代表您以只读方式访问 YouTube 数据（youtube.readonly 范围）。您须遵守 YouTube 服务条款及 Google API 服务的用户数据政策。您可随时在 Google 账户安全设置中撤销访问权限，或断开 Sparkroll 连接。Sparkroll 不会上传、修改或删除您 YouTube 频道的内容。"
+        },
+        "aiFeatures": {
+          "title": "AI 功能",
+          "body": "AI 生成的建议（标题、标签、脚本、聊天回复）仅供灵感与效率参考。您须自行审核并发布内容。AI 输出可能不准确或不完整，请勿将其作为专业、法律或财务建议。"
+        },
+        "subscriptions": {
+          "title": "订阅与计费",
+          "body": "Sparkroll 提供免费套餐及由 Lemon Squeezy 管理的可选 Pro 订阅。付费套餐按结账时所示条款续订。您可在计费门户管理或取消订阅。退款按 Lemon Squeezy 政策处理，适用法律另有要求除外。"
+        },
+        "intellectualProperty": {
+          "title": "知识产权",
+          "body": "您保留在 Sparkroll 中创建的内容及 YouTube 频道数据的所有权。Sparkroll、其品牌及底层软件仍归我们或我们的许可方所有。您授予我们有限许可，仅为提供服务而处理您的内容。"
+        },
+        "disclaimer": {
+          "title": "免责声明",
+          "body": "Sparkroll 按\"现状\"和\"可用性\"提供，不作任何明示或暗示保证，包括适销性、特定用途适用性及不侵权。我们不保证不间断访问、特定增长结果或无错误运行。"
+        },
+        "limitation": {
+          "title": "责任限制",
+          "body": "在法律允许的最大范围内，Sparkroll 及其运营方不对因使用本服务而产生的间接、附带、特殊、后果性或惩罚性损害，或利润、数据或商誉损失承担责任。我们对任何索赔的总责任不超过您在索赔前十二个月内支付的金额；若使用免费套餐则为零。"
+        },
+        "termination": {
+          "title": "终止",
+          "body": "您可随时停止使用 Sparkroll。若您违反本条款、构成安全风险或法律要求，我们可暂停或终止访问。终止后，使用服务的权利即告终止，但依其性质应继续有效的条款（免责、责任限制）仍然有效。"
+        },
+        "governingLaw": {
+          "title": "适用法律",
+          "body": "本条款受服务运营方所在司法管辖区的适用法律管辖，不适用法律冲突原则。您居住国强制性消费者保护在需要时适用。"
+        },
+        "changes": {
+          "title": "条款变更",
+          "body": "我们可修订本条款以反映产品更新、法律要求或运营变更。页首\"最后更新\"日期表示最近修订时间。请定期查阅本页面。"
+        }
+      },
+      "contact": {
+        "title": "联系我们",
+        "body": "对本条款有疑问？请发送邮件至 {email}。",
+        "email": "support@sparkroll.app"
+      }
     },
     "privacy": {
-      "title": "Privacy Policy",
-      "description": "How Sparkroll handles your data.",
-      "body": "We store account data and workspace content to provide the service. We do not sell personal data. You can request deletion by contacting support. Third-party providers (Supabase, Google, YouTube) process data according to their policies."
+      "title": "隐私政策",
+      "description": "Sparkroll 如何收集、使用和保护您的个人数据。",
+      "lastUpdated": "最后更新：2026年7月3日",
+      "intro": "Sparkroll（\"我们\"）是一款免费的 AI 驱动 YouTube 创作者工具包。本隐私政策说明我们收集哪些个人数据、收集原因、如何与服务提供商共享以及您有哪些选择。使用 Sparkroll 即表示您知悉本政策。",
+      "sections": {
+        "dataWeCollect": {
+          "title": "我们收集的信息",
+          "body": "根据您使用 Sparkroll 的方式，我们可能收集：",
+          "items": {
+            "0": "账户数据：来自 Google 登录的电子邮件地址、姓名和头像，经 Supabase Auth 处理。",
+            "1": "YouTube 频道数据：连接 YouTube 时的频道 ID、标题、描述、缩略图、订阅者和观看统计（YouTube Data API，youtube.readonly 范围）。",
+            "2": "视频数据：您的视频及您选择追踪的竞争对手频道的标题、描述、标签、统计、缩略图和发布日期。",
+            "3": "评论：使用评论功能时您视频下的讨论串和回复。",
+            "4": "工作区内容：在 Sparkroll 中创建的创意、脚本、工作流任务、日历条目、竞争对手列表和 SEO 笔记。",
+            "5": "AI 输入与输出：发送的提示词及 AI 功能生成的文本，经 Groq 处理。",
+            "6": "使用与技术数据：功能使用情况、错误日志、速率限制计数器及运营和保护服务所需的基本设备/浏览器信息。",
+            "7": "Cookie 与本地存储：用于身份验证的会话令牌及保存在浏览器中的界面偏好（如主题和语言）。"
+          }
+        },
+        "howWeUse": {
+          "title": "我们如何使用您的信息",
+          "body": "我们使用个人数据以：",
+          "items": {
+            "0": "验证身份并维护您的 Sparkroll 账户。",
+            "1": "展示 YouTube 仪表板、分析、日历和竞争对手洞察。",
+            "2": "支持创意生成、SEO 建议和 AI 助手等 AI 功能。",
+            "3": "在会话之间保存并同步工作区内容。",
+            "4": "执行免费与 Pro 套餐限制并防止滥用。",
+            "5": "通过 Lemon Squeezy 处理订阅与计费（Pro 套餐）。",
+            "6": "提高可靠性、诊断错误并防范欺诈。",
+            "7": "履行法律义务并回应合法请求。"
+          }
+        },
+        "legalBasis": {
+          "title": "法律依据（EEA/英国用户）",
+          "body": "在适用 GDPR 时，我们基于以下依据处理数据：(a) 合同履行——提供您请求的服务；(b) 合法利益——安全、分析与产品改进，并与您的权利相平衡；(c) 同意——连接 YouTube 或启用可选功能时；(d) 法律义务——法律要求时。"
+        },
+        "thirdParties": {
+          "title": "第三方服务提供商",
+          "body": "我们依赖可信的数据处理方运营 Sparkroll。他们仅在提供服务时访问数据：",
+          "items": {
+            "0": "Supabase——身份验证、数据库和文件存储（根据项目区域在欧盟/美国托管）。",
+            "1": "Google / YouTube——连接频道时的 OAuth 访问及只读 YouTube Data API。",
+            "2": "Groq——为创作者工具和 AI 助手生成 AI 文本。",
+            "3": "Vercel——应用托管、无服务器函数和边缘分发。",
+            "4": "Lemon Squeezy——Pro 订阅的支付处理（升级时）。",
+            "5": "Upstash Redis（如已启用）——短期缓存以减少 API 使用。"
+          }
+        },
+        "cookies": {
+          "title": "Cookie 及类似技术",
+          "body": "我们使用必要 Cookie 和浏览器存储以维持身份验证会话（Supabase）并记住主题、语言等偏好。我们不使用第三方广告 Cookie。您可在浏览器设置中清除 Cookie，但部分功能可能在没有会话 Cookie 时无法使用。"
+        },
+        "dataRetention": {
+          "title": "数据保留",
+          "body": "在您的账户处于活跃状态期间，我们保留账户和工作区数据。若您删除账户或请求删除，我们将在合理期限内删除或匿名化个人数据，法律、安全或计费所需保留除外。缓存的 API 响应可能根据配置的 TTL 更早过期。"
+        },
+        "yourRights": {
+          "title": "您的权利与选择",
+          "body": "根据您所在地区，您可能有权访问、更正、删除或导出个人数据，并对特定处理提出异议或要求限制。您可随时在 Google 账户中撤销 YouTube 访问权限。行使隐私权利请通过下方电子邮件联系我们。您也可向当地数据保护机构投诉。"
+        },
+        "children": {
+          "title": "儿童隐私",
+          "body": "Sparkroll 不面向 13 岁以下儿童（或您所在司法管辖区要求的最低年龄）。我们不会故意收集儿童个人数据。若您认为儿童向我们提供了数据，请联系我们，我们将予以删除。"
+        },
+        "international": {
+          "title": "国际传输",
+          "body": "您的数据可能在服务提供商运营的国家（包括美国和欧盟）处理。跨境传输时，我们在需要时依赖标准合同条款等适当保障措施。"
+        },
+        "changes": {
+          "title": "本政策变更",
+          "body": "我们可更新本隐私政策以反映产品、法律或运营变更。修订版将发布在本页面并更新\"最后更新\"日期。重大变更可能通过应用内或电子邮件通知（如适用）。"
+        }
+      },
+      "contact": {
+        "title": "联系我们",
+        "body": "有关隐私、数据访问或删除请求，请发送邮件至 {email}。",
+        "email": "support@sparkroll.app"
+      }
     },
     "blog": {
       "title": "Blog",

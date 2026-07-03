@@ -8,6 +8,8 @@ Google OAuth shows the Supabase project hostname (`*.supabase.co`) during sign-i
    - App name: **Sparkroll**
    - App logo: upload `public/icon.svg` (or a 120×120 PNG export)
    - Application home page: `https://creatorforge-xi.vercel.app`
+   - Privacy policy: `https://creatorforge-xi.vercel.app/en/privacy`
+   - Terms of service: `https://creatorforge-xi.vercel.app/en/terms`
    - Authorized domains: `creatorforge-xi.vercel.app`, `vercel.app`
 
 2. **Supabase Dashboard → Authentication → URL Configuration**
@@ -41,6 +43,10 @@ Full checklist: `docs/OAUTH_GOOGLE.md`.
 - `getSiteUrl()` prefers `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_APP_URL`, but **ignores localhost values on Vercel/production** and falls back to `VERCEL_PROJECT_PRODUCTION_URL` or `VERCEL_URL`.
 - OAuth `redirectTo` points to `https://creatorforge-xi.vercel.app/auth/callback?next=/{locale}/dashboard`.
 - `getSupabaseAuthCallbackUrl()` in `lib/supabase/env.ts` returns the URI Google expects for Supabase login.
+
+## Related docs
+
+- [GOOGLE_VERIFICATION.md](./GOOGLE_VERIFICATION.md) — guida completa verifica Google OAuth (italiano)
 
 ## What Supabase `queryParams` cannot change
 
