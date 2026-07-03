@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .accordion-content {
+    overflow: hidden;
+  }
+  .accordion-content[data-state="open"] {
+    animation: accordion-down 0.25s ease-out;
+  }
+  .accordion-content[data-state="closed"] {
+    animation: accordion-up 0.2s ease-out;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 224 71% 4%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+
+  --muted: 240 5% 96%;
+  --muted-foreground: 220 9% 46%;
+
+  --accent: 262 83% 96%;
+  --accent-foreground: 262 47% 28%;
+
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 240 5% 96%;
+  --secondary-foreground: 224 71% 4%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 262 83% 58%;
+
+  --radius: 0.75rem;
+
+  color-scheme: light;
+}
+
+.dark {
+  --background: 224 71% 4%;
+  --foreground: 210 40% 98%;
+
+  --card: 224 50% 6%;
+  --card-foreground: 210 40% 98%;
+
+  --muted: 215 28% 12%;
+  --muted-foreground: 217 11% 65%;
+
+  --accent: 262 40% 16%;
+  --accent-foreground: 262 80% 90%;
+
+  --primary: 263 70% 65%;
+  --primary-foreground: 224 71% 4%;
+
+  --secondary: 215 28% 12%;
+  --secondary-foreground: 210 40% 98%;
+
+  --destructive: 0 63% 45%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 215 28% 16%;
+  --input: 215 28% 16%;
+  --ring: 263 70% 65%;
+
+  color-scheme: dark;
+}
+

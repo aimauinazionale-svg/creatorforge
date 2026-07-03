@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "CreatorForge for YouTube",
+  "version": "2.2.0",
+  "description": "VidIQ-style YouTube SEO sidebar with CreatorForge scores, channel stats, and deep links to your creator toolkit.",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://youtube.com/*",
+    "https://www.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "CreatorForge"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://youtube.com/*"
+      ],
+      "js": [
+        "lib/utils-global.js",
+        "lib/i18n.js",
+        "lib/seo-scorer.js",
+        "lib/dom-parser.js",
+        "lib/toolbar.js",
+        "lib/vph-badges.js",
+        "lib/panel-renderer.js",
+        "content/youtube-channel.js",
+        "content/youtube-video.js",
+        "content/youtube-search.js",
+        "content/youtube-home.js",
+        "content/youtube-bootstrap.js"
+      ],
+      "css": ["styles/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html"
+}

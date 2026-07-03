@@ -1,0 +1,759 @@
+/* ═══════════════════════════════════════════════════════════════
+   CreatorForge Extension v2.2 — VidIQ-quality polish
+   ═══════════════════════════════════════════════════════════════ */
+
+#creatorforge-root {
+  display: none;
+}
+
+#creatorforge-root.cf-root--fixed {
+  display: block;
+  position: fixed;
+  top: 96px;
+  right: 16px;
+  width: min(340px, calc(100vw - 32px));
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.cf-mount {
+  margin-bottom: 8px;
+  max-width: 100%;
+}
+
+/* ── Sidebar panel ──────────────────────────────────────────── */
+.cf-panel {
+  font-family: "Roboto", "Arial", system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #e0e0e0;
+  background: #212121;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  max-width: 340px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Header (gradient accent only here) ─────────────────────── */
+.cf-panel-header {
+  padding: 10px 12px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.18) 0%, rgba(217, 70, 239, 0.08) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cf-panel-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cf-logo-mark {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.cf-panel-brand-text {
+  font-size: 14px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #8b5cf6, #d946ef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.01em;
+}
+
+/* ── Tabs (horizontal scroll) ───────────────────────────────── */
+.cf-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 8px 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: #1a1a1a;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cf-tabs::-webkit-scrollbar {
+  height: 3px;
+}
+
+.cf-tabs::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.4);
+  border-radius: 2px;
+}
+
+.cf-tab {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 4px 4px 0 0;
+  background: transparent;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 120ms, background 120ms;
+}
+
+.cf-tab:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cf-tab--active {
+  color: #fff;
+  background: rgba(139, 92, 246, 0.2);
+  box-shadow: inset 0 -2px 0 #8b5cf6;
+}
+
+/* ── Panel body ─────────────────────────────────────────────── */
+.cf-panel-body {
+  padding: 12px;
+  max-height: 460px;
+  overflow-y: auto;
+  background: #212121;
+}
+
+.cf-panel-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cf-panel-body::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.35);
+  border-radius: 4px;
+}
+
+.cf-tab-panel {
+  animation: cf-fade-in 180ms ease;
+}
+
+@keyframes cf-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Score circles (crisp SVG, no scale blur) ───────────────── */
+.cf-overview-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0 12px;
+}
+
+.cf-circle {
+  position: relative;
+  width: 88px;
+  height: 88px;
+}
+
+.cf-circle--lg {
+  width: 100px;
+  height: 100px;
+}
+
+.cf-circle--sm {
+  width: 56px;
+  height: 56px;
+}
+
+.cf-circle-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  shape-rendering: geometricPrecision;
+}
+
+.cf-circle-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 6;
+}
+
+.cf-circle-fill {
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.cf-score--red .cf-circle-fill { stroke: #ef4444; }
+.cf-score--yellow .cf-circle-fill { stroke: #eab308; }
+.cf-score--green .cf-circle-fill { stroke: #22c55e; }
+
+.cf-circle-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cf-circle-number {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.cf-circle--lg .cf-circle-number { font-size: 28px; }
+.cf-circle--sm .cf-circle-number { font-size: 16px; }
+
+.cf-circle-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+.cf-score--red .cf-circle-number { color: #fca5a5; }
+.cf-score--yellow .cf-circle-number { color: #fde047; }
+.cf-score--green .cf-circle-number { color: #86efac; }
+
+.cf-section-score {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* ── Category bars ──────────────────────────────────────────── */
+.cf-cat-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cf-cat-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.cf-cat-bar-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.cf-cat-bar-score {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.cf-cat-bar-track {
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.cf-cat-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.cf-score--red .cf-cat-bar-fill { background: #ef4444; }
+.cf-score--yellow .cf-cat-bar-fill { background: #eab308; }
+.cf-score--green .cf-cat-bar-fill { background: #22c55e; }
+
+.cf-score--red.cf-cat-bar-score { color: #ef4444; }
+.cf-score--yellow.cf-cat-bar-score { color: #eab308; }
+.cf-score--green.cf-cat-bar-score { color: #22c55e; }
+
+.cf-cat-bar-weight {
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ── Metrics ────────────────────────────────────────────────── */
+.cf-metric-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 13px;
+}
+
+.cf-metric-label {
+  color: #aaa;
+}
+
+.cf-metric-value {
+  font-weight: 600;
+  color: #fff;
+}
+
+.cf-preview-text {
+  margin: 8px 0 0;
+  padding: 8px;
+  border-radius: 8px;
+  background: #1a1a1a;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #bbb;
+  word-break: break-word;
+}
+
+.cf-preview-text--desc {
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.cf-empty-hint {
+  font-size: 12px;
+  color: #888;
+  margin: 8px 0 0;
+}
+
+/* ── Tags ───────────────────────────────────────────────────── */
+.cf-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.cf-tag-pill {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(139, 92, 246, 0.15);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.cf-tag-estimated {
+  font-size: 11px;
+  color: #888;
+  font-weight: 400;
+}
+
+/* ── Stat grid ──────────────────────────────────────────────── */
+.cf-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.cf-stat-card {
+  padding: 8px;
+  border-radius: 8px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.cf-stat-card-value {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cf-stat-card-label {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.cf-channel-line {
+  font-size: 12px;
+  color: #888;
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+.cf-channel-name {
+  margin: 8px 0 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+/* ── Checklist ──────────────────────────────────────────────── */
+.cf-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cf-checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #1a1a1a;
+}
+
+.cf-checklist-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cf-checklist-item--pass .cf-checklist-icon {
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.cf-checklist-item--fail .cf-checklist-icon {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+.cf-checklist-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.cf-checklist-label {
+  color: #aaa;
+}
+
+.cf-checklist-value {
+  font-weight: 600;
+  color: #fff;
+  text-align: right;
+}
+
+/* ── Tips ───────────────────────────────────────────────────── */
+.cf-tips {
+  margin: 0;
+  padding: 0 0 0 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #bbb;
+}
+
+.cf-tips li {
+  margin-bottom: 6px;
+}
+
+/* ── Action buttons ─────────────────────────────────────────── */
+.cf-actions {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: #1a1a1a;
+}
+
+.cf-action-btn {
+  flex: 1;
+  display: block;
+  text-align: center;
+  padding: 8px 6px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #c4b5fd;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: background 120ms;
+}
+
+.cf-action-btn:hover {
+  background: rgba(139, 92, 246, 0.22);
+  color: #e9d5ff;
+}
+
+.cf-action-btn--primary {
+  background: rgba(139, 92, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.4);
+  color: #fff;
+}
+
+/* ── Compact inline score badge (next to title) ─────────────── */
+#cf-video-badge,
+#cf-channel-badge {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.cf-inline-badge--compact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-family: "Roboto", system-ui, sans-serif;
+  cursor: default;
+  border: 2px solid currentColor;
+  background: #212121;
+}
+
+.cf-inline-badge--compact .cf-inline-badge-score {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.cf-score--red.cf-inline-badge--compact { color: #ef4444; background: #212121; }
+.cf-score--yellow.cf-inline-badge--compact { color: #eab308; background: #212121; }
+.cf-score--green.cf-inline-badge--compact { color: #22c55e; background: #212121; }
+
+.cf-score--red.cf-inline-badge--compact .cf-inline-badge-score { color: #ef4444; }
+.cf-score--yellow.cf-inline-badge--compact .cf-inline-badge-score { color: #eab308; }
+.cf-score--green.cf-inline-badge--compact .cf-inline-badge-score { color: #22c55e; }
+
+/* ── SEO score thumbnail badge (top-left) ───────────────────── */
+.cf-thumb-badge-wrap {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.cf-thumb-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Roboto", system-ui, sans-serif;
+}
+
+.cf-score--red.cf-thumb-badge { background: #ef4444; }
+.cf-score--yellow.cf-thumb-badge { background: #eab308; color: #1a1a1a; }
+.cf-score--green.cf-thumb-badge { background: #22c55e; }
+
+/* ── VPH pill badge (bottom-left, VidIQ style) ──────────────── */
+.cf-vph-badge-wrap {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.cf-vph-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Roboto", system-ui, sans-serif;
+  color: #fff;
+  background: #8b5cf6;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+/* ── Score color utilities ──────────────────────────────────── */
+.cf-score--red { color: #ef4444; }
+.cf-score--yellow { color: #eab308; }
+.cf-score--green { color: #22c55e; }
+
+/* ═══════════════════════════════════════════════════════════════
+   Compact toolbar — VidIQ style below masthead
+   ═══════════════════════════════════════════════════════════════ */
+
+#creatorforge-toolbar {
+  position: relative;
+  z-index: 2001;
+  width: 100%;
+  font-family: "Roboto", "Arial", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cf-toolbar {
+  background: #0f0f0f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.cf-toolbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.cf-toolbar-left,
+.cf-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.cf-toolbar-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  justify-content: center;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cf-toolbar-center::-webkit-scrollbar {
+  display: none;
+}
+
+.cf-toolbar-logo {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.cf-toolbar-brand {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.cf-toolbar-sep {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 0 4px;
+}
+
+.cf-toolbar-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 12px;
+  user-select: none;
+}
+
+.cf-toolbar-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cf-toolbar-pill-label {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.cf-toolbar-pill-value {
+  color: #fff;
+  font-weight: 700;
+}
+
+.cf-toolbar-pill--health.cf-score--red .cf-toolbar-pill-value { color: #fca5a5; }
+.cf-toolbar-pill--health.cf-score--yellow .cf-toolbar-pill-value { color: #fde047; }
+.cf-toolbar-pill--health.cf-score--green .cf-toolbar-pill-value { color: #86efac; }
+
+.cf-toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: #e0e0e0;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 120ms, color 120ms;
+}
+
+.cf-toolbar-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.cf-toolbar-btn--pill {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  padding: 4px 10px;
+}
+
+.cf-toolbar-btn--pill:hover {
+  background: rgba(139, 92, 246, 0.3);
+  color: #fff;
+}
+
+.cf-toolbar-btn-icon {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.cf-toolbar-btn-text {
+  font-size: 12px;
+}
+
+.cf-toolbar-chevron {
+  font-size: 8px;
+  opacity: 0.7;
+  margin-left: 2px;
+}
+
+.cf-toolbar-right {
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .cf-toolbar-btn-text {
+    display: none;
+  }
+
+  .cf-toolbar-brand {
+    display: none;
+  }
+
+  .cf-panel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cf-panel-body {
+    max-height: 360px;
+  }
+}

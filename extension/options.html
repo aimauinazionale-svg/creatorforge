@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CreatorForge Extension Settings</title>
+    <link rel="stylesheet" href="styles/options.css" />
+  </head>
+  <body>
+    <div class="cf-options-wrap">
+      <header class="cf-options-header">
+        <svg class="cf-options-logo" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="cf-opt-grad" x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#8b5cf6" />
+              <stop offset="0.5" stop-color="#d946ef" />
+              <stop offset="1" stop-color="#fbbf24" />
+            </linearGradient>
+          </defs>
+          <rect width="32" height="32" rx="8" fill="url(#cf-opt-grad)" />
+          <path d="M9 22V10h4.2c2.4 0 3.9 1.3 3.9 3.2 0 1.4-.7 2.4-1.9 2.9l2.6 5.9h-2.5l-2.3-5.4H11.4V22H9zm2.4-7.4h1.7c1.1 0 1.7-.6 1.7-1.5s-.6-1.4-1.7-1.4h-1.7v2.9zM20.2 22l3.8-12h2.3L23.5 22h-3.3z" fill="white" />
+        </svg>
+        <div>
+          <h1 data-i18n="optionsTitle">CreatorForge Settings</h1>
+          <p data-i18n="optionsSubtitle">Configure your YouTube extension</p>
+        </div>
+      </header>
+
+      <section class="cf-section">
+        <h2 class="cf-section-title" data-i18n="general">General</h2>
+        <div class="cf-field">
+          <label for="siteUrl" data-i18n="siteUrl">CreatorForge site URL</label>
+          <input id="siteUrl" type="url" placeholder="http://localhost:3000" />
+          <span class="cf-hint" data-i18n="siteUrlHint">Same as NEXT_PUBLIC_SITE_URL in your app</span>
+        </div>
+        <div class="cf-field">
+          <label for="locale" data-i18n="defaultLocale">Default locale</label>
+          <select id="locale">
+            <option value="en">English</option>
+            <option value="it">Italiano</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="pt">Português</option>
+            <option value="ru">Русский</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="cf-section">
+        <h2 class="cf-section-title" data-i18n="youtubeApi">YouTube API</h2>
+        <div class="cf-field">
+          <label for="youtubeApiKey" data-i18n="youtubeApiKey">YouTube Data API key</label>
+          <input id="youtubeApiKey" type="password" placeholder="AIza..." autocomplete="off" />
+          <span class="cf-hint" data-i18n="youtubeApiHint">Paste the same YOUTUBE_API_KEY from your CreatorForge .env.local file.</span>
+        </div>
+      </section>
+
+      <section class="cf-section">
+        <h2 class="cf-section-title" data-i18n="display">Display</h2>
+        <div class="cf-toggle-row">
+          <div>
+            <span class="cf-toggle-label" data-i18n="showToolbar">CreatorForge toolbar</span>
+            <span class="cf-toggle-desc" data-i18n="showToolbarDesc">Compact VidIQ-style bar below YouTube header</span>
+          </div>
+          <label class="cf-switch">
+            <input type="checkbox" id="showToolbar" checked />
+            <span class="cf-switch-slider"></span>
+          </label>
+        </div>
+        <div class="cf-toggle-row">
+          <div>
+            <span class="cf-toggle-label" data-i18n="videoSidebar">Video SEO sidebar</span>
+            <span class="cf-toggle-desc" data-i18n="videoSidebarDesc">Show panel on watch pages</span>
+          </div>
+          <label class="cf-switch">
+            <input type="checkbox" id="showVideoPanel" checked />
+            <span class="cf-switch-slider"></span>
+          </label>
+        </div>
+        <div class="cf-toggle-row">
+          <div>
+            <span class="cf-toggle-label" data-i18n="inlineScore">Inline score badge</span>
+            <span class="cf-toggle-desc" data-i18n="inlineScoreDesc">Score circle next to video title</span>
+          </div>
+          <label class="cf-switch">
+            <input type="checkbox" id="showInlineScore" checked />
+            <span class="cf-switch-slider"></span>
+          </label>
+        </div>
+        <div class="cf-toggle-row">
+          <div>
+            <span class="cf-toggle-label" data-i18n="channelPanel">Channel panel</span>
+            <span class="cf-toggle-desc" data-i18n="channelPanelDesc">Show stats on channel pages</span>
+          </div>
+          <label class="cf-switch">
+            <input type="checkbox" id="showChannelPanel" checked />
+            <span class="cf-switch-slider"></span>
+          </label>
+        </div>
+        <div class="cf-toggle-row">
+          <div>
+            <span class="cf-toggle-label" data-i18n="showVphBadges">VPH on thumbnails</span>
+            <span class="cf-toggle-desc" data-i18n="showVphBadgesDesc">Views-per-hour pill on video thumbnails</span>
+          </div>
+          <label class="cf-switch">
+            <input type="checkbox" id="showVphBadges" checked />
+            <span class="cf-switch-slider"></span>
+          </label>
+        </div>
+        <div class="cf-toggle-row">
+          <div>
+            <span class="cf-toggle-label" data-i18n="searchBadges">Search badges</span>
+            <span class="cf-toggle-desc" data-i18n="searchBadgesDesc">Score overlay on search thumbnails</span>
+          </div>
+          <label class="cf-switch">
+            <input type="checkbox" id="showSearchBadges" checked />
+            <span class="cf-switch-slider"></span>
+          </label>
+        </div>
+        <div class="cf-field">
+          <label for="panelPosition" data-i18n="panelPosition">Panel position</label>
+          <select id="panelPosition">
+            <option value="sidebar" data-i18n="panelSidebar">YouTube sidebar (recommended)</option>
+            <option value="fixed" data-i18n="panelFixed">Fixed overlay</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="cf-section">
+        <h2 class="cf-section-title" data-i18n="account">Account</h2>
+        <p class="cf-account-text" data-i18n="accountText">Sign in to CreatorForge to sync your YouTube channel and unlock full analytics.</p>
+        <a class="cf-account-link" id="login-link" href="#" target="_blank" rel="noreferrer" data-i18n="openLogin">Open CreatorForge Login →</a>
+      </section>
+
+      <div class="cf-save-row">
+        <button type="button" id="save" class="cf-save-btn" data-i18n="save">Save Settings</button>
+        <span id="saved" class="cf-saved" hidden data-i18n="saved">Saved successfully</span>
+      </div>
+    </div>
+
+    <script src="lib/i18n.js"></script>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

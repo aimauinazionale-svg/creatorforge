@@ -1,0 +1,1862 @@
+{
+  "meta": {
+    "description": "Toolkit gratuito con IA para creadores de YouTube — ideas, SEO, flujo de trabajo, competidores, calendario y miniaturas."
+  },
+  "layout": {
+    "brand": {
+      "name": "CreatorForge"
+    },
+    "header": {
+      "breadcrumb": "Migas de pan",
+      "language": "Idioma",
+      "languageShort": "Idioma",
+      "userMenu": "Menú de usuario",
+      "theme": {
+        "light": "Cambiar a tema claro",
+        "dark": "Cambiar a tema oscuro"
+      }
+    },
+    "sidebar": {
+      "navigation": "Navegación principal",
+      "open": "Abrir menú",
+      "close": "Cerrar menú"
+    },
+    "nav": {
+      "dashboard": "Panel",
+      "aiAssistant": "Asistente IA",
+      "seoLab": "Laboratorio SEO",
+      "competitors": "Competidores",
+      "workflow": "Flujo de trabajo",
+      "calendar": "Calendario",
+      "ideas": "Ideas",
+      "thumbnail": "Miniatura",
+      "settings": "Ajustes",
+      "onboarding": "Configuración inicial"
+    },
+    "breadcrumb": {
+      "dashboard": "Panel",
+      "aiAssistant": "Asistente IA",
+      "seoLab": "Laboratorio SEO",
+      "competitors": "Competidores",
+      "workflow": "Flujo de trabajo",
+      "calendar": "Calendario",
+      "ideas": "Ideas",
+      "thumbnail": "Miniatura",
+      "settings": "Ajustes",
+      "dynamic": "{segment}",
+      "onboarding": "Configuración inicial"
+    },
+    "user": {
+      "guest": "Invitado",
+      "logout": "Cerrar sesión",
+      "initialFallback": "U",
+      "avatarAlt": "Foto de perfil de {name}"
+    },
+    "languages": {
+      "en": "English",
+      "it": "Italiano",
+      "es": "Español",
+      "de": "Deutsch",
+      "fr": "Français",
+      "pt": "Português",
+      "ru": "Русский",
+      "ja": "日本語",
+      "zh": "中文"
+    },
+    "toast": {
+      "dismiss": "Cerrar notificación"
+    }
+  },
+  "auth": {
+    "title": "Iniciar sesión en CreatorForge",
+    "subtitle": "Gratis para creadores. Sin tarjeta de crédito.",
+    "cardTitle": "Bienvenido de nuevo",
+    "cardSubtitle": "Elige cómo quieres iniciar sesión.",
+    "orEmail": "O continúa con correo",
+    "divider": "o",
+    "google": "Continuar con Google",
+    "magicLink": {
+      "emailLabel": "Correo",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "submit": "Enviar enlace mágico",
+      "submitting": "Enviando…",
+      "sentTitle": "Revisa tu bandeja",
+      "sentBody": "Enviamos un enlace de acceso a {email}."
+    },
+    "toast": {
+      "magicLinkSent": "Enlace mágico enviado. Revisa tu correo.",
+      "error": "Error al iniciar sesión"
+    },
+    "errors": {
+      "INVALID_INPUT": "Introduce un correo válido.",
+      "AUTH_ERROR": "Error de autenticación. Inténtalo de nuevo.",
+      "MISSING_CONFIG": "Sign-in is unavailable until Supabase is configured.",
+      "UNKNOWN": "Server unavailable. Please try again."
+    }
+  },
+  "seoLab": {
+    "title": "Laboratorio SEO",
+    "subtitle": "Investiga palabras clave con autocompletado de YouTube y puntuación heurística.",
+    "form": {
+      "title": "Investigación de keywords",
+      "seedLabel": "Palabra clave semilla",
+      "seedPlaceholder": "ej. consejos crecimiento youtube",
+      "hint": "Usa sugerencias de autocompletado de YouTube (sin API key).",
+      "submit": "Investigar",
+      "submitting": "Investigando…"
+    },
+    "results": {
+      "title": "Puntuaciones",
+      "subtitle": "Puntuaciones más altas sugieren mejores oportunidades long-tail.",
+      "empty": "Introduce una palabra clave semilla para ver sugerencias.",
+      "score": "Puntuación {score}",
+      "autocomplete": "Sugerencias de autocompletado"
+    },
+    "competition": {
+      "low": "Baja",
+      "medium": "Media",
+      "high": "Alta"
+    },
+    "tabs": {
+      "keywords": "Keyword research",
+      "optimizer": "Video optimizer",
+      "analyzer": "Video analyzer",
+      "titles": "Title generator"
+    },
+    "keywords": {
+      "title": "YouTube keyword research",
+      "seedLabel": "Seed keyword",
+      "seedPlaceholder": "e.g. youtube growth tips",
+      "research": "Research keywords"
+    },
+    "optimizer": {
+      "title": "Video SEO optimizer",
+      "titlePlaceholder": "Current video title",
+      "topicPlaceholder": "Main topic",
+      "descriptionPlaceholder": "Video description (optional)",
+      "run": "Optimize",
+      "suggestedTitles": "Suggested titles",
+      "checklist": "SEO checklist"
+    },
+    "errors": {
+      "INVALID_INPUT": "Please enter a keyword with at least 2 characters."
+    },
+    "analyzer": {
+      "title": "Full video SEO analyzer",
+      "urlLabel": "YouTube URL or video ID",
+      "urlPlaceholder": "https://youtube.com/watch?v=... or dQw4w9WgXcQ",
+      "urlHint": "Paste a URL or use ?videoId= from the Chrome extension deep link.",
+      "analyze": "Analyze video",
+      "analyzing": "Analyzing…",
+      "currentVideo": "Current video",
+      "overallScore": "Overall SEO score",
+      "titleScore": "Title",
+      "descriptionScore": "Description",
+      "tagsScore": "Tags",
+      "suggestions": "AI suggestions",
+      "currentTitle": "Current title",
+      "suggestedTitle": "Suggested title",
+      "improvements": "Improvements"
+    },
+    "titleGenerator": {
+      "title": "Title A/B variants",
+      "currentTitle": "Base title",
+      "titlePlaceholder": "e.g. How I Grew My Channel",
+      "topic": "Topic",
+      "topicPlaceholder": "e.g. YouTube growth",
+      "includeEmoji": "Include emoji variants",
+      "powerWords": "Use power words",
+      "generate": "Generate 5 variants",
+      "generating": "Generating…",
+      "chars": "chars",
+      "emoji": "Emoji"
+    }
+  },
+  "aiAssistant": {
+    "title": "Asistente IA",
+    "subtitle": "Chatea con tu experto en YouTube y SEO—ideas, títulos, analíticas y estrategia de crecimiento.",
+    "chat": {
+      "welcome": "¡Hola! Soy tu experto en crecimiento de YouTube",
+      "welcomeSubtitle": "Pregúntame sobre tu canal, ideas de video, títulos SEO, miniaturas, retención o un plan de crecimiento. Te daré consejos prácticos y accionables.",
+      "placeholder": "Pregunta a tu experto de YouTube…",
+      "send": "Enviar mensaje",
+      "thinking": "Pensando…",
+      "clearChat": "Borrar chat",
+      "clearConfirmTitle": "¿Borrar conversación?",
+      "clearConfirm": "Esto eliminará todos los mensajes del chat. No se puede deshacer.",
+      "cancel": "Cancelar",
+      "copy": "Copiar",
+      "copied": "Copiado al portapapeles",
+      "expertName": "Experto YouTube",
+      "expertTitle": "Coach de Creadores y Analista SEO",
+      "suggestions": {
+        "title": "Prueba preguntar:",
+        "analyzeChannel": "Analiza mi canal",
+        "videoIdeas": "Ideas de video para mi nicho",
+        "optimizeTitle": "Optimiza un título SEO",
+        "growthStrategy": "Estrategia de crecimiento para mi canal"
+      },
+      "rateLimit": {
+        "nearDescription": "Has usado {used}/{limit} solicitudes hoy. Quedan {remaining}."
+      },
+      "errors": {
+        "UNAUTHENTICATED": "Inicia sesión para usar el asistente IA.",
+        "RATE_LIMITED": "Has alcanzado el límite de hoy. Inténtalo mañana.",
+        "MISSING_CONFIG": "La IA no está configurada. {details}",
+        "TIMEOUT": "La solicitud ha expirado. Inténtalo de nuevo.",
+        "INVALID_INPUT": "Mensaje no válido. Inténtalo de nuevo.",
+        "GENERIC": "Algo salió mal. {details}",
+        "UNKNOWN": "Algo salió mal. {details}",
+        "NETWORK": "Error de red. Inténtalo de nuevo.",
+        "DB_ERROR": "No pudimos guardar los cambios. {details}"
+      },
+      "aria": {
+        "messageList": "Mensajes del chat",
+        "userMessage": "Tu mensaje",
+        "assistantMessage": "Respuesta del experto"
+      }
+    },
+    "form": {
+      "title": "Generar ideas",
+      "topicLabel": "Tema",
+      "topicPlaceholder": "p. ej. productividad para creadores",
+      "countLabel": "Cantidad de ideas",
+      "countHint": "Máximo 10. Mostraremos 5.",
+      "submit": "Generar",
+      "submitting": "Generando…",
+      "validation": {
+        "topic": "Introduce un tema (mín. 2 caracteres).",
+        "count": "Introduce un número entre 1 y 10."
+      }
+    },
+    "results": {
+      "title": "Ideas",
+      "subtitle": "Elige una y mejora.",
+      "empty": "Envía un tema para generar ideas."
+    },
+    "errors": {
+      "UNAUTHENTICATED": "Inicia sesión para usar herramientas IA.",
+      "RATE_LIMITED": "Has alcanzado el límite de hoy. Inténtalo mañana.",
+      "MISSING_CONFIG": "Falta configuración. {details}",
+      "TIMEOUT": "La solicitud IA agotó el tiempo. Inténtalo de nuevo.",
+      "INVALID_INPUT": "Entrada inválida. Revisa el tema e inténtalo.",
+      "INVALID_JSON": "No se pudo interpretar la respuesta IA. Inténtalo de nuevo.",
+      "GENERIC": "Algo salió mal. {details}",
+      "UNKNOWN": "Something went wrong. {details}",
+      "NETWORK": "Network error. Please try again.",
+      "DB_ERROR": "We couldn't save your changes. {details}",
+      "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to create a workflow from this idea."
+    },
+    "toast": {
+      "success": "Ideas generated",
+      "error": "No se pudieron generar ideas"
+    }
+  },
+  "ai": {
+    "pageTitle": "Asistente de IA",
+    "title": {
+      "formTitle": "Optimizar tu título",
+      "titleLabel": "Título actual",
+      "titlePlaceholder": "p. ej. Cómo planifico videos que funcionan",
+      "topicLabel": "Tema",
+      "topicPlaceholder": "p. ej. estrategia de YouTube",
+      "keywordsLabel": "Palabras clave (opcional)",
+      "keywordsPlaceholder": "keyword 1, keyword 2",
+      "optimize": "Optimizar título",
+      "resultsTitle": "Sugerencias",
+      "resultsSubtitle": "Copia cualquier sugerencia.",
+      "empty": "Envía un título para obtener 3 sugerencias.",
+      "scoreLabel": "Puntuación: {score}/100"
+    },
+    "subtitle": "Genera ideas, títulos, descripciones y etiquetas—rápido.",
+    "tabs": {
+      "ideas": "Ideas",
+      "title": "Título",
+      "description": "Descripción",
+      "tags": "Tags"
+    },
+    "common": {
+      "generate": "Generar",
+      "generating": "Generando…",
+      "optimizing": "Optimizando…",
+      "copy": "Copiar",
+      "retry": "Reintentar",
+      "saving": "Guardando…",
+      "commaOrNewlineHint": "Separa elementos con comas o saltos de línea."
+    },
+    "validation": {
+      "required": "Revisa los campos resaltados."
+    },
+    "errors": {
+      "title": "Algo salió mal",
+      "unauthenticated": "Inicia sesión para usar las herramientas de IA.",
+      "invalidInput": "Entrada inválida. Inténtalo de nuevo.",
+      "rateLimited": "Alcanzaste el límite de hoy. Intenta mañana.",
+      "invalidJson": "No se pudo interpretar la respuesta de IA. Inténtalo de nuevo.",
+      "generic": "Error inesperado. {details}"
+    },
+    "rateLimit": {
+      "nearTitle": "Estás cerca del límite de hoy",
+      "nearDescription": "Has usado {used}/{limit} solicitudes hoy. Quedan {remaining}."
+    },
+    "difficulty": {
+      "low": "Baja",
+      "medium": "Media",
+      "high": "Alta"
+    },
+    "ideas": {
+      "formTitle": "Generar ideas de video",
+      "topicLabel": "Tema",
+      "topicPlaceholder": "p. ej. productividad para creadores",
+      "nicheLabel": "Nicho (opcional)",
+      "nichePlaceholder": "p. ej. canales sin rostro",
+      "audienceLabel": "Audiencia (opcional)",
+      "audiencePlaceholder": "p. ej. nuevos YouTubers",
+      "resultsTitle": "Ideas",
+      "resultsSubtitle": "Genera 5 opciones y guarda la mejor.",
+      "empty": "Completa el formulario para generar 5 ideas.",
+      "difficultyLabel": "Dificultad: {difficulty}",
+      "uniqueAngleLabel": "Ángulo único:",
+      "save": "Guardar en el banco de ideas",
+      "regenerate": "Regenerar"
+    },
+    "description": {
+      "formTitle": "Generar una descripción",
+      "titleLabel": "Título del video",
+      "titlePlaceholder": "p. ej. 7 hábitos para crecer tu canal",
+      "keywordsLabel": "Palabras clave (opcional)",
+      "keywordsPlaceholder": "keyword 1, keyword 2",
+      "keyPointsLabel": "Puntos clave (opcional)",
+      "keyPointsPlaceholder": "Punto 1\nPunto 2",
+      "generate": "Generar descripción",
+      "resultsTitle": "Descripción",
+      "resultsSubtitle": "Copia y ajusta según necesites.",
+      "empty": "Envía un título para generar una descripción."
+    },
+    "tags": {
+      "formTitle": "Generar tags",
+      "titleLabel": "Título del video",
+      "titlePlaceholder": "p. ej. Construye un sistema de contenido",
+      "topicLabel": "Tema",
+      "topicPlaceholder": "p. ej. estrategia de contenido",
+      "descriptionLabel": "Descripción",
+      "descriptionPlaceholder": "Pega tu descripción para generar mejores tags.",
+      "generate": "Generar tags",
+      "resultsTitle": "Tags",
+      "resultsSubtitle": "Copia tags individuales o copia todo.",
+      "empty": "Envía el formulario para generar tags.",
+      "copyAll": "Copiar todo",
+      "copyTagAria": "Copiar tag: {tag}"
+    },
+    "toasts": {
+      "saveIdeaSuccessTitle": "Guardado en el banco de ideas",
+      "saveIdeaErrorTitle": "No se pudo guardar la idea",
+      "copySuccessTitle": "Copiado",
+      "copyErrorTitle": "Fallo al copiar"
+    }
+  },
+  "dynamicPage": {
+    "title": "Página dinámica: {nome}",
+    "subtitle": "Esta ruta demuestra estados de carga, error, vacío y éxito.",
+    "states": {
+      "loading": "Cargando",
+      "error": "Error",
+      "empty": "Vacío",
+      "success": "Éxito"
+    },
+    "loading": {
+      "title": "Cargando…",
+      "subtitle": "Obteniendo tu contenido."
+    },
+    "error": {
+      "title": "Algo salió mal",
+      "message": "No pudimos cargar esta página. Inténtalo de nuevo.",
+      "retryCta": "Reintentar",
+      "backCta": "Volver"
+    },
+    "routeError": {
+      "title": "Error de ruta",
+      "description": "Ocurrió un error inesperado al renderizar esta ruta.",
+      "details": "Detalles: {details}",
+      "retryCta": "Reintentar",
+      "homeCta": "Inicio"
+    },
+    "empty": {
+      "title": "Nada que mostrar",
+      "description": "No se devolvieron datos para este nombre.",
+      "cta": "Ir al inicio"
+    },
+    "success": {
+      "title": "Cargado",
+      "greeting": "Hola, {nome}!",
+      "placeholderHeading": "Contenido de ejemplo",
+      "placeholderBody": "Puedes reemplazar esto con contenido real para “{nome}”.",
+      "timestamp": "Obtenido a las: {timestamp}",
+      "refreshCta": "Actualizar",
+      "homeCta": "Inicio"
+    },
+    "sidebar": {
+      "title": "Detalles de la ruta",
+      "body": "Usa nombres especiales para probar estados: “error” o “empty”.",
+      "nomeLabel": "nome",
+      "stateLabel": "estado"
+    }
+  },
+  "nav": {
+    "ariaLabel": "Navegación principal",
+    "dashboard": "Panel",
+    "aiAssistant": "Asistente de IA",
+    "seoLab": "Laboratorio SEO",
+    "competitors": "Competidores",
+    "workflow": "Flujo de trabajo",
+    "calendar": "Calendario",
+    "ideas": "Ideas",
+    "settings": "Ajustes"
+  },
+  "header": {
+    "brand": "CreatorForge",
+    "aria": {
+      "breadcrumb": "Migas de pan",
+      "language": "Idioma",
+      "userMenu": "Menú de usuario"
+    },
+    "languageShort": "Idioma",
+    "languages": {
+      "en": "English",
+      "it": "Italiano",
+      "es": "Español",
+      "de": "Deutsch",
+      "fr": "Français",
+      "pt": "Português",
+      "ru": "Русский",
+      "ja": "日本語",
+      "zh": "中文"
+    },
+    "breadcrumb": {
+      "dashboard": "Panel",
+      "aiAssistant": "Asistente de IA",
+      "seoLab": "Laboratorio SEO",
+      "competitors": "Competidores",
+      "workflow": "Flujo de trabajo",
+      "calendar": "Calendario",
+      "ideas": "Ideas",
+      "thumbnail": "Miniatura",
+      "settings": "Ajustes",
+      "dynamic": "{segment}",
+      "onboarding": "Onboarding"
+    },
+    "mobileMenu": {
+      "open": "Abrir menú",
+      "close": "Cerrar menú"
+    },
+    "user": {
+      "guest": "Invitado",
+      "profile": "Perfil",
+      "logout": "Cerrar sesión"
+    }
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema",
+    "switchToDark": "Cambiar a tema oscuro",
+    "switchToLight": "Cambiar a tema claro"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "subtitle": "Conecta tu canal de YouTube para ver estadísticas y sincronizar videos.",
+    "unauthenticated": "Inicia sesión para conectar tu canal de YouTube.",
+    "notConnectedHint": "Conecta tu canal de YouTube para cargar estadísticas.",
+    "stats": {
+      "title": "Estadísticas del canal",
+      "subscribers": "Suscriptores",
+      "views": "Vistas",
+      "videos": "Videos",
+      "totalViews": "Vistas totales",
+      "totalVideos": "Videos totales",
+      "watchTime": "Tiempo de visualización",
+      "error": "No pudimos cargar las estadísticas del canal.",
+      "retry": "Reintentar"
+    },
+    "trend": {
+      "vsLastPeriod": "vs captura de los últimos 30 días"
+    },
+    "videos": {
+      "recentTitle": "Videos recientes",
+      "topTitle": "Mejores videos",
+      "empty": "Aún no hay videos.",
+      "emptyTop": "Aún no hay mejores videos.",
+      "published": "Publicado {date}",
+      "metrics": {
+        "views": "Vistas",
+        "likes": "Me gusta",
+        "comments": "Comentarios",
+        "ctr": "CTR {value}%"
+      },
+      "metricsSummary": "{views} views · {comments} comments"
+    },
+    "chart": {
+      "title": "Vistas (últimos 30 días)",
+      "empty": "Sin datos para el gráfico.",
+      "unavailable": "La serie temporal requiere acceso a YouTube Analytics.",
+      "tooltipDate": "{date}",
+      "tooltipViews": "Vistas"
+    },
+    "actions": {
+      "title": "Acciones rápidas",
+      "aiAssistant": {
+        "title": "Asistente IA",
+        "description": "Genera ideas de videos"
+      },
+      "seoLab": {
+        "title": "Laboratorio SEO",
+        "description": "Optimiza títulos y etiquetas"
+      },
+      "competitors": {
+        "title": "Competidores",
+        "description": "Sigue otros canales"
+      },
+      "workflow": {
+        "title": "Flujo de trabajo",
+        "description": "Planifica tu producción"
+      }
+    },
+    "recentActivity": {
+      "title": "Recent activity",
+      "empty": "No recent activity yet.",
+      "types": {
+        "idea": "Idea saved",
+        "workflow": "Workflow",
+        "scheduled": "Scheduled video",
+        "ai": "AI request",
+        "video": "Video"
+      }
+    },
+    "channelHealth": {
+      "title": "Channel health",
+      "labels": {
+        "excellent": "Excellent",
+        "good": "Good",
+        "fair": "Fair",
+        "needs_attention": "Needs attention"
+      },
+      "factors": {
+        "channelConnected": "YouTube channel connected",
+        "hasIdeas": "Ideas in Idea Bank",
+        "activeWorkflow": "Active workflows",
+        "scheduledContent": "Scheduled content",
+        "syncedVideos": "Synced videos",
+        "tracksCompetitors": "Competitors tracked"
+      },
+      "fallback": "Connect & sync"
+    },
+    "insights": {
+      "title": "Today's focus",
+      "dailyTip": "Daily tip",
+      "topVideo": "Best performing video",
+      "views": "views",
+      "actionItems": "3 things to do today",
+      "refresh": "Refresh insights",
+      "notConnected": "Connect your YouTube channel to get personalized daily insights."
+    },
+    "trending": {
+      "title": "Trending in your niche",
+      "nicheLabel": "Based on: {niche}",
+      "empty": "No trending topics found. Try connecting your channel first.",
+      "addToIdeas": "Add to ideas",
+      "addedToIdeas": "Added to Idea Bank",
+      "addError": "Could not save idea",
+      "refresh": "Refresh trends"
+    },
+    "weeklyReport": {
+      "title": "Weekly report preview",
+      "description": "Generate an AI-powered weekly summary of your channel performance.",
+      "generate": "Generate report",
+      "previewBadge": "Preview",
+      "subscribers": "Subs",
+      "views": "Views",
+      "videos": "Videos",
+      "highlights": "Highlights",
+      "improvements": "Areas to improve",
+      "nextWeekGoals": "Next week goals",
+      "projection": "Growth projection",
+      "refresh": "Regenerate",
+      "notConnected": "Connect your channel to preview your weekly report."
+    }
+  },
+  "youtube": {
+    "card": {
+      "title": "YouTube",
+      "connectedDescription": "Tu cuenta de YouTube está conectada.",
+      "disconnectedDescription": "Conecta tu canal de YouTube para habilitar análisis y sincronización.",
+      "channelIdLabel": "ID del canal:",
+      "refreshSuccess": "Datos del canal actualizados.",
+      "syncSuccess": "Se sincronizaron {count} videos.",
+      "disconnectedSuccess": "YouTube desconectado.",
+      "statsLine": "{subscribers} subscribers · {views} views · {videos} videos"
+    },
+    "actions": {
+      "connect": "Conectar canal de YouTube",
+      "disconnect": "Desconectar",
+      "refreshChannel": "Actualizar datos del canal",
+      "syncVideos": "Sincronizar videos"
+    },
+    "errors": {
+      "UNAUTHENTICATED": "Debes iniciar sesión.",
+      "NOT_CONNECTED": "Aún no hay un canal de YouTube conectado.",
+      "DB_ERROR": "No pudimos guardar tus cambios. Inténtalo de nuevo.",
+      "YOUTUBE_ERROR": "Falló la solicitud a YouTube. Inténtalo de nuevo.",
+      "NOT_CONFIGURED": "Configura YOUTUBE_API_KEY en .env.local",
+      "INVALID_URL": "URL o identificador del canal de YouTube no válido.",
+      "invalidUrl": "URL o identificador del canal de YouTube no válido.",
+      "CHANNEL_NOT_FOUND": "No encontramos un canal de YouTube para esa URL o identificador."
+    },
+    "fields": {
+      "channelUrl": {
+        "label": "URL del canal o @identificador",
+        "placeholder": "@tucanal o https://www.youtube.com/@tucanal",
+        "hint": "Admite youtube.com/channel/UC…, /c/nombre, /user/nombre o @identificador."
+      }
+    }
+  },
+  "calendar": {
+    "title": "Calendario de contenido",
+    "subtitle": "Planifica, programa y reprograma videos durante el mes.",
+    "unauthenticated": "Inicia sesión para usar el calendario de contenido.",
+    "notConnected": "Conecta tu canal de YouTube para usar el calendario.",
+    "views": {
+      "month": "Mes",
+      "week": "Semana",
+      "list": "Lista"
+    },
+    "actions": {
+      "prevMonth": "Mes anterior",
+      "nextMonth": "Mes siguiente",
+      "scheduleVideo": "Programar video",
+      "bestTime": "Mejor hora"
+    },
+    "common": {
+      "close": "Cerrar",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "saving": "Guardando…"
+    },
+    "fields": {
+      "title": "Título",
+      "date": "Fecha",
+      "time": "Hora",
+      "status": "Estado",
+      "notes": "Notas"
+    },
+    "placeholders": {
+      "title": "p. ej. Mi sistema de contenido en 3 pasos",
+      "notes": "Añade notas, enlaces, checklist…"
+    },
+    "status": {
+      "planned": "Planificado",
+      "draft": "Borrador",
+      "scheduled": "Programado",
+      "published": "Publicado",
+      "canceled": "Cancelado"
+    },
+    "validation": {
+      "title": "Ingresa un título (mínimo 2 caracteres).",
+      "dateRequired": "Selecciona una fecha."
+    },
+    "errors": {
+      "load": "No pudimos cargar tu calendario. {details}",
+      "scheduleFailed": "No pudimos programar este video.",
+      "updateFailed": "No pudimos actualizar la programación.",
+      "deleteFailed": "No pudimos quitar la programación.",
+      "UNAUTHENTICATED": "Debes iniciar sesión.",
+      "NOT_CONNECTED": "Aún no hay un canal de YouTube conectado.",
+      "INVALID_INPUT": "Entrada inválida. Revisa e inténtalo de nuevo.",
+      "NOT_FOUND": "Este video programado ya no existe.",
+      "DB_ERROR": "No pudimos guardar los cambios. {details}",
+      "DATABASE_NOT_READY": "Database setup is incomplete. Your changes are saved in this browser until you run the Supabase SQL migration."
+    },
+    "toasts": {
+      "scheduled": "Video programado.",
+      "rescheduled": "Video reprogramado.",
+      "updated": "Programación actualizada.",
+      "deleted": "Programación eliminada.",
+      "bestTimeLoaded": "Mejor hora cargada."
+    },
+    "schedule": {
+      "title": "Programar video",
+      "subtitle": "Elige día y hora, y añade detalles.",
+      "dateEmpty": "No hay fecha seleccionada",
+      "bestTimeBanner": "Sugerido: {day} a las {time}",
+      "useBestTime": "Usar hora"
+    },
+    "details": {
+      "title": "Detalles del video",
+      "subtitle": "Edita programación, estado y notas.",
+      "empty": "Selecciona un video programado para ver detalles.",
+      "delete": "Quitar del calendario",
+      "deleting": "Quitando…",
+      "confirmDeleteTitle": "¿Quitar este video del calendario?",
+      "confirmDeleteDescription": "Se eliminará del calendario. Puedes programarlo de nuevo cuando quieras."
+    },
+    "list": {
+      "filters": {
+        "upcoming": "Próximos",
+        "past": "Pasados",
+        "all": "Todos"
+      },
+      "empty": "No hay videos programados para este filtro.",
+      "weekOf": "Semana de {date}",
+      "when": "{date}"
+    },
+    "week": {
+      "title": "Semana de {date}",
+      "emptyDay": "No hay videos programados"
+    },
+    "sidebar": {
+      "bestTime": {
+        "title": "Mejor hora de publicación",
+        "recommended": "Recomendado",
+        "dayTime": "{day} • {time}",
+        "confidence": "Confianza: {value}%",
+        "updated": "Actualizado",
+        "empty": "Aún no hay suficiente historial."
+      },
+      "frequency": {
+        "label": "Frecuencia",
+        "value": "{count} / semana"
+      },
+      "upcoming": {
+        "title": "Próximos 7 días",
+        "empty": "Nada programado todavía.",
+        "when": "{date}"
+      },
+      "stats": {
+        "title": "Estadísticas",
+        "total": "Total",
+        "upcoming7": "Próximos (7d)"
+      }
+    },
+    "days": {
+      "Sun": "Domingo",
+      "Mon": "Lunes",
+      "Tue": "Martes",
+      "Wed": "Miércoles",
+      "Thu": "Jueves",
+      "Fri": "Viernes",
+      "Sat": "Sábado"
+    },
+    "daysShort": {
+      "Mon": "Lun",
+      "Tue": "Mar",
+      "Wed": "Mié",
+      "Thu": "Jue",
+      "Fri": "Vie",
+      "Sat": "Sáb",
+      "Sun": "Dom"
+    },
+    "empty": "No scheduled videos yet. Schedule your first video to get started."
+  },
+  "competitors": {
+    "title": "Seguimiento de competidores",
+    "subtitle": "Monitorea canales competidores y compara estadísticas clave.",
+    "unauthenticated": "Inicia sesión para seguir competidores.",
+    "actions": {
+      "addCompetitor": "Añadir competidor",
+      "refreshAll": "Actualizar todo",
+      "refresh": "Actualizar",
+      "remove": "Eliminar"
+    },
+    "addSection": {
+      "title": "Añadir un competidor",
+      "description": "Pega un enlace de canal de YouTube (canal, handle o URL personalizada).",
+      "titleManual": "Add manually"
+    },
+    "form": {
+      "channelUrlLabel": "URL del canal de YouTube",
+      "channelUrlPlaceholder": "p. ej. https://www.youtube.com/@veritasium",
+      "submit": "Añadir",
+      "submitting": "Añadiendo…",
+      "hint": "Consejo: los handles (como @nombre) también funcionan.",
+      "validation": {
+        "channelUrl": "Introduce una URL válida de un canal de YouTube."
+      }
+    },
+    "limitWarning": {
+      "title": "Estás cerca del límite",
+      "description": "Estás siguiendo {current}/{limit} competidores. Las cuentas gratis pueden seguir hasta {limit}.",
+      "dismiss": "Ocultar aviso"
+    },
+    "empty": {
+      "kicker": "Empieza",
+      "title": "Sigue los canales con los que compites",
+      "description": "Añade hasta 5 competidores y observa su crecimiento con el tiempo.",
+      "formTitle": "Añade tu primer competidor",
+      "benefits": {
+        "trackGrowth": "Sigue el crecimiento de suscriptores",
+        "compareStats": "Compara vistas y subidas",
+        "spotTrends": "Detecta tendencias pronto",
+        "stayConsistent": "Mantén benchmarks consistentes"
+      },
+      "descriptionAuto": "We analyze your niche when your YouTube channel is connected. You can also add competitors manually below."
+    },
+    "stats": {
+      "subscribers": "Suscriptores",
+      "views": "Vistas",
+      "videos": "Vídeos",
+      "summary": "{subscribers} subscribers · {views} views"
+    },
+    "labels": {
+      "unknownChannel": "Canal desconocido",
+      "unknownDate": "Fecha desconocida",
+      "na": "N/D",
+      "never": "Nunca"
+    },
+    "card": {
+      "trackedSince": "Siguiendo desde {date}",
+      "openChannel": "Abrir canal",
+      "lastUpdated": "Última actualización: {date}"
+    },
+    "removeDialog": {
+      "title": "¿Eliminar competidor?",
+      "description": "Esto dejará de seguir “{name}”. Puedes añadirlo de nuevo más tarde.",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar"
+    },
+    "toasts": {
+      "addSuccessTitle": "Competidor añadido",
+      "addSuccessDescription": "Ahora sigues a {name}.",
+      "addErrorTitle": "No se pudo añadir el competidor",
+      "refreshSuccessTitle": "Competidor actualizado",
+      "refreshSuccessDescription": "Se guardaron las estadísticas más recientes.",
+      "refreshErrorTitle": "No se pudo actualizar el competidor",
+      "removeSuccessTitle": "Competidor eliminado",
+      "removeSuccessDescription": "Se detuvo el seguimiento.",
+      "removeErrorTitle": "No se pudo eliminar el competidor",
+      "refreshAllSuccessTitle": "Competidores actualizados",
+      "refreshAllSuccessDescription": "Se actualizaron {count} competidores.",
+      "refreshAllErrorTitle": "No se pudieron actualizar los competidores"
+    },
+    "error": {
+      "title": "Algo salió mal",
+      "description": "No pudimos cargar tus competidores. Inténtalo de nuevo.",
+      "retry": "Reintentar",
+      "report": "Mostrar detalles"
+    },
+    "errors": {
+      "UNAUTHENTICATED": "Debes iniciar sesión.",
+      "INVALID_URL": "Eso no parece una URL válida de canal de YouTube.",
+      "NOT_FOUND": "No pudimos encontrar ese canal en YouTube.",
+      "LIMIT_REACHED": "Has alcanzado el límite gratis (5 competidores). Elimina uno para añadir otro.",
+      "DUPLICATE": "Ya estás siguiendo ese canal.",
+      "DB_ERROR": "No pudimos guardar tus cambios. Inténtalo de nuevo.",
+      "YOUTUBE_ERROR": "Falló la solicitud a YouTube. Inténtalo de nuevo.",
+      "NOT_CONFIGURED": "Se requiere la clave API de YouTube para el descubrimiento automático.",
+      "NOT_CONNECTED": "Conecta tu canal de YouTube para descubrir competidores automáticamente.",
+      "INVALID_NICHE": "Introduce un nicho de al menos 2 caracteres."
+    },
+    "niche": {
+      "searchByNiche": "Buscar por nicho",
+      "noNicheDetected": "No pudimos detectar tu nicho automáticamente. Introduce una palabra clave para encontrar canales similares.",
+      "inputLabel": "Introduce tu nicho",
+      "placeholder": "ej. gaming, cocina italiana, reseñas tech",
+      "submit": "Buscar competidores",
+      "submitting": "Buscando…",
+      "noResultsTitle": "No se encontraron competidores",
+      "noResultsDescription": "Prueba otra palabra clave o añade una URL de canal manualmente."
+    },
+    "contentGap": {
+      "title": "Content gap hint",
+      "description": "Competitors cover these topics more than you. These could be opportunities:"
+    },
+    "discovery": {
+      "analyzing": "Analyzing your niche…",
+      "autoDiscovered": "Auto-discovered",
+      "notConfigured": "Auto-discovery needs YOUTUBE_API_KEY in .env.local. You can still add competitors manually.",
+      "noChannel": "Connect your YouTube channel (sign in with Google) to discover competitors automatically.",
+      "retry": "Discover competitors",
+      "successTitle": "Competitors found",
+      "successDescription": "Added {count} channels based on your niche."
+    }
+  },
+  "workflow": {
+    "title": "Flujo de producción",
+    "subtitle": "Sigue cada vídeo desde la idea hasta el análisis.",
+    "newProject": "Nuevo proyecto",
+    "unauthenticated": "Inicia sesión para gestionar tu flujo de trabajo.",
+    "notConnected": "Conecta tu canal de YouTube para usar el tablero.",
+    "loadError": "No pudimos cargar tus workflows. {details}",
+    "columns": {
+      "idea": "Idea",
+      "script": "Guion",
+      "recording": "Grabación",
+      "editing": "Edición",
+      "upload": "Subida",
+      "published": "Publicado",
+      "analyzed": "Analizado"
+    },
+    "status": {
+      "idea": "Idea",
+      "script": "Guion",
+      "recording": "Grabación",
+      "editing": "Edición",
+      "upload": "Subida",
+      "published": "Publicado",
+      "analyzed": "Analizado"
+    },
+    "emptyColumn": "Aún no hay tarjetas. Añade una para empezar.",
+    "dnd": {
+      "dragging": "Arrastrando tarjeta"
+    },
+    "modal": {
+      "title": "Tarjeta de workflow",
+      "subtitle": "Edita detalles, estado y fecha límite.",
+      "close": "Cerrar diálogo"
+    },
+    "create": {
+      "title": "Nueva tarjeta",
+      "subtitle": "Crea un nuevo proyecto y sigue el progreso.",
+      "column": "Columna"
+    },
+    "fields": {
+      "title": "Título",
+      "description": "Descripción",
+      "status": "Estado",
+      "dueDate": "Fecha límite",
+      "notes": "Notas",
+      "youtubeVideoId": "ID del vídeo de YouTube"
+    },
+    "placeholders": {
+      "title": "p. ej. 10 consejos de edición",
+      "description": "Descripción corta opcional…",
+      "notes": "Añade notas, enlaces…",
+      "youtubeVideoId": "p. ej. dQw4w9WgXcQ"
+    },
+    "dueDate": "Fecha límite",
+    "dueDateSelected": "Vence {date}",
+    "dueDateEmpty": "Sin fecha seleccionada",
+    "clear": "Limpiar",
+    "actions": {
+      "addToColumn": "Añadir a {column}",
+      "cancel": "Cancelar",
+      "save": "Guardar",
+      "saving": "Guardando…",
+      "delete": "Eliminar",
+      "deleting": "Eliminando…",
+      "create": "Crear",
+      "creating": "Creando…"
+    },
+    "validation": {
+      "title": "Introduce un título (mín. 2 caracteres)."
+    },
+    "errors": {
+      "UNAUTHENTICATED": "Debes iniciar sesión.",
+      "NOT_CONNECTED": "Aún no hay un canal de YouTube conectado.",
+      "INVALID_INPUT": "Entrada inválida. Revisa e inténtalo de nuevo.",
+      "NOT_FOUND": "Esta tarjeta ya no existe.",
+      "DB_ERROR": "No pudimos guardar tus cambios. {details}"
+    }
+  },
+  "thumbnail": {
+    "title": "Analizador de Miniaturas",
+    "subtitle": "Analiza tamaño, contraste, legibilidad y composición—sin IA de pago.",
+    "tabs": {
+      "upload": "Subir",
+      "url": "URL"
+    },
+    "actions": {
+      "analyze": "Analizar",
+      "analyzing": "Analizando…",
+      "retry": "Reintentar",
+      "clear": "Limpiar",
+      "upload": "Subir a la biblioteca",
+      "save": "Guardar análisis"
+    },
+    "upload": {
+      "dropzoneAria": "Subir miniatura",
+      "previewAlt": "Vista previa de miniatura",
+      "selected": "Archivo seleccionado",
+      "fileMeta": "{sizeMb} MB · {type}",
+      "remove": "Quitar",
+      "dropActive": "Suelta la imagen aquí",
+      "dropIdle": "Arrastra una imagen o haz clic para buscar",
+      "dropHint": "JPG, PNG o WebP",
+      "limits": "Máx 5MB. Acepta: JPG, PNG, WebP.",
+      "uploadHint": "La subida es opcional para analizar. Es necesaria para guardar en tu cuenta."
+    },
+    "url": {
+      "label": "URL de la imagen",
+      "placeholder": "https://…/thumbnail.jpg",
+      "trim": "Recortar",
+      "hint": "Algunos sitios bloquean el acceso cross-origin. Si falla, prueba subiendo el archivo."
+    },
+    "results": {
+      "empty": "Sube una imagen o pega una URL para analizar tu miniatura.",
+      "scoreTitle": "Puntuación general",
+      "scoreSubtitle": "0–100 según señales de calidad",
+      "breakdownTitle": "Desglose",
+      "suggestionsTitle": "Sugerencias",
+      "previewTitle": "Vista previa",
+      "previewAlt": "Vista previa de miniatura",
+      "previewHint": "Consejo: activa la cuadrícula para comprobar la regla de tercios.",
+      "showThirdsGrid": "Mostrar cuadrícula de tercios",
+      "noSuggestions": "Sin sugerencias: se ve muy bien.",
+      "priority": {
+        "high": "Alta",
+        "medium": "Media",
+        "low": "Baja"
+      },
+      "breakdown": {
+        "dimensions": "Dimensiones",
+        "fileSize": "Tamaño del archivo",
+        "colors": "Colores",
+        "text": "Texto",
+        "faces": "Caras",
+        "composition": "Composición"
+      },
+      "meta": {
+        "dimensions": "Dimensiones",
+        "size": "Tamaño",
+        "dominant": "Color dominante"
+      }
+    },
+    "errors": {
+      "title": "Algo salió mal",
+      "generic": "Algo salió mal. Inténtalo de nuevo.",
+      "noFile": "Primero sube una imagen.",
+      "noUrl": "Primero introduce una URL de imagen.",
+      "unauthenticated": "Inicia sesión para subir o guardar análisis.",
+      "fileTooLarge": "El archivo es demasiado grande (máx 5MB).",
+      "unsupportedFile": "Tipo de archivo no compatible. Usa JPG, PNG o WebP.",
+      "uploadFailed": "La subida falló. {details}",
+      "saveFailed": "No se pudo guardar el análisis. {details}",
+      "tableMissing": "Guardar no está configurado aún. Crea la tabla thumbnail_analyses en Supabase (ver notas)."
+    },
+    "toasts": {
+      "analyzedTitle": "Análisis completo",
+      "analyzedBody": "Puntuación y sugerencias listas.",
+      "uploadedTitle": "Subido",
+      "uploadedBody": "Tu miniatura se subió correctamente.",
+      "savedTitle": "Guardado",
+      "savedBody": "El análisis se guardó en tu cuenta.",
+      "errorTitle": "Error"
+    }
+  },
+  "onboarding": {
+    "title": "Bienvenido a CreatorForge",
+    "subtitle": "Configuremos tu espacio de trabajo en unos pocos pasos.",
+    "progress": {
+      "welcome": "Bienvenida",
+      "connect": "Conectar YouTube",
+      "goals": "Objetivos",
+      "channel": "Info del canal",
+      "personalize": "Personalización",
+      "complete": "Completado"
+    },
+    "actions": {
+      "back": "Atrás",
+      "next": "Siguiente",
+      "skip": "Omitir",
+      "finish": "Finalizar"
+    },
+    "validation": {
+      "generic": "Revisa tus respuestas e inténtalo de nuevo.",
+      "goalsMinOne": "Selecciona al menos un objetivo o añade uno personalizado.",
+      "channelInfo": "Completa todos los campos del canal (mínimo 2 caracteres cada uno)."
+    },
+    "errors": {
+      "UNAUTHENTICATED": "Inicia sesión para continuar la configuración.",
+      "DB_ERROR": "No pudimos guardar tu progreso. Inténtalo de nuevo.",
+      "INVALID_STEP": "Paso de configuración no válido.",
+      "INVALID_INPUT": "Please check your answers and try again.",
+      "UNKNOWN": "Server unavailable. Please try again.",
+      "NETWORK": "Network error. Please try again."
+    },
+    "savedLocally": "Progreso guardado localmente.",
+    "steps": {
+      "welcome": {
+        "title": "Empecemos la configuración",
+        "subtitle": "Esto ayuda a CreatorForge a adaptar las sugerencias a tu canal.",
+        "bullets": {
+          "youtube": "Conecta YouTube para desbloquear analíticas y sincronización.",
+          "goals": "Elige objetivos para optimizar tu flujo de trabajo.",
+          "personalize": "Elige notificaciones y frecuencia de correo."
+        }
+      },
+      "connectYouTube": {
+        "title": "Conectar YouTube",
+        "subtitle": "Opcional, pero recomendado para desbloquear el panel.",
+        "card": {
+          "title": "YouTube connection",
+          "connected": "You’re connected.",
+          "disconnected": "Connect your YouTube account to enable analytics.",
+          "channelIdLabel": "Channel ID:",
+          "connectCta": "Connect YouTube"
+        }
+      },
+      "goals": {
+        "title": "Tus objetivos",
+        "subtitle": "Elige al menos uno para personalizar las recomendaciones.",
+        "options": {
+          "grow": "Hacer crecer suscriptores y vistas",
+          "consistent": "Publicar con más constancia",
+          "monetize": "Monetizar el canal",
+          "workflow": "Mejorar flujo de trabajo y planificación"
+        },
+        "custom": {
+          "label": "Objetivo personalizado (opcional)",
+          "placeholder": "ej. mejorar la retención en los primeros 30 segundos",
+          "hint": "Si ninguna opción encaja, añade el tuyo."
+        }
+      },
+      "channelInfo": {
+        "title": "Información del canal",
+        "subtitle": "Algunos detalles nos ayudan a personalizar ideas y plantillas.",
+        "fields": {
+          "niche": {
+            "label": "Nicho",
+            "placeholder": "ej. fitness, reseñas tech, cocina"
+          },
+          "audience": {
+            "label": "Audiencia",
+            "placeholder": "ej. principiantes, creadores, padres"
+          },
+          "frequency": {
+            "label": "Frecuencia de subida",
+            "placeholder": "ej. 2 videos/semana"
+          },
+          "experience": {
+            "label": "Nivel de experiencia",
+            "placeholder": "ej. nuevo, intermedio, experto"
+          }
+        }
+      },
+      "personalization": {
+        "title": "Personalización",
+        "subtitle": "Elige cómo quieres recibir noticias nuestras.",
+        "notifications": {
+          "title": "Notifications",
+          "product": {
+            "label": "Product updates",
+            "hint": "New features and improvements."
+          },
+          "tips": {
+            "label": "Tips & best practices",
+            "hint": "Short guidance to grow faster."
+          }
+        },
+        "emailFrequency": {
+          "label": "Frecuencia de correo",
+          "hint": "Puedes cambiarlo en cualquier momento en ajustes.",
+          "options": {
+            "daily": "Diaria",
+            "weekly": "Semanal",
+            "monthly": "Mensual",
+            "never": "Nunca"
+          }
+        }
+      },
+      "complete": {
+        "title": "¡Todo listo!",
+        "subtitle": "Guardamos tus preferencias. Redirigiendo al panel…",
+        "summary": {
+          "title": "Summary",
+          "goalsLabel": "Goals:",
+          "nicheLabel": "Niche:",
+          "audienceLabel": "Audience:",
+          "emailFrequencyLabel": "Email:",
+          "none": "None"
+        }
+      }
+    }
+  },
+  "ideas": {
+    "title": "Idea Bank",
+    "subtitle": "Capture, organize, and prioritize content ideas.",
+    "countBadge": {
+      "title": "{count} ideas",
+      "value": "{count}"
+    },
+    "view": {
+      "grid": "Grid view",
+      "list": "List view"
+    },
+    "actions": {
+      "newIdea": "New idea",
+      "edit": "Edit",
+      "archive": "Archive",
+      "unarchive": "Unarchive",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…",
+      "deleting": "Deleting…",
+      "exportJson": "Export JSON",
+      "createWorkflow": "Create workflow",
+      "viewWorkflow": "View workflow"
+    },
+    "status": {
+      "active": "Active",
+      "archived": "Archived"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "filters": {
+      "searchPlaceholder": "Search ideas…",
+      "searchAria": "Search ideas",
+      "button": "Filters",
+      "reset": "Reset",
+      "close": "Close",
+      "status": {
+        "label": "Status",
+        "aria": "Filter by status",
+        "active": "Active",
+        "archived": "Archived",
+        "all": "All"
+      },
+      "priority": {
+        "label": "Priority",
+        "aria": "Filter by priority",
+        "all": "All priorities"
+      },
+      "category": {
+        "label": "Category",
+        "aria": "Filter by category",
+        "all": "All categories"
+      },
+      "tag": {
+        "label": "Tag",
+        "aria": "Filter by tag",
+        "placeholder": "e.g. shorts"
+      },
+      "sort": {
+        "label": "Sort",
+        "aria": "Sort ideas",
+        "newest": "Newest",
+        "oldest": "Oldest",
+        "priority": "Priority"
+      }
+    },
+    "bulk": {
+      "aria": "Bulk actions",
+      "selectOne": "Select idea: {title}",
+      "selectAll": "Select all ideas",
+      "selectAllLabel": "Select all",
+      "selectedCount": "{count} selected",
+      "selectedCountInline": "{count} selected",
+      "archive": "Archive",
+      "unarchive": "Unarchive",
+      "delete": "Delete",
+      "priority": {
+        "aria": "Set priority for selected",
+        "label": "Set priority…"
+      },
+      "confirmDelete": {
+        "title": "Delete selected ideas?",
+        "description": "This will permanently delete {count} ideas.",
+        "cta": "Delete"
+      }
+    },
+    "card": {
+      "open": "Open idea: {title}",
+      "menu": "Idea actions",
+      "created": "Created {date}",
+      "notesPreview": "Notes: {notes}",
+      "moreTags": "+{count} more"
+    },
+    "modal": {
+      "createTitle": "New idea",
+      "createSubtitle": "Add details now or later—everything is editable.",
+      "editTitle": "Edit idea",
+      "editSubtitle": "Update fields, tags, and status.",
+      "close": "Close",
+      "moreTags": "+{count} more"
+    },
+    "fields": {
+      "title": "Title",
+      "description": "Description",
+      "category": "Category",
+      "tags": "Tags",
+      "priority": "Priority",
+      "status": "Status",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "title": "e.g. 10 editing tips for creators",
+      "description": "Optional short description…",
+      "category": "e.g. Productivity",
+      "tags": "Comma-separated (e.g. shorts, editing, hooks)",
+      "notes": "Add notes, links, timestamps…"
+    },
+    "hints": {
+      "tags": "Tip: use commas to add multiple tags."
+    },
+    "validation": {
+      "title": "Please enter a title (min 2 characters)."
+    },
+    "empty": {
+      "kicker": "Idea Bank",
+      "title": "Your idea bank is empty",
+      "description": "Start capturing ideas so you never lose a great hook again.",
+      "ctaTitle": "Create your first idea",
+      "ctaHint": "You can add tags, priority, and notes anytime.",
+      "benefits": {
+        "capture": "Capture ideas fast",
+        "organize": "Organize with categories & tags",
+        "prioritize": "Prioritize what matters",
+        "revisit": "Revisit anytime"
+      }
+    },
+    "sidebar": {
+      "aria": "Ideas stats",
+      "title": "Stats",
+      "subtitle": "Quick overview of your idea bank.",
+      "active": "Active",
+      "archived": "Archived",
+      "priorityTitle": "By priority",
+      "categoriesTitle": "Top categories",
+      "noCategories": "No categories yet.",
+      "tagsTitle": "Top tags",
+      "noTags": "No tags yet."
+    },
+    "confirmDelete": {
+      "title": "Delete this idea?",
+      "description": "This will permanently delete “{title}”."
+    },
+    "toast": {
+      "created": {
+        "title": "Created",
+        "description": "Your idea was added to the bank."
+      },
+      "saved": {
+        "title": "Saved",
+        "description": "Your changes were saved."
+      },
+      "archived": {
+        "title": "Archived",
+        "description": "The idea was archived."
+      },
+      "unarchived": {
+        "title": "Restored",
+        "description": "The idea is active again."
+      },
+      "deleted": {
+        "title": "Deleted",
+        "description": "The idea was deleted."
+      },
+      "bulkDone": {
+        "title": "Done",
+        "description": "{count} ideas updated."
+      },
+      "actionFailed": {
+        "title": "Something went wrong"
+      },
+      "exported": {
+        "title": "Exported",
+        "description": "Ideas downloaded as JSON."
+      },
+      "workflowCreated": {
+        "title": "Workflow created",
+        "description": "Your idea is now a workflow project."
+      }
+    },
+    "errors": {
+      "UNAUTHENTICATED": "You need to be signed in.",
+      "INVALID_INPUT": "Invalid input. Please check and try again.",
+      "NOT_FOUND": "This idea no longer exists.",
+      "DB_ERROR": "We couldn’t save your changes. {details}",
+      "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to create a workflow from this idea."
+    },
+    "categoryBadge": {
+      "title": "Category: {category}"
+    },
+    "tagChip": {
+      "title": "Tag: {tag}",
+      "remove": "Remove tag {tag}"
+    },
+    "priorityIndicator": {
+      "title": "Priority: {priority}",
+      "aria": "Priority {priority}"
+    },
+    "scriptOutline": {
+      "title": "Script outline generator",
+      "videoTitle": "Video title",
+      "titlePlaceholder": "e.g. 10 Tips for Better Thumbnails",
+      "duration": "Target duration",
+      "style": "Style",
+      "stylePlaceholder": "educational, vlog, tutorial…",
+      "generate": "Generate outline",
+      "generating": "Generating…",
+      "result": "Script outline",
+      "hook": "Hook",
+      "intro": "Intro",
+      "cta": "Call to action",
+      "outro": "Outro",
+      "copyAll": "Copy outline",
+      "copied": "Outline copied to clipboard",
+      "copyError": "Could not copy"
+    }
+  },
+  "emails": {
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your CreatorForge preferences.",
+      "unauthenticated": "Please sign in to manage settings.",
+      "emailLink": "Email notifications",
+      "emailTitle": "Email notifications",
+      "emailSubtitle": "Elige qué correos quieres recibir.",
+      "thumbnailTitle": "Analizador de miniaturas",
+      "thumbnailSubtitle": "Analiza contraste, texto y composición",
+      "commentsTitle": "Sentimiento de comentarios",
+      "commentsSubtitle": "Comprende las reacciones de tu audiencia",
+      "profileFallback": "Creador",
+      "billingTitle": "Billing & plan",
+      "billingSubtitle": "View your plan and manage your Pro subscription"
+    },
+    "preferences": {
+      "emailLabel": "Sending to",
+      "frequencyLabel": "Digest frequency",
+      "frequencyWeekly": "Weekly",
+      "frequencyBiweekly": "Every 2 weeks",
+      "unsubscribedAllHint": "You have unsubscribed from all email notifications."
+    },
+    "types": {
+      "weeklyDigest": {
+        "title": "Weekly digest",
+        "description": "A snapshot of your performance + next steps."
+      },
+      "competitorAlert": {
+        "title": "Competitor alerts",
+        "description": "Get notified when tracked channels publish."
+      },
+      "publishingReminder": {
+        "title": "Publishing reminders",
+        "description": "Nudges when workflows are due."
+      },
+      "goalReached": {
+        "title": "Goal reached",
+        "description": "Celebrate milestones you hit."
+      },
+      "onboarding": {
+        "title": "Onboarding",
+        "description": "Tips to help you get started."
+      }
+    },
+    "actions": {
+      "save": "Save changes",
+      "saving": "Saving…",
+      "unsubscribeAll": "Unsubscribe from all"
+    },
+    "toast": {
+      "savedTitle": "Saved",
+      "savedBody": "Your email preferences were updated.",
+      "errorTitle": "Could not save",
+      "errorBody": "Please try again."
+    }
+  },
+  "landing": {
+    "brand": "CreatorForge",
+    "meta": {
+      "title": "CreatorForge — Kit gratuito para creadores de YouTube con IA",
+      "description": "Planifica, investiga y publica mejores videos con un kit gratuito: ideas, flujo de trabajo, competidores, calendario y análisis de miniaturas."
+    },
+    "structuredData": {
+      "name": "CreatorForge",
+      "description": "Kit gratuito con IA para creadores de YouTube: ideas, planificación y optimización."
+    },
+    "nav": {
+      "aria": "Navegación principal",
+      "features": "Funciones",
+      "pricing": "Precios",
+      "blog": "Blog",
+      "login": "Iniciar sesión",
+      "close": "Cerrar menú",
+      "menuOpen": "Abrir menú de navegación"
+    },
+    "cta": {
+      "getStartedFree": "Empezar gratis"
+    },
+    "hero": {
+      "kicker": "Publica mejores videos, más rápido",
+      "title": "Tu kit de creador gratuito con IA",
+      "subtitle": "De la idea al calendario: CreatorForge te ayuda a planificar, optimizar y publicar con constancia—sin diez herramientas distintas.",
+      "primaryCta": "Empezar gratis",
+      "secondaryCta": "Ver precios",
+      "mockAlt": "Vista previa del panel de CreatorForge",
+      "bullets": {
+        "0": "Gratis para empezar",
+        "1": "Diseñado para la velocidad",
+        "2": "Disponible en 9 idiomas"
+      }
+    },
+    "features": {
+      "title": "Everything you need to grow",
+      "subtitle": "A focused set of tools for modern YouTube workflows—simple, fast, and cost-aware.",
+      "items": {
+        "ideas": {
+          "title": "AI idea generator",
+          "description": "Generate video ideas and angles in seconds, then iterate with prompts."
+        },
+        "seo": {
+          "title": "SEO-ready titles",
+          "description": "Craft better titles, tags, and descriptions with structured guidance."
+        },
+        "competitors": {
+          "title": "Competitor tracking",
+          "description": "Follow channels you admire and learn from what’s working."
+        },
+        "workflow": {
+          "title": "Production workflow",
+          "description": "Keep scripts, notes, and status in one place—from draft to publish."
+        },
+        "calendar": {
+          "title": "Scheduling calendar",
+          "description": "Plan uploads, reschedule with drag & drop, and stay consistent."
+        },
+        "thumbnails": {
+          "title": "Thumbnail checks",
+          "description": "Quickly analyze thumbnails and get actionable improvements."
+        }
+      }
+    },
+    "how": {
+      "title": "How it works",
+      "subtitle": "A simple loop you can repeat every week.",
+      "steps": {
+        "connect": {
+          "label": "Step 1",
+          "title": "Connect your channel",
+          "description": "Sign in and link YouTube to unlock analytics and scheduling."
+        },
+        "build": {
+          "label": "Step 2",
+          "title": "Plan with AI + workflow",
+          "description": "Generate ideas, organize tasks, and track competitors in one hub."
+        },
+        "publish": {
+          "label": "Step 3",
+          "title": "Schedule and improve",
+          "description": "Schedule uploads and refine thumbnails with quick feedback."
+        }
+      }
+    },
+    "comparison": {
+      "title": "CreatorForge vs. alternatives",
+      "subtitle": "Stop stitching together free tools and spreadsheets.",
+      "table": {
+        "feature": "Feature",
+        "creatorForge": "CreatorForge",
+        "alternatives": "Other tools"
+      },
+      "rows": {
+        "freeTools": "Free core toolkit",
+        "aiCredits": "AI assistance built-in",
+        "workflow": "Workflow + notes",
+        "competitors": "Competitor tracking",
+        "calendar": "Scheduling calendar",
+        "thumbnails": "Thumbnail analysis"
+      }
+    },
+    "testimonials": {
+      "title": "Creators love the focus",
+      "subtitle": "Less clutter, more output.",
+      "items": {
+        "0": {
+          "quote": "I replaced three spreadsheets and two apps in one afternoon.",
+          "name": "Ava",
+          "role": "Education creator"
+        },
+        "1": {
+          "quote": "The workflow view keeps my uploads consistent—even when I’m busy.",
+          "name": "Noah",
+          "role": "Gaming creator"
+        },
+        "2": {
+          "quote": "Thumbnail feedback is quick and actionable. My CTR improved.",
+          "name": "Mia",
+          "role": "Vlog creator"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Pricing that stays simple",
+      "subtitle": "Start free. Upgrade when you need more.",
+      "highlight": "Most popular",
+      "finePrint": "You can start on the Free plan and upgrade anytime.",
+      "plans": {
+        "free": {
+          "label": "Free",
+          "price": "$0",
+          "description": "Essentials to plan and publish consistently.",
+          "cta": "Start free",
+          "features": {
+            "0": "AI idea generation (limited)",
+            "1": "Workflow board",
+            "2": "Basic scheduling",
+            "3": "Core creator tools"
+          }
+        },
+        "pro": {
+          "label": "Pro",
+          "price": "$9/mo",
+          "description": "More automation and deeper planning.",
+          "cta": "Try Pro",
+          "features": {
+            "0": "Higher AI limits",
+            "1": "Competitor tracking",
+            "2": "Advanced calendar views",
+            "3": "Priority improvements"
+          }
+        },
+        "creator": {
+          "label": "Creator",
+          "price": "$19/mo",
+          "description": "For teams and serious creators.",
+          "cta": "Go Creator",
+          "features": {
+            "0": "Team-ready workflows",
+            "1": "More channels (coming soon)",
+            "2": "Enhanced analytics (coming soon)",
+            "3": "Best-in-class support"
+          }
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Everything you need to know before you start.",
+      "items": {
+        "0": {
+          "q": "Is CreatorForge really free?",
+          "a": "Yes. The Free plan includes the core toolkit and limited AI usage."
+        },
+        "1": {
+          "q": "Do I need to connect YouTube?",
+          "a": "You can explore the landing experience without connecting. Connecting unlocks analytics and scheduling."
+        },
+        "2": {
+          "q": "Which languages are supported?",
+          "a": "CreatorForge supports 9 languages including English, Italian, Spanish, German, French, Portuguese, Russian, Japanese, and Chinese."
+        },
+        "3": {
+          "q": "Can I use my own workflow?",
+          "a": "Yes. You can adapt the workflow to match your production process and update statuses as you go."
+        },
+        "4": {
+          "q": "Is this optimized for mobile?",
+          "a": "Yes. The landing page and core app screens are responsive and dark-mode friendly."
+        },
+        "5": {
+          "q": "How do I get started?",
+          "a": "Click “Get Started Free” to open the app and begin planning your next upload."
+        }
+      }
+    },
+    "finalCta": {
+      "title": "Ready to publish consistently?",
+      "subtitle": "Start free and ship your next video with less friction.",
+      "primaryCta": "Get started free",
+      "secondaryCta": "View pricing"
+    },
+    "footer": {
+      "brand": "CreatorForge",
+      "tagline": "A free toolkit for modern YouTube creators.",
+      "sections": {
+        "product": "Product",
+        "social": "Social"
+      },
+      "links": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "blog": "Blog",
+        "login": "Login"
+      },
+      "social": {
+        "github": "GitHub",
+        "x": "X",
+        "youtube": "YouTube"
+      },
+      "legal": {
+        "terms": "Terms",
+        "privacy": "Privacy"
+      },
+      "copyright": "© {year} CreatorForge. All rights reserved."
+    }
+  },
+  "common": {
+    "errors": {
+      "UNAUTHENTICATED": "Please sign in to continue.",
+      "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+      "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
+      "NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
+      "INVALID_INPUT": "Invalid input. Please check and try again.",
+      "NOT_FOUND": "This item no longer exists.",
+      "DB_ERROR": "No pudimos guardar los cambios. {details}",
+      "NETWORK": "Network error. Check your connection and try again.",
+      "UNKNOWN": "Something went wrong. Please try again.",
+      "AUTH_ERROR": "Authentication failed. Please try again.",
+      "MISSING_CONFIG": "Missing configuration. {details}",
+      "TIMEOUT": "The request timed out. Please try again.",
+      "INVALID_JSON": "The response could not be parsed. Please try again."
+    },
+    "actions": {
+      "signIn": "Iniciar sesión",
+      "connectYouTube": "Conectar YouTube",
+      "retry": "Reintentar",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "toast": {
+      "success": "Done",
+      "error": "Something went wrong"
+    },
+    "loading": "Loading…"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or was moved.",
+    "backHome": "Back to dashboard"
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Try refreshing the page.",
+    "retry": "Try again"
+  },
+  "devBanner": {
+    "message": "Supabase is not configured. Add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to .env.local.",
+    "dismiss": "Dismiss"
+  },
+  "login": {
+    "pageTitle": "Sign in to CreatorForge",
+    "pageSubtitle": "Use Google or a magic link to access your creator toolkit.",
+    "title": "Welcome back",
+    "subtitle": "Choose how you'd like to sign in.",
+    "google": "Continue with Google",
+    "orEmail": "Or continue with email",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "magicLink": "Send magic link",
+    "checkInbox": "Check your inbox for a sign-in link.",
+    "validation": {
+      "email": "Please enter a valid email address."
+    },
+    "toast": {
+      "magicLinkSent": "Magic link sent. Check your email.",
+      "error": "Sign-in failed"
+    },
+    "errors": {
+      "AUTH_ERROR": "We couldn't sign you in. Please try again.",
+      "INVALID_INPUT": "Please enter a valid email address."
+    }
+  },
+  "search": {
+    "placeholder": "Buscar ideas y flujos de trabajo…",
+    "aria": "Búsqueda global",
+    "empty": "No se encontraron resultados.",
+    "resultsAria": "Resultados de búsqueda",
+    "types": {
+      "idea": "Idea",
+      "workflow": "Flujo de trabajo"
+    }
+  },
+  "comments": {
+    "title": "Comment Sentiment",
+    "subtitle": "Analyze audience reactions with lightweight sentiment scoring.",
+    "videoUrlLabel": "YouTube video URL",
+    "videoUrlPlaceholder": "https://youtube.com/watch?v=…",
+    "analyze": "Analyze comments",
+    "analyzing": "Analyzing…",
+    "sentiment": {
+      "title": "Sentiment breakdown",
+      "positive": "Positive",
+      "neutral": "Neutral",
+      "negative": "Negative",
+      "total": "{count} comments analyzed"
+    },
+    "questions": {
+      "title": "Top questions",
+      "empty": "No questions detected in recent comments."
+    },
+    "sample": {
+      "title": "Sample comments"
+    }
+  },
+  "legalPages": {
+    "terms": {
+      "title": "Terms of Service",
+      "description": "CreatorForge terms of service.",
+      "body": "CreatorForge is provided as-is for creators. By using the service you agree to use it responsibly and comply with applicable laws. We may update these terms; continued use constitutes acceptance."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How CreatorForge handles your data.",
+      "body": "We store account data and workspace content to provide the service. We do not sell personal data. You can request deletion by contacting support. Third-party providers (Supabase, Google, YouTube) process data according to their policies."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "CreatorForge updates and creator tips.",
+      "comingSoon": "Our blog is coming soon. Check back for product updates and YouTube growth tips."
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing",
+      "description": "Simple pricing for CreatorForge — start free, upgrade to Pro when you need unlimited AI, competitor tracking, and advanced SEO tools."
+    },
+    "title": "Pricing that stays simple",
+    "subtitle": "Start free. Upgrade when you need more power for your channel.",
+    "highlight": "Most popular",
+    "finePrint": "You can start on the Free plan and upgrade anytime. Cancel from your billing portal.",
+    "free": {
+      "label": "Free",
+      "price": "$0",
+      "description": "Essentials to plan and publish consistently.",
+      "cta": "Start free",
+      "features": {
+        "0": "Dashboard & workflow board",
+        "1": "Basic calendar scheduling",
+        "2": "Limited AI requests per day",
+        "3": "Thumbnail analyzer",
+        "4": "Ideas bank & script outlines"
+      }
+    },
+    "pro": {
+      "label": "Pro",
+      "price": "$9/mo",
+      "description": "Unlimited AI, competitor tracking, and advanced SEO Lab.",
+      "features": {
+        "0": "Unlimited AI Assistant",
+        "1": "Competitor tracking & niche discovery",
+        "2": "Advanced SEO Lab & video analyzer",
+        "3": "Higher rate limits across tools",
+        "4": "Priority feature updates"
+      }
+    }
+  },
+  "billing": {
+    "title": "Billing",
+    "subtitle": "Manage your CreatorForge subscription.",
+    "currentPlan": "Current plan",
+    "planFree": "Free",
+    "planPro": "Pro",
+    "planFreeDescription": "You are on the Free plan. Upgrade to unlock Pro features.",
+    "planProDescription": "You have full access to Pro features.",
+    "statusLabel": "Subscription status",
+    "upgrade": "Upgrade to Pro",
+    "upgradeLoading": "Opening checkout…",
+    "upgradeError": "Could not start checkout. Please try again.",
+    "manage": "Manage subscription",
+    "manageLoading": "Opening portal…",
+    "manageError": "Could not open the billing portal.",
+    "loginRequired": "Sign in to upgrade your plan.",
+    "includedTitle": "What's included in your plan",
+    "included": {
+      "0": "Pro unlocks AI Assistant, Competitors, and SEO Lab.",
+      "1": "Manage payment method and invoices in the LemonSqueezy portal.",
+      "2": "Upgrades apply immediately after checkout.",
+      "3": "Downgrades take effect when your subscription ends."
+    }
+  }
+}

@@ -1,0 +1,1862 @@
+{
+  "meta": {
+    "description": "免费AI驱动的YouTube创作者工具包 — 创意、SEO、工作流、竞品、日历和缩略图。"
+  },
+  "layout": {
+    "brand": {
+      "name": "CreatorForge"
+    },
+    "header": {
+      "breadcrumb": "面包屑",
+      "language": "语言",
+      "languageShort": "语言",
+      "userMenu": "用户菜单",
+      "theme": {
+        "light": "切换到浅色主题",
+        "dark": "切换到深色主题"
+      }
+    },
+    "sidebar": {
+      "navigation": "主导航",
+      "open": "打开菜单",
+      "close": "关闭菜单"
+    },
+    "nav": {
+      "dashboard": "仪表盘",
+      "aiAssistant": "AI 助手",
+      "seoLab": "SEO 实验室",
+      "competitors": "竞品",
+      "workflow": "工作流",
+      "calendar": "日历",
+      "ideas": "创意",
+      "thumbnail": "缩略图",
+      "settings": "设置",
+      "onboarding": "入门引导"
+    },
+    "breadcrumb": {
+      "dashboard": "仪表盘",
+      "aiAssistant": "AI 助手",
+      "seoLab": "SEO 实验室",
+      "competitors": "竞品",
+      "workflow": "工作流",
+      "calendar": "日历",
+      "ideas": "创意",
+      "thumbnail": "缩略图",
+      "settings": "设置",
+      "dynamic": "{segment}",
+      "onboarding": "入门引导"
+    },
+    "user": {
+      "guest": "访客",
+      "logout": "退出登录",
+      "initialFallback": "U",
+      "avatarAlt": "{name}的头像"
+    },
+    "languages": {
+      "en": "English",
+      "it": "Italiano",
+      "es": "Español",
+      "de": "Deutsch",
+      "fr": "Français",
+      "pt": "Português",
+      "ru": "Русский",
+      "ja": "日本語",
+      "zh": "中文"
+    },
+    "toast": {
+      "dismiss": "关闭通知"
+    }
+  },
+  "auth": {
+    "title": "登录 CreatorForge",
+    "subtitle": "创作者免费使用，无需信用卡。",
+    "cardTitle": "欢迎回来",
+    "cardSubtitle": "选择登录方式。",
+    "orEmail": "或使用邮箱继续",
+    "divider": "或",
+    "google": "使用 Google 继续",
+    "magicLink": {
+      "emailLabel": "邮箱",
+      "emailPlaceholder": "you@example.com",
+      "submit": "发送魔法链接",
+      "submitting": "发送中…",
+      "sentTitle": "请查收邮件",
+      "sentBody": "我们已向 {email} 发送登录链接。"
+    },
+    "toast": {
+      "magicLinkSent": "魔法链接已发送，请查收邮件。",
+      "error": "登录失败"
+    },
+    "errors": {
+      "INVALID_INPUT": "请输入有效的邮箱地址。",
+      "AUTH_ERROR": "认证失败，请重试。",
+      "MISSING_CONFIG": "Sign-in is unavailable until Supabase is configured.",
+      "UNKNOWN": "Server unavailable. Please try again."
+    }
+  },
+  "seoLab": {
+    "title": "SEO 实验室",
+    "subtitle": "通过 YouTube 自动完成与启发式评分的关键词研究。",
+    "form": {
+      "title": "关键词研究",
+      "seedLabel": "种子关键词",
+      "seedPlaceholder": "例如：youtube 增长技巧",
+      "hint": "使用 YouTube 自动完成建议（无需 API 密钥）。",
+      "submit": "研究",
+      "submitting": "研究中…"
+    },
+    "results": {
+      "title": "关键词评分",
+      "subtitle": "分数越高通常表示长尾机会越好。",
+      "empty": "输入种子关键词以查看建议与评分。",
+      "score": "评分 {score}",
+      "autocomplete": "自动完成建议"
+    },
+    "competition": {
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    },
+    "tabs": {
+      "keywords": "Keyword research",
+      "optimizer": "Video optimizer",
+      "analyzer": "Video analyzer",
+      "titles": "Title generator"
+    },
+    "keywords": {
+      "title": "YouTube keyword research",
+      "seedLabel": "Seed keyword",
+      "seedPlaceholder": "e.g. youtube growth tips",
+      "research": "Research keywords"
+    },
+    "optimizer": {
+      "title": "Video SEO optimizer",
+      "titlePlaceholder": "Current video title",
+      "topicPlaceholder": "Main topic",
+      "descriptionPlaceholder": "Video description (optional)",
+      "run": "Optimize",
+      "suggestedTitles": "Suggested titles",
+      "checklist": "SEO checklist"
+    },
+    "errors": {
+      "INVALID_INPUT": "Please enter a keyword with at least 2 characters."
+    },
+    "analyzer": {
+      "title": "Full video SEO analyzer",
+      "urlLabel": "YouTube URL or video ID",
+      "urlPlaceholder": "https://youtube.com/watch?v=... or dQw4w9WgXcQ",
+      "urlHint": "Paste a URL or use ?videoId= from the Chrome extension deep link.",
+      "analyze": "Analyze video",
+      "analyzing": "Analyzing…",
+      "currentVideo": "Current video",
+      "overallScore": "Overall SEO score",
+      "titleScore": "Title",
+      "descriptionScore": "Description",
+      "tagsScore": "Tags",
+      "suggestions": "AI suggestions",
+      "currentTitle": "Current title",
+      "suggestedTitle": "Suggested title",
+      "improvements": "Improvements"
+    },
+    "titleGenerator": {
+      "title": "Title A/B variants",
+      "currentTitle": "Base title",
+      "titlePlaceholder": "e.g. How I Grew My Channel",
+      "topic": "Topic",
+      "topicPlaceholder": "e.g. YouTube growth",
+      "includeEmoji": "Include emoji variants",
+      "powerWords": "Use power words",
+      "generate": "Generate 5 variants",
+      "generating": "Generating…",
+      "chars": "chars",
+      "emoji": "Emoji"
+    }
+  },
+  "aiAssistant": {
+    "title": "AI 助手",
+    "subtitle": "与 YouTube 和 SEO 专家对话—创意、标题、分析和增长策略。",
+    "chat": {
+      "welcome": "你好！我是你的 YouTube 增长专家",
+      "welcomeSubtitle": "可以问我关于频道、视频创意、SEO 标题、缩略图、留存率或增长计划的问题。我会给出实用、可执行的建议。",
+      "placeholder": "向 YouTube 专家提问…",
+      "send": "发送消息",
+      "thinking": "思考中…",
+      "clearChat": "清空聊天",
+      "clearConfirmTitle": "清空对话？",
+      "clearConfirm": "这将删除所有聊天消息，且无法撤销。",
+      "cancel": "取消",
+      "copy": "复制",
+      "copied": "已复制到剪贴板",
+      "expertName": "YouTube 专家",
+      "expertTitle": "创作者教练与 SEO 分析师",
+      "suggestions": {
+        "title": "试试这些问题：",
+        "analyzeChannel": "分析我的频道",
+        "videoIdeas": "适合我领域的视频创意",
+        "optimizeTitle": "优化 SEO 标题",
+        "growthStrategy": "我的频道增长策略"
+      },
+      "rateLimit": {
+        "nearDescription": "今日已使用 {used}/{limit} 次请求，剩余 {remaining} 次。"
+      },
+      "errors": {
+        "UNAUTHENTICATED": "请登录后使用 AI 助手。",
+        "RATE_LIMITED": "已达到今日上限，请明天再试。",
+        "MISSING_CONFIG": "AI 未配置。{details}",
+        "TIMEOUT": "请求超时，请重试。",
+        "INVALID_INPUT": "消息无效，请重试。",
+        "GENERIC": "出现问题。{details}",
+        "UNKNOWN": "出现问题。{details}",
+        "NETWORK": "网络错误，请重试。",
+        "DB_ERROR": "无法保存更改。{details}"
+      },
+      "aria": {
+        "messageList": "聊天消息",
+        "userMessage": "你的消息",
+        "assistantMessage": "专家回复"
+      }
+    },
+    "form": {
+      "title": "生成创意",
+      "topicLabel": "主题",
+      "topicPlaceholder": "例如：创作者效率提升",
+      "countLabel": "创意数量",
+      "countHint": "最多 10 条。我们会展示 5 条。",
+      "submit": "生成",
+      "submitting": "生成中…",
+      "validation": {
+        "topic": "请输入主题（至少 2 个字符）。",
+        "count": "请输入 1 到 10 之间的数字。"
+      }
+    },
+    "results": {
+      "title": "创意",
+      "subtitle": "选择一个继续迭代。",
+      "empty": "提交主题以生成创意。"
+    },
+    "errors": {
+      "UNAUTHENTICATED": "请先登录再使用 AI 工具。",
+      "RATE_LIMITED": "已达到今日额度限制，请明天再试。",
+      "MISSING_CONFIG": "缺少配置。{details}",
+      "TIMEOUT": "AI 请求超时，请重试。",
+      "INVALID_INPUT": "输入无效，请检查主题后重试。",
+      "INVALID_JSON": "无法解析 AI 返回结果，请重试。",
+      "GENERIC": "发生错误。{details}",
+      "UNKNOWN": "Something went wrong. {details}",
+      "NETWORK": "Network error. Please try again.",
+      "DB_ERROR": "We couldn't save your changes. {details}",
+      "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to create a workflow from this idea."
+    },
+    "toast": {
+      "success": "Ideas generated",
+      "error": "无法生成创意"
+    }
+  },
+  "ai": {
+    "pageTitle": "AI 助手",
+    "title": {
+      "formTitle": "优化标题",
+      "titleLabel": "当前标题",
+      "titlePlaceholder": "例如：我如何规划高表现视频",
+      "topicLabel": "主题",
+      "topicPlaceholder": "例如：YouTube 策略",
+      "keywordsLabel": "关键词（可选）",
+      "keywordsPlaceholder": "keyword 1, keyword 2",
+      "optimize": "优化标题",
+      "resultsTitle": "建议",
+      "resultsSubtitle": "点击即可复制任一建议。",
+      "empty": "提交标题以获得 3 个建议。",
+      "scoreLabel": "评分：{score}/100"
+    },
+    "subtitle": "快速生成选题、标题、简介与标签。",
+    "tabs": {
+      "ideas": "选题",
+      "title": "标题",
+      "description": "简介",
+      "tags": "标签"
+    },
+    "common": {
+      "generate": "生成",
+      "generating": "生成中…",
+      "optimizing": "优化中…",
+      "copy": "复制",
+      "retry": "重试",
+      "saving": "保存中…",
+      "commaOrNewlineHint": "用逗号或换行分隔条目。"
+    },
+    "validation": {
+      "required": "请检查高亮字段。"
+    },
+    "errors": {
+      "title": "出现错误",
+      "unauthenticated": "请先登录再使用 AI 工具。",
+      "invalidInput": "输入无效，请重试。",
+      "rateLimited": "已达到今日额度，请明天再试。",
+      "invalidJson": "无法解析 AI 返回内容，请重试。",
+      "generic": "发生未知错误。{details}"
+    },
+    "rateLimit": {
+      "nearTitle": "接近今日额度上限",
+      "nearDescription": "今天已使用 {used}/{limit} 次，还剩 {remaining} 次。"
+    },
+    "difficulty": {
+      "low": "低",
+      "medium": "中",
+      "high": "高"
+    },
+    "ideas": {
+      "formTitle": "生成视频选题",
+      "topicLabel": "主题",
+      "topicPlaceholder": "例如：创作者效率提升",
+      "nicheLabel": "细分领域（可选）",
+      "nichePlaceholder": "例如：不露脸频道",
+      "audienceLabel": "目标受众（可选）",
+      "audiencePlaceholder": "例如：新手 YouTuber",
+      "resultsTitle": "选题",
+      "resultsSubtitle": "生成 5 个选项并保存最好的。",
+      "empty": "填写表单以生成 5 个选题。",
+      "difficultyLabel": "难度：{difficulty}",
+      "uniqueAngleLabel": "独特角度：",
+      "save": "保存到选题库",
+      "regenerate": "重新生成"
+    },
+    "description": {
+      "formTitle": "生成简介",
+      "titleLabel": "视频标题",
+      "titlePlaceholder": "例如：让频道增长的 7 个习惯",
+      "keywordsLabel": "关键词（可选）",
+      "keywordsPlaceholder": "keyword 1, keyword 2",
+      "keyPointsLabel": "要点（可选）",
+      "keyPointsPlaceholder": "要点 1\n要点 2",
+      "generate": "生成简介",
+      "resultsTitle": "简介",
+      "resultsSubtitle": "复制后可按需调整。",
+      "empty": "提交标题以生成简介。"
+    },
+    "tags": {
+      "formTitle": "生成标签",
+      "titleLabel": "视频标题",
+      "titlePlaceholder": "例如：搭建内容系统",
+      "topicLabel": "主题",
+      "topicPlaceholder": "例如：内容策略",
+      "descriptionLabel": "简介",
+      "descriptionPlaceholder": "粘贴简介以生成更精准的标签。",
+      "generate": "生成标签",
+      "resultsTitle": "标签",
+      "resultsSubtitle": "可复制单个标签或全部复制。",
+      "empty": "提交表单以生成标签。",
+      "copyAll": "全部复制",
+      "copyTagAria": "复制标签：{tag}"
+    },
+    "toasts": {
+      "saveIdeaSuccessTitle": "已保存到选题库",
+      "saveIdeaErrorTitle": "无法保存选题",
+      "copySuccessTitle": "已复制",
+      "copyErrorTitle": "复制失败"
+    }
+  },
+  "dynamicPage": {
+    "title": "动态页面：{nome}",
+    "subtitle": "此路由演示加载、错误、空内容与成功状态。",
+    "states": {
+      "loading": "加载中",
+      "error": "错误",
+      "empty": "空",
+      "success": "成功"
+    },
+    "loading": {
+      "title": "加载中…",
+      "subtitle": "正在获取内容。"
+    },
+    "error": {
+      "title": "出了点问题",
+      "message": "无法加载该页面，请重试。",
+      "retryCta": "重试",
+      "backCta": "返回"
+    },
+    "routeError": {
+      "title": "路由错误",
+      "description": "渲染该路由时发生了意外错误。",
+      "details": "详情：{details}",
+      "retryCta": "重试",
+      "homeCta": "主页"
+    },
+    "empty": {
+      "title": "暂无内容",
+      "description": "此名称没有返回任何数据。",
+      "cta": "返回主页"
+    },
+    "success": {
+      "title": "已加载",
+      "greeting": "你好，{nome}！",
+      "placeholderHeading": "占位内容",
+      "placeholderBody": "你可以将这里替换为“{nome}”的真实内容。",
+      "timestamp": "获取时间：{timestamp}",
+      "refreshCta": "刷新",
+      "homeCta": "主页"
+    },
+    "sidebar": {
+      "title": "路由信息",
+      "body": "使用特殊名称测试状态：“error” 或 “empty”。",
+      "nomeLabel": "nome",
+      "stateLabel": "状态"
+    }
+  },
+  "dashboard": {
+    "title": "仪表盘",
+    "subtitle": "连接你的 YouTube 频道以查看统计数据并同步视频。",
+    "unauthenticated": "请先登录以连接你的 YouTube 频道。",
+    "notConnectedHint": "连接你的 YouTube 频道以加载统计数据。",
+    "stats": {
+      "title": "频道统计",
+      "subscribers": "订阅者",
+      "views": "观看次数",
+      "videos": "视频",
+      "totalViews": "总观看次数",
+      "totalVideos": "总视频数",
+      "watchTime": "观看时长",
+      "error": "无法加载频道统计数据。",
+      "retry": "重试"
+    },
+    "trend": {
+      "vsLastPeriod": "对比过去30天快照"
+    },
+    "videos": {
+      "recentTitle": "最新视频",
+      "topTitle": "热门视频",
+      "empty": "暂时没有视频。",
+      "emptyTop": "暂时没有热门视频。",
+      "published": "发布于 {date}",
+      "metrics": {
+        "views": "观看次数",
+        "likes": "点赞",
+        "comments": "评论",
+        "ctr": "CTR {value}%"
+      },
+      "metricsSummary": "{views} views · {comments} comments"
+    },
+    "chart": {
+      "title": "观看次数（过去30天）",
+      "empty": "暂无图表数据。",
+      "unavailable": "时间序列需要 YouTube Analytics 权限。",
+      "tooltipDate": "{date}",
+      "tooltipViews": "观看次数"
+    },
+    "actions": {
+      "title": "快捷操作",
+      "aiAssistant": {
+        "title": "AI 助手",
+        "description": "生成视频创意"
+      },
+      "seoLab": {
+        "title": "SEO 实验室",
+        "description": "优化标题与标签"
+      },
+      "competitors": {
+        "title": "竞品",
+        "description": "跟踪其他频道"
+      },
+      "workflow": {
+        "title": "工作流",
+        "description": "规划制作流程"
+      }
+    },
+    "recentActivity": {
+      "title": "Recent activity",
+      "empty": "No recent activity yet.",
+      "types": {
+        "idea": "Idea saved",
+        "workflow": "Workflow",
+        "scheduled": "Scheduled video",
+        "ai": "AI request",
+        "video": "Video"
+      }
+    },
+    "channelHealth": {
+      "title": "Channel health",
+      "labels": {
+        "excellent": "Excellent",
+        "good": "Good",
+        "fair": "Fair",
+        "needs_attention": "Needs attention"
+      },
+      "factors": {
+        "channelConnected": "YouTube channel connected",
+        "hasIdeas": "Ideas in Idea Bank",
+        "activeWorkflow": "Active workflows",
+        "scheduledContent": "Scheduled content",
+        "syncedVideos": "Synced videos",
+        "tracksCompetitors": "Competitors tracked"
+      },
+      "fallback": "Connect & sync"
+    },
+    "insights": {
+      "title": "Today's focus",
+      "dailyTip": "Daily tip",
+      "topVideo": "Best performing video",
+      "views": "views",
+      "actionItems": "3 things to do today",
+      "refresh": "Refresh insights",
+      "notConnected": "Connect your YouTube channel to get personalized daily insights."
+    },
+    "trending": {
+      "title": "Trending in your niche",
+      "nicheLabel": "Based on: {niche}",
+      "empty": "No trending topics found. Try connecting your channel first.",
+      "addToIdeas": "Add to ideas",
+      "addedToIdeas": "Added to Idea Bank",
+      "addError": "Could not save idea",
+      "refresh": "Refresh trends"
+    },
+    "weeklyReport": {
+      "title": "Weekly report preview",
+      "description": "Generate an AI-powered weekly summary of your channel performance.",
+      "generate": "Generate report",
+      "previewBadge": "Preview",
+      "subscribers": "Subs",
+      "views": "Views",
+      "videos": "Videos",
+      "highlights": "Highlights",
+      "improvements": "Areas to improve",
+      "nextWeekGoals": "Next week goals",
+      "projection": "Growth projection",
+      "refresh": "Regenerate",
+      "notConnected": "Connect your channel to preview your weekly report."
+    }
+  },
+  "youtube": {
+    "card": {
+      "title": "YouTube",
+      "connectedDescription": "你的 YouTube 账号已连接。",
+      "disconnectedDescription": "连接你的 YouTube 频道以启用分析与同步。",
+      "channelIdLabel": "频道 ID：",
+      "refreshSuccess": "频道数据已刷新。",
+      "syncSuccess": "已同步 {count} 个视频。",
+      "disconnectedSuccess": "YouTube 已断开连接。",
+      "statsLine": "{subscribers} subscribers · {views} views · {videos} videos"
+    },
+    "actions": {
+      "connect": "连接 YouTube 频道",
+      "disconnect": "断开连接",
+      "refreshChannel": "刷新频道数据",
+      "syncVideos": "同步视频"
+    },
+    "errors": {
+      "UNAUTHENTICATED": "你需要先登录。",
+      "NOT_CONNECTED": "尚未连接 YouTube 频道。",
+      "DB_ERROR": "无法保存更改，请重试。",
+      "YOUTUBE_ERROR": "YouTube 请求失败，请重试。",
+      "NOT_CONFIGURED": "请在 .env.local 中配置 YOUTUBE_API_KEY",
+      "INVALID_URL": "无效的 YouTube 频道 URL 或句柄。",
+      "invalidUrl": "无效的 YouTube 频道 URL 或句柄。",
+      "CHANNEL_NOT_FOUND": "找不到与该 URL 或句柄对应的 YouTube 频道。"
+    },
+    "fields": {
+      "channelUrl": {
+        "label": "频道 URL 或 @句柄",
+        "placeholder": "@yourchannel 或 https://www.youtube.com/@yourchannel",
+        "hint": "支持 youtube.com/channel/UC…、/c/name、/user/name 或 @句柄。"
+      }
+    }
+  },
+  "calendar": {
+    "title": "内容日历",
+    "subtitle": "按月规划、安排并调整你的视频发布计划。",
+    "unauthenticated": "请先登录以使用内容日历。",
+    "notConnected": "请先连接你的 YouTube 频道以使用日历。",
+    "views": {
+      "month": "月",
+      "week": "周",
+      "list": "列表"
+    },
+    "actions": {
+      "prevMonth": "上个月",
+      "nextMonth": "下个月",
+      "scheduleVideo": "安排视频",
+      "bestTime": "最佳时间"
+    },
+    "common": {
+      "close": "关闭",
+      "cancel": "取消",
+      "save": "保存",
+      "saving": "保存中…"
+    },
+    "fields": {
+      "title": "标题",
+      "date": "日期",
+      "time": "时间",
+      "status": "状态",
+      "notes": "备注"
+    },
+    "placeholders": {
+      "title": "例如：我的 3 步内容系统",
+      "notes": "添加备注、链接、清单…"
+    },
+    "status": {
+      "planned": "计划",
+      "draft": "草稿",
+      "scheduled": "已排期",
+      "published": "已发布",
+      "canceled": "已取消"
+    },
+    "validation": {
+      "title": "请输入标题（至少 2 个字符）。",
+      "dateRequired": "请选择日期。"
+    },
+    "errors": {
+      "load": "无法加载日历。{details}",
+      "scheduleFailed": "无法安排该视频。",
+      "updateFailed": "无法更新排期。",
+      "deleteFailed": "无法移除排期。",
+      "UNAUTHENTICATED": "你需要先登录。",
+      "NOT_CONNECTED": "尚未连接 YouTube 频道。",
+      "INVALID_INPUT": "输入无效，请检查后重试。",
+      "NOT_FOUND": "该排期已不存在。",
+      "DB_ERROR": "无法保存更改。{details}",
+      "DATABASE_NOT_READY": "Database setup is incomplete. Your changes are saved in this browser until you run the Supabase SQL migration."
+    },
+    "toasts": {
+      "scheduled": "视频已安排。",
+      "rescheduled": "视频已重新安排。",
+      "updated": "排期已更新。",
+      "deleted": "排期已移除。",
+      "bestTimeLoaded": "最佳时间已加载。"
+    },
+    "schedule": {
+      "title": "安排视频",
+      "subtitle": "选择日期与时间，并填写详情。",
+      "dateEmpty": "未选择日期",
+      "bestTimeBanner": "建议：{day} {time}",
+      "useBestTime": "使用时间"
+    },
+    "details": {
+      "title": "视频详情",
+      "subtitle": "编辑时间、状态与备注。",
+      "empty": "请选择一个已安排的视频查看详情。",
+      "delete": "移出日历",
+      "deleting": "移除中…",
+      "confirmDeleteTitle": "将此视频移出日历？",
+      "confirmDeleteDescription": "这会从日历中移除该排期，你可以随时重新安排。"
+    },
+    "list": {
+      "filters": {
+        "upcoming": "即将",
+        "past": "过去",
+        "all": "全部"
+      },
+      "empty": "没有符合筛选条件的排期。",
+      "weekOf": "{date} 所在周",
+      "when": "{date}"
+    },
+    "week": {
+      "title": "{date} 所在周",
+      "emptyDay": "暂无排期"
+    },
+    "sidebar": {
+      "bestTime": {
+        "title": "最佳发布时间",
+        "recommended": "推荐",
+        "dayTime": "{day} • {time}",
+        "confidence": "置信度：{value}%",
+        "updated": "已更新",
+        "empty": "历史数据不足。"
+      },
+      "frequency": {
+        "label": "频率",
+        "value": "每周 {count} 个"
+      },
+      "upcoming": {
+        "title": "未来 7 天",
+        "empty": "暂无安排。",
+        "when": "{date}"
+      },
+      "stats": {
+        "title": "统计",
+        "total": "总计",
+        "upcoming7": "未来（7 天）"
+      }
+    },
+    "days": {
+      "Sun": "星期日",
+      "Mon": "星期一",
+      "Tue": "星期二",
+      "Wed": "星期三",
+      "Thu": "星期四",
+      "Fri": "星期五",
+      "Sat": "星期六"
+    },
+    "daysShort": {
+      "Mon": "一",
+      "Tue": "二",
+      "Wed": "三",
+      "Thu": "四",
+      "Fri": "五",
+      "Sat": "六",
+      "Sun": "日"
+    },
+    "empty": "No scheduled videos yet. Schedule your first video to get started."
+  },
+  "competitors": {
+    "title": "竞品追踪",
+    "subtitle": "追踪竞品频道并对比关键数据。",
+    "unauthenticated": "请先登录以追踪竞品。",
+    "actions": {
+      "addCompetitor": "添加竞品",
+      "refreshAll": "全部刷新",
+      "refresh": "刷新",
+      "remove": "移除"
+    },
+    "addSection": {
+      "title": "添加竞品",
+      "description": "粘贴 YouTube 频道链接（/channel、@handle 或自定义 URL）。",
+      "titleManual": "Add manually"
+    },
+    "form": {
+      "channelUrlLabel": "YouTube 频道链接",
+      "channelUrlPlaceholder": "例如：https://www.youtube.com/@veritasium",
+      "submit": "添加",
+      "submitting": "添加中…",
+      "hint": "提示：支持 @handle（如 @name）。",
+      "validation": {
+        "channelUrl": "请输入有效的 YouTube 频道链接。"
+      }
+    },
+    "limitWarning": {
+      "title": "接近上限",
+      "description": "你正在追踪 {current}/{limit} 个竞品。免费账户最多可追踪 {limit} 个。",
+      "dismiss": "关闭提示"
+    },
+    "empty": {
+      "kicker": "开始使用",
+      "title": "追踪你的竞品频道",
+      "description": "最多添加 5 个竞品，持续关注它们的增长。",
+      "formTitle": "添加第一个竞品",
+      "benefits": {
+        "trackGrowth": "追踪订阅增长",
+        "compareStats": "对比播放量与发布量",
+        "spotTrends": "更早发现趋势",
+        "stayConsistent": "用基准保持稳定"
+      },
+      "descriptionAuto": "We analyze your niche when your YouTube channel is connected. You can also add competitors manually below."
+    },
+    "stats": {
+      "subscribers": "订阅",
+      "views": "播放",
+      "videos": "视频",
+      "summary": "{subscribers} subscribers · {views} views"
+    },
+    "labels": {
+      "unknownChannel": "未知频道",
+      "unknownDate": "未知日期",
+      "na": "—",
+      "never": "从未"
+    },
+    "card": {
+      "trackedSince": "自 {date} 起追踪",
+      "openChannel": "打开频道",
+      "lastUpdated": "最后更新：{date}"
+    },
+    "removeDialog": {
+      "title": "移除竞品？",
+      "description": "将停止追踪“{name}”。你可以稍后再次添加。",
+      "cancel": "取消",
+      "confirm": "移除"
+    },
+    "toasts": {
+      "addSuccessTitle": "已添加竞品",
+      "addSuccessDescription": "正在追踪 {name}。",
+      "addErrorTitle": "无法添加竞品",
+      "refreshSuccessTitle": "已刷新",
+      "refreshSuccessDescription": "已保存最新数据。",
+      "refreshErrorTitle": "无法刷新竞品",
+      "removeSuccessTitle": "已移除",
+      "removeSuccessDescription": "已停止追踪。",
+      "removeErrorTitle": "无法移除竞品",
+      "refreshAllSuccessTitle": "已刷新竞品",
+      "refreshAllSuccessDescription": "已刷新 {count} 个竞品。",
+      "refreshAllErrorTitle": "无法刷新竞品"
+    },
+    "error": {
+      "title": "出现问题",
+      "description": "无法加载竞品列表，请重试。",
+      "retry": "重试",
+      "report": "显示详情"
+    },
+    "errors": {
+      "UNAUTHENTICATED": "你需要先登录。",
+      "INVALID_URL": "这看起来不是有效的 YouTube 频道链接。",
+      "NOT_FOUND": "未在 YouTube 上找到该频道。",
+      "LIMIT_REACHED": "已达到免费上限（5 个竞品）。移除一个后再添加。",
+      "DUPLICATE": "你已在追踪该频道。",
+      "DB_ERROR": "无法保存更改，请重试。",
+      "YOUTUBE_ERROR": "YouTube 请求失败，请重试。",
+      "NOT_CONFIGURED": "自动发现需要 YouTube API 密钥。",
+      "NOT_CONNECTED": "连接 YouTube 频道后可自动发现竞争对手。",
+      "INVALID_NICHE": "请输入至少 2 个字符的细分领域。"
+    },
+    "niche": {
+      "searchByNiche": "按细分领域搜索",
+      "noNicheDetected": "无法自动识别您的细分领域。请输入关键词以查找类似频道。",
+      "inputLabel": "输入您的细分领域",
+      "placeholder": "例如：游戏、意大利美食、科技评测",
+      "submit": "查找竞争对手",
+      "submitting": "搜索中…",
+      "noResultsTitle": "未找到竞争对手",
+      "noResultsDescription": "请尝试其他关键词，或手动添加频道 URL。"
+    },
+    "contentGap": {
+      "title": "Content gap hint",
+      "description": "Competitors cover these topics more than you. These could be opportunities:"
+    },
+    "discovery": {
+      "analyzing": "Analyzing your niche…",
+      "autoDiscovered": "Auto-discovered",
+      "notConfigured": "Auto-discovery needs YOUTUBE_API_KEY in .env.local. You can still add competitors manually.",
+      "noChannel": "Connect your YouTube channel (sign in with Google) to discover competitors automatically.",
+      "retry": "Discover competitors",
+      "successTitle": "Competitors found",
+      "successDescription": "Added {count} channels based on your niche."
+    }
+  },
+  "nav": {
+    "ariaLabel": "主导航",
+    "dashboard": "仪表盘",
+    "aiAssistant": "AI 助手",
+    "seoLab": "SEO 实验室",
+    "competitors": "竞品",
+    "workflow": "工作流",
+    "calendar": "日历",
+    "ideas": "创意",
+    "settings": "设置"
+  },
+  "header": {
+    "brand": "CreatorForge",
+    "aria": {
+      "breadcrumb": "面包屑导航",
+      "language": "语言",
+      "userMenu": "用户菜单"
+    },
+    "languageShort": "语言",
+    "languages": {
+      "en": "English",
+      "it": "Italiano",
+      "es": "Español",
+      "de": "Deutsch",
+      "fr": "Français",
+      "pt": "Português",
+      "ru": "Русский",
+      "ja": "日本語",
+      "zh": "中文"
+    },
+    "breadcrumb": {
+      "dashboard": "仪表盘",
+      "aiAssistant": "AI 助手",
+      "seoLab": "SEO 实验室",
+      "competitors": "竞品",
+      "workflow": "工作流",
+      "calendar": "日历",
+      "ideas": "创意",
+      "thumbnail": "缩略图",
+      "settings": "设置",
+      "dynamic": "{segment}",
+      "onboarding": "Onboarding"
+    },
+    "mobileMenu": {
+      "open": "打开菜单",
+      "close": "关闭菜单"
+    },
+    "user": {
+      "guest": "访客",
+      "profile": "个人资料",
+      "logout": "退出登录"
+    }
+  },
+  "theme": {
+    "light": "浅色",
+    "dark": "深色",
+    "system": "系统",
+    "switchToDark": "切换到深色主题",
+    "switchToLight": "切换到浅色主题"
+  },
+  "workflow": {
+    "title": "制作流程",
+    "subtitle": "从创意到分析全流程跟踪。",
+    "newProject": "新建项目",
+    "unauthenticated": "请先登录以管理流程看板。",
+    "notConnected": "请连接你的 YouTube 频道以使用看板。",
+    "loadError": "无法加载流程数据。{details}",
+    "columns": {
+      "idea": "创意",
+      "script": "脚本",
+      "recording": "录制",
+      "editing": "剪辑",
+      "upload": "上传",
+      "published": "已发布",
+      "analyzed": "已分析"
+    },
+    "status": {
+      "idea": "创意",
+      "script": "脚本",
+      "recording": "录制",
+      "editing": "剪辑",
+      "upload": "上传",
+      "published": "已发布",
+      "analyzed": "已分析"
+    },
+    "emptyColumn": "还没有卡片。添加一张开始吧。",
+    "dnd": {
+      "dragging": "正在拖拽卡片"
+    },
+    "modal": {
+      "title": "流程卡片",
+      "subtitle": "编辑详情、状态与截止日期。",
+      "close": "关闭对话框"
+    },
+    "create": {
+      "title": "新建卡片",
+      "subtitle": "创建项目并跟踪进度。",
+      "column": "列"
+    },
+    "fields": {
+      "title": "标题",
+      "description": "描述",
+      "status": "状态",
+      "dueDate": "截止日期",
+      "notes": "备注",
+      "youtubeVideoId": "YouTube 视频 ID"
+    },
+    "placeholders": {
+      "title": "例如：剪辑技巧 10 条",
+      "description": "可选的简短描述…",
+      "notes": "备注、链接、时间戳…",
+      "youtubeVideoId": "例如：dQw4w9WgXcQ"
+    },
+    "dueDate": "截止日期",
+    "dueDateSelected": "截止 {date}",
+    "dueDateEmpty": "未选择日期",
+    "clear": "清除",
+    "actions": {
+      "addToColumn": "添加到 {column}",
+      "cancel": "取消",
+      "save": "保存",
+      "saving": "保存中…",
+      "delete": "删除",
+      "deleting": "删除中…",
+      "create": "创建",
+      "creating": "创建中…"
+    },
+    "validation": {
+      "title": "请输入标题（至少 2 个字符）。"
+    },
+    "errors": {
+      "UNAUTHENTICATED": "需要登录。",
+      "NOT_CONNECTED": "尚未连接 YouTube 频道。",
+      "INVALID_INPUT": "输入无效，请检查后重试。",
+      "NOT_FOUND": "该卡片已不存在。",
+      "DB_ERROR": "无法保存更改。{details}"
+    }
+  },
+  "thumbnail": {
+    "title": "缩略图分析器",
+    "subtitle": "分析尺寸、对比度、可读性与构图——无需付费 AI。",
+    "tabs": {
+      "upload": "上传",
+      "url": "URL"
+    },
+    "actions": {
+      "analyze": "分析",
+      "analyzing": "分析中…",
+      "retry": "重试",
+      "clear": "清除",
+      "upload": "上传到库",
+      "save": "保存分析"
+    },
+    "upload": {
+      "dropzoneAria": "上传缩略图",
+      "previewAlt": "缩略图预览",
+      "selected": "已选择文件",
+      "fileMeta": "{sizeMb} MB · {type}",
+      "remove": "移除",
+      "dropActive": "将图片拖放到此处",
+      "dropIdle": "拖放图片，或点击选择文件",
+      "dropHint": "JPG、PNG 或 WebP",
+      "limits": "最大 5MB。支持：JPG、PNG、WebP。",
+      "uploadHint": "分析不需要先上传；但要保存到账号则需要上传。"
+    },
+    "url": {
+      "label": "图片 URL",
+      "placeholder": "https://…/thumbnail.jpg",
+      "trim": "去除空格",
+      "hint": "部分网站会阻止跨域访问。若失败，请改用上传。"
+    },
+    "results": {
+      "empty": "上传图片或粘贴 URL 来分析你的缩略图。",
+      "scoreTitle": "总体评分",
+      "scoreSubtitle": "基于质量信号的 0–100",
+      "breakdownTitle": "评分明细",
+      "suggestionsTitle": "建议",
+      "previewTitle": "预览",
+      "previewAlt": "缩略图预览",
+      "previewHint": "提示：开启网格以检查三分法构图。",
+      "showThirdsGrid": "显示三分法网格",
+      "noSuggestions": "暂无建议——看起来很不错。",
+      "priority": {
+        "high": "高",
+        "medium": "中",
+        "low": "低"
+      },
+      "breakdown": {
+        "dimensions": "尺寸",
+        "fileSize": "文件大小",
+        "colors": "颜色",
+        "text": "文字",
+        "faces": "人脸",
+        "composition": "构图"
+      },
+      "meta": {
+        "dimensions": "尺寸",
+        "size": "大小",
+        "dominant": "主色"
+      }
+    },
+    "errors": {
+      "title": "出现错误",
+      "generic": "出现错误，请重试。",
+      "noFile": "请先上传一张图片。",
+      "noUrl": "请先输入图片 URL。",
+      "unauthenticated": "请登录以便上传或保存分析。",
+      "fileTooLarge": "文件过大（最大 5MB）。",
+      "unsupportedFile": "不支持的文件类型，请使用 JPG、PNG 或 WebP。",
+      "uploadFailed": "上传失败。{details}",
+      "saveFailed": "无法保存分析。{details}",
+      "tableMissing": "保存功能尚未配置。请在 Supabase 中创建 thumbnail_analyses 表（见说明）。"
+    },
+    "toasts": {
+      "analyzedTitle": "分析完成",
+      "analyzedBody": "评分与建议已准备好。",
+      "uploadedTitle": "已上传",
+      "uploadedBody": "缩略图上传成功。",
+      "savedTitle": "已保存",
+      "savedBody": "分析已保存到你的账号。",
+      "errorTitle": "错误"
+    }
+  },
+  "onboarding": {
+    "title": "欢迎使用 CreatorForge",
+    "subtitle": "只需几步即可设置你的工作区。",
+    "progress": {
+      "welcome": "欢迎",
+      "connect": "连接 YouTube",
+      "goals": "目标",
+      "channel": "频道信息",
+      "personalize": "个性化",
+      "complete": "完成"
+    },
+    "actions": {
+      "back": "返回",
+      "next": "下一步",
+      "skip": "跳过",
+      "finish": "完成"
+    },
+    "validation": {
+      "generic": "请检查你的回答后重试。",
+      "goalsMinOne": "请至少选择一个目标或添加自定义目标。",
+      "channelInfo": "请填写所有频道信息字段（每项至少 2 个字符）。"
+    },
+    "errors": {
+      "UNAUTHENTICATED": "请登录以继续入门引导。",
+      "DB_ERROR": "无法保存进度，请重试。",
+      "INVALID_STEP": "无效的入门步骤。",
+      "INVALID_INPUT": "Please check your answers and try again.",
+      "UNKNOWN": "Server unavailable. Please try again.",
+      "NETWORK": "Network error. Please try again."
+    },
+    "savedLocally": "进度已保存在本地。",
+    "steps": {
+      "welcome": {
+        "title": "开始设置",
+        "subtitle": "这有助于 CreatorForge 根据你的频道定制建议。",
+        "bullets": {
+          "youtube": "连接 YouTube 以解锁分析与同步。",
+          "goals": "选择目标以优化你的工作流。",
+          "personalize": "选择通知和邮件频率。"
+        }
+      },
+      "connectYouTube": {
+        "title": "连接 YouTube",
+        "subtitle": "可选，但建议连接以解锁仪表盘。",
+        "card": {
+          "title": "YouTube connection",
+          "connected": "You’re connected.",
+          "disconnected": "Connect your YouTube account to enable analytics.",
+          "channelIdLabel": "Channel ID:",
+          "connectCta": "Connect YouTube"
+        }
+      },
+      "goals": {
+        "title": "你的目标",
+        "subtitle": "请至少选择一项以个性化推荐。",
+        "options": {
+          "grow": "增长订阅者与播放量",
+          "consistent": "更稳定地发布",
+          "monetize": "频道变现",
+          "workflow": "改进工作流与规划"
+        },
+        "custom": {
+          "label": "自定义目标（可选）",
+          "placeholder": "例如：提升前 30 秒留存",
+          "hint": "如果没有合适选项，请添加自己的目标。"
+        }
+      },
+      "channelInfo": {
+        "title": "频道信息",
+        "subtitle": "一些细节有助于定制创意和模板。",
+        "fields": {
+          "niche": {
+            "label": "领域",
+            "placeholder": "例如：健身、科技评测、烹饪"
+          },
+          "audience": {
+            "label": "受众",
+            "placeholder": "例如：新手、创作者、家长"
+          },
+          "frequency": {
+            "label": "发布频率",
+            "placeholder": "例如：每周 2 个视频"
+          },
+          "experience": {
+            "label": "经验水平",
+            "placeholder": "例如：新手、中级、专业"
+          }
+        }
+      },
+      "personalization": {
+        "title": "个性化",
+        "subtitle": "选择你希望如何收到我们的消息。",
+        "notifications": {
+          "title": "Notifications",
+          "product": {
+            "label": "Product updates",
+            "hint": "New features and improvements."
+          },
+          "tips": {
+            "label": "Tips & best practices",
+            "hint": "Short guidance to grow faster."
+          }
+        },
+        "emailFrequency": {
+          "label": "邮件频率",
+          "hint": "可随时在设置中更改。",
+          "options": {
+            "daily": "每天",
+            "weekly": "每周",
+            "monthly": "每月",
+            "never": "从不"
+          }
+        }
+      },
+      "complete": {
+        "title": "全部完成！",
+        "subtitle": "已保存你的偏好，正在跳转到仪表盘…",
+        "summary": {
+          "title": "Summary",
+          "goalsLabel": "Goals:",
+          "nicheLabel": "Niche:",
+          "audienceLabel": "Audience:",
+          "emailFrequencyLabel": "Email:",
+          "none": "None"
+        }
+      }
+    }
+  },
+  "ideas": {
+    "title": "Idea Bank",
+    "subtitle": "Capture, organize, and prioritize content ideas.",
+    "countBadge": {
+      "title": "{count} ideas",
+      "value": "{count}"
+    },
+    "view": {
+      "grid": "Grid view",
+      "list": "List view"
+    },
+    "actions": {
+      "newIdea": "New idea",
+      "edit": "Edit",
+      "archive": "Archive",
+      "unarchive": "Unarchive",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…",
+      "deleting": "Deleting…",
+      "exportJson": "Export JSON",
+      "createWorkflow": "Create workflow",
+      "viewWorkflow": "View workflow"
+    },
+    "status": {
+      "active": "Active",
+      "archived": "Archived"
+    },
+    "priority": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "filters": {
+      "searchPlaceholder": "Search ideas…",
+      "searchAria": "Search ideas",
+      "button": "Filters",
+      "reset": "Reset",
+      "close": "Close",
+      "status": {
+        "label": "Status",
+        "aria": "Filter by status",
+        "active": "Active",
+        "archived": "Archived",
+        "all": "All"
+      },
+      "priority": {
+        "label": "Priority",
+        "aria": "Filter by priority",
+        "all": "All priorities"
+      },
+      "category": {
+        "label": "Category",
+        "aria": "Filter by category",
+        "all": "All categories"
+      },
+      "tag": {
+        "label": "Tag",
+        "aria": "Filter by tag",
+        "placeholder": "e.g. shorts"
+      },
+      "sort": {
+        "label": "Sort",
+        "aria": "Sort ideas",
+        "newest": "Newest",
+        "oldest": "Oldest",
+        "priority": "Priority"
+      }
+    },
+    "bulk": {
+      "aria": "Bulk actions",
+      "selectOne": "Select idea: {title}",
+      "selectAll": "Select all ideas",
+      "selectAllLabel": "Select all",
+      "selectedCount": "{count} selected",
+      "selectedCountInline": "{count} selected",
+      "archive": "Archive",
+      "unarchive": "Unarchive",
+      "delete": "Delete",
+      "priority": {
+        "aria": "Set priority for selected",
+        "label": "Set priority…"
+      },
+      "confirmDelete": {
+        "title": "Delete selected ideas?",
+        "description": "This will permanently delete {count} ideas.",
+        "cta": "Delete"
+      }
+    },
+    "card": {
+      "open": "Open idea: {title}",
+      "menu": "Idea actions",
+      "created": "Created {date}",
+      "notesPreview": "Notes: {notes}",
+      "moreTags": "+{count} more"
+    },
+    "modal": {
+      "createTitle": "New idea",
+      "createSubtitle": "Add details now or later—everything is editable.",
+      "editTitle": "Edit idea",
+      "editSubtitle": "Update fields, tags, and status.",
+      "close": "Close",
+      "moreTags": "+{count} more"
+    },
+    "fields": {
+      "title": "Title",
+      "description": "Description",
+      "category": "Category",
+      "tags": "Tags",
+      "priority": "Priority",
+      "status": "Status",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "title": "e.g. 10 editing tips for creators",
+      "description": "Optional short description…",
+      "category": "e.g. Productivity",
+      "tags": "Comma-separated (e.g. shorts, editing, hooks)",
+      "notes": "Add notes, links, timestamps…"
+    },
+    "hints": {
+      "tags": "Tip: use commas to add multiple tags."
+    },
+    "validation": {
+      "title": "Please enter a title (min 2 characters)."
+    },
+    "empty": {
+      "kicker": "Idea Bank",
+      "title": "Your idea bank is empty",
+      "description": "Start capturing ideas so you never lose a great hook again.",
+      "ctaTitle": "Create your first idea",
+      "ctaHint": "You can add tags, priority, and notes anytime.",
+      "benefits": {
+        "capture": "Capture ideas fast",
+        "organize": "Organize with categories & tags",
+        "prioritize": "Prioritize what matters",
+        "revisit": "Revisit anytime"
+      }
+    },
+    "sidebar": {
+      "aria": "Ideas stats",
+      "title": "Stats",
+      "subtitle": "Quick overview of your idea bank.",
+      "active": "Active",
+      "archived": "Archived",
+      "priorityTitle": "By priority",
+      "categoriesTitle": "Top categories",
+      "noCategories": "No categories yet.",
+      "tagsTitle": "Top tags",
+      "noTags": "No tags yet."
+    },
+    "confirmDelete": {
+      "title": "Delete this idea?",
+      "description": "This will permanently delete “{title}”."
+    },
+    "toast": {
+      "created": {
+        "title": "Created",
+        "description": "Your idea was added to the bank."
+      },
+      "saved": {
+        "title": "Saved",
+        "description": "Your changes were saved."
+      },
+      "archived": {
+        "title": "Archived",
+        "description": "The idea was archived."
+      },
+      "unarchived": {
+        "title": "Restored",
+        "description": "The idea is active again."
+      },
+      "deleted": {
+        "title": "Deleted",
+        "description": "The idea was deleted."
+      },
+      "bulkDone": {
+        "title": "Done",
+        "description": "{count} ideas updated."
+      },
+      "actionFailed": {
+        "title": "Something went wrong"
+      },
+      "exported": {
+        "title": "Exported",
+        "description": "Ideas downloaded as JSON."
+      },
+      "workflowCreated": {
+        "title": "Workflow created",
+        "description": "Your idea is now a workflow project."
+      }
+    },
+    "errors": {
+      "UNAUTHENTICATED": "You need to be signed in.",
+      "INVALID_INPUT": "Invalid input. Please check and try again.",
+      "NOT_FOUND": "This idea no longer exists.",
+      "DB_ERROR": "We couldn’t save your changes. {details}",
+      "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to create a workflow from this idea."
+    },
+    "categoryBadge": {
+      "title": "Category: {category}"
+    },
+    "tagChip": {
+      "title": "Tag: {tag}",
+      "remove": "Remove tag {tag}"
+    },
+    "priorityIndicator": {
+      "title": "Priority: {priority}",
+      "aria": "Priority {priority}"
+    },
+    "scriptOutline": {
+      "title": "Script outline generator",
+      "videoTitle": "Video title",
+      "titlePlaceholder": "e.g. 10 Tips for Better Thumbnails",
+      "duration": "Target duration",
+      "style": "Style",
+      "stylePlaceholder": "educational, vlog, tutorial…",
+      "generate": "Generate outline",
+      "generating": "Generating…",
+      "result": "Script outline",
+      "hook": "Hook",
+      "intro": "Intro",
+      "cta": "Call to action",
+      "outro": "Outro",
+      "copyAll": "Copy outline",
+      "copied": "Outline copied to clipboard",
+      "copyError": "Could not copy"
+    }
+  },
+  "landing": {
+    "brand": "CreatorForge",
+    "meta": {
+      "title": "CreatorForge — 免费 AI YouTube 创作者工具包",
+      "description": "用免费工具规划、研究并发布更好的视频：创意生成、工作流、竞品追踪、排期和缩略图分析。"
+    },
+    "structuredData": {
+      "name": "CreatorForge",
+      "description": "面向 YouTube 创作者的免费 AI 工具包：创意、规划与优化。"
+    },
+    "nav": {
+      "aria": "主导航",
+      "features": "功能",
+      "pricing": "定价",
+      "blog": "博客",
+      "login": "登录",
+      "close": "关闭菜单",
+      "menuOpen": "打开导航菜单"
+    },
+    "cta": {
+      "getStartedFree": "免费开始"
+    },
+    "hero": {
+      "kicker": "更快发布更好的视频",
+      "title": "你的免费 AI 创作者工具包",
+      "subtitle": "从创意到排期：CreatorForge 帮助你规划、优化并持续发布——无需十个工具。",
+      "primaryCta": "免费开始",
+      "secondaryCta": "查看定价",
+      "mockAlt": "CreatorForge 仪表盘预览",
+      "bullets": {
+        "0": "免费起步",
+        "1": "为速度而生",
+        "2": "支持 9 种语言"
+      }
+    },
+    "features": {
+      "title": "Everything you need to grow",
+      "subtitle": "A focused set of tools for modern YouTube workflows—simple, fast, and cost-aware.",
+      "items": {
+        "ideas": {
+          "title": "AI idea generator",
+          "description": "Generate video ideas and angles in seconds, then iterate with prompts."
+        },
+        "seo": {
+          "title": "SEO-ready titles",
+          "description": "Craft better titles, tags, and descriptions with structured guidance."
+        },
+        "competitors": {
+          "title": "Competitor tracking",
+          "description": "Follow channels you admire and learn from what’s working."
+        },
+        "workflow": {
+          "title": "Production workflow",
+          "description": "Keep scripts, notes, and status in one place—from draft to publish."
+        },
+        "calendar": {
+          "title": "Scheduling calendar",
+          "description": "Plan uploads, reschedule with drag & drop, and stay consistent."
+        },
+        "thumbnails": {
+          "title": "Thumbnail checks",
+          "description": "Quickly analyze thumbnails and get actionable improvements."
+        }
+      }
+    },
+    "how": {
+      "title": "How it works",
+      "subtitle": "A simple loop you can repeat every week.",
+      "steps": {
+        "connect": {
+          "label": "Step 1",
+          "title": "Connect your channel",
+          "description": "Sign in and link YouTube to unlock analytics and scheduling."
+        },
+        "build": {
+          "label": "Step 2",
+          "title": "Plan with AI + workflow",
+          "description": "Generate ideas, organize tasks, and track competitors in one hub."
+        },
+        "publish": {
+          "label": "Step 3",
+          "title": "Schedule and improve",
+          "description": "Schedule uploads and refine thumbnails with quick feedback."
+        }
+      }
+    },
+    "comparison": {
+      "title": "CreatorForge vs. alternatives",
+      "subtitle": "Stop stitching together free tools and spreadsheets.",
+      "table": {
+        "feature": "Feature",
+        "creatorForge": "CreatorForge",
+        "alternatives": "Other tools"
+      },
+      "rows": {
+        "freeTools": "Free core toolkit",
+        "aiCredits": "AI assistance built-in",
+        "workflow": "Workflow + notes",
+        "competitors": "Competitor tracking",
+        "calendar": "Scheduling calendar",
+        "thumbnails": "Thumbnail analysis"
+      }
+    },
+    "testimonials": {
+      "title": "Creators love the focus",
+      "subtitle": "Less clutter, more output.",
+      "items": {
+        "0": {
+          "quote": "I replaced three spreadsheets and two apps in one afternoon.",
+          "name": "Ava",
+          "role": "Education creator"
+        },
+        "1": {
+          "quote": "The workflow view keeps my uploads consistent—even when I’m busy.",
+          "name": "Noah",
+          "role": "Gaming creator"
+        },
+        "2": {
+          "quote": "Thumbnail feedback is quick and actionable. My CTR improved.",
+          "name": "Mia",
+          "role": "Vlog creator"
+        }
+      }
+    },
+    "pricing": {
+      "title": "Pricing that stays simple",
+      "subtitle": "Start free. Upgrade when you need more.",
+      "highlight": "Most popular",
+      "finePrint": "You can start on the Free plan and upgrade anytime.",
+      "plans": {
+        "free": {
+          "label": "Free",
+          "price": "$0",
+          "description": "Essentials to plan and publish consistently.",
+          "cta": "Start free",
+          "features": {
+            "0": "AI idea generation (limited)",
+            "1": "Workflow board",
+            "2": "Basic scheduling",
+            "3": "Core creator tools"
+          }
+        },
+        "pro": {
+          "label": "Pro",
+          "price": "$9/mo",
+          "description": "More automation and deeper planning.",
+          "cta": "Try Pro",
+          "features": {
+            "0": "Higher AI limits",
+            "1": "Competitor tracking",
+            "2": "Advanced calendar views",
+            "3": "Priority improvements"
+          }
+        },
+        "creator": {
+          "label": "Creator",
+          "price": "$19/mo",
+          "description": "For teams and serious creators.",
+          "cta": "Go Creator",
+          "features": {
+            "0": "Team-ready workflows",
+            "1": "More channels (coming soon)",
+            "2": "Enhanced analytics (coming soon)",
+            "3": "Best-in-class support"
+          }
+        }
+      }
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "subtitle": "Everything you need to know before you start.",
+      "items": {
+        "0": {
+          "q": "Is CreatorForge really free?",
+          "a": "Yes. The Free plan includes the core toolkit and limited AI usage."
+        },
+        "1": {
+          "q": "Do I need to connect YouTube?",
+          "a": "You can explore the landing experience without connecting. Connecting unlocks analytics and scheduling."
+        },
+        "2": {
+          "q": "Which languages are supported?",
+          "a": "CreatorForge supports 9 languages including English, Italian, Spanish, German, French, Portuguese, Russian, Japanese, and Chinese."
+        },
+        "3": {
+          "q": "Can I use my own workflow?",
+          "a": "Yes. You can adapt the workflow to match your production process and update statuses as you go."
+        },
+        "4": {
+          "q": "Is this optimized for mobile?",
+          "a": "Yes. The landing page and core app screens are responsive and dark-mode friendly."
+        },
+        "5": {
+          "q": "How do I get started?",
+          "a": "Click “Get Started Free” to open the app and begin planning your next upload."
+        }
+      }
+    },
+    "finalCta": {
+      "title": "Ready to publish consistently?",
+      "subtitle": "Start free and ship your next video with less friction.",
+      "primaryCta": "Get started free",
+      "secondaryCta": "View pricing"
+    },
+    "footer": {
+      "brand": "CreatorForge",
+      "tagline": "A free toolkit for modern YouTube creators.",
+      "sections": {
+        "product": "Product",
+        "social": "Social"
+      },
+      "links": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "blog": "Blog",
+        "login": "Login"
+      },
+      "social": {
+        "github": "GitHub",
+        "x": "X",
+        "youtube": "YouTube"
+      },
+      "legal": {
+        "terms": "Terms",
+        "privacy": "Privacy"
+      },
+      "copyright": "© {year} CreatorForge. All rights reserved."
+    }
+  },
+  "common": {
+    "errors": {
+      "UNAUTHENTICATED": "Please sign in to continue.",
+      "RATE_LIMITED": "You reached today's limit. Try again tomorrow.",
+      "YOUTUBE_NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
+      "NOT_CONNECTED": "Connect your YouTube channel to use this feature.",
+      "INVALID_INPUT": "Invalid input. Please check and try again.",
+      "NOT_FOUND": "This item no longer exists.",
+      "DB_ERROR": "无法保存更改。{details}",
+      "NETWORK": "Network error. Check your connection and try again.",
+      "UNKNOWN": "Something went wrong. Please try again.",
+      "AUTH_ERROR": "Authentication failed. Please try again.",
+      "MISSING_CONFIG": "Missing configuration. {details}",
+      "TIMEOUT": "The request timed out. Please try again.",
+      "INVALID_JSON": "The response could not be parsed. Please try again."
+    },
+    "actions": {
+      "signIn": "登录",
+      "connectYouTube": "连接 YouTube",
+      "retry": "重试",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "toast": {
+      "success": "Done",
+      "error": "Something went wrong"
+    },
+    "loading": "Loading…"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or was moved.",
+    "backHome": "Back to dashboard"
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred. Try refreshing the page.",
+    "retry": "Try again"
+  },
+  "devBanner": {
+    "message": "Supabase is not configured. Add NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY to .env.local.",
+    "dismiss": "Dismiss"
+  },
+  "login": {
+    "pageTitle": "Sign in to CreatorForge",
+    "pageSubtitle": "Use Google or a magic link to access your creator toolkit.",
+    "title": "Welcome back",
+    "subtitle": "Choose how you'd like to sign in.",
+    "google": "Continue with Google",
+    "orEmail": "Or continue with email",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "magicLink": "Send magic link",
+    "checkInbox": "Check your inbox for a sign-in link.",
+    "validation": {
+      "email": "Please enter a valid email address."
+    },
+    "toast": {
+      "magicLinkSent": "Magic link sent. Check your email.",
+      "error": "Sign-in failed"
+    },
+    "errors": {
+      "AUTH_ERROR": "We couldn't sign you in. Please try again.",
+      "INVALID_INPUT": "Please enter a valid email address."
+    }
+  },
+  "search": {
+    "placeholder": "搜索创意和工作流…",
+    "aria": "全局搜索",
+    "empty": "未找到结果。",
+    "resultsAria": "搜索结果",
+    "types": {
+      "idea": "创意",
+      "workflow": "工作流"
+    }
+  },
+  "comments": {
+    "title": "Comment Sentiment",
+    "subtitle": "Analyze audience reactions with lightweight sentiment scoring.",
+    "videoUrlLabel": "YouTube video URL",
+    "videoUrlPlaceholder": "https://youtube.com/watch?v=…",
+    "analyze": "Analyze comments",
+    "analyzing": "Analyzing…",
+    "sentiment": {
+      "title": "Sentiment breakdown",
+      "positive": "Positive",
+      "neutral": "Neutral",
+      "negative": "Negative",
+      "total": "{count} comments analyzed"
+    },
+    "questions": {
+      "title": "Top questions",
+      "empty": "No questions detected in recent comments."
+    },
+    "sample": {
+      "title": "Sample comments"
+    }
+  },
+  "emails": {
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your CreatorForge preferences.",
+      "unauthenticated": "Please sign in to manage settings.",
+      "emailLink": "Email notifications",
+      "emailTitle": "Email notifications",
+      "emailSubtitle": "选择要接收的邮件。",
+      "thumbnailTitle": "缩略图分析",
+      "thumbnailSubtitle": "分析对比度、文字和构图",
+      "commentsTitle": "评论情感分析",
+      "commentsSubtitle": "了解观众反应",
+      "profileFallback": "创作者",
+      "billingTitle": "Billing & plan",
+      "billingSubtitle": "View your plan and manage your Pro subscription"
+    },
+    "preferences": {
+      "emailLabel": "Sending to",
+      "frequencyLabel": "Digest frequency",
+      "frequencyWeekly": "Weekly",
+      "frequencyBiweekly": "Every 2 weeks",
+      "unsubscribedAllHint": "You have unsubscribed from all email notifications."
+    },
+    "types": {
+      "weeklyDigest": {
+        "title": "Weekly digest",
+        "description": "A snapshot of your performance + next steps."
+      },
+      "competitorAlert": {
+        "title": "Competitor alerts",
+        "description": "Get notified when tracked channels publish."
+      },
+      "publishingReminder": {
+        "title": "Publishing reminders",
+        "description": "Nudges when workflows are due."
+      },
+      "goalReached": {
+        "title": "Goal reached",
+        "description": "Celebrate milestones you hit."
+      },
+      "onboarding": {
+        "title": "Onboarding",
+        "description": "Tips to help you get started."
+      }
+    },
+    "actions": {
+      "save": "Save changes",
+      "saving": "Saving…",
+      "unsubscribeAll": "Unsubscribe from all"
+    },
+    "toast": {
+      "savedTitle": "Saved",
+      "savedBody": "Your email preferences were updated.",
+      "errorTitle": "Could not save",
+      "errorBody": "Please try again."
+    }
+  },
+  "legalPages": {
+    "terms": {
+      "title": "Terms of Service",
+      "description": "CreatorForge terms of service.",
+      "body": "CreatorForge is provided as-is for creators. By using the service you agree to use it responsibly and comply with applicable laws. We may update these terms; continued use constitutes acceptance."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "How CreatorForge handles your data.",
+      "body": "We store account data and workspace content to provide the service. We do not sell personal data. You can request deletion by contacting support. Third-party providers (Supabase, Google, YouTube) process data according to their policies."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "CreatorForge updates and creator tips.",
+      "comingSoon": "Our blog is coming soon. Check back for product updates and YouTube growth tips."
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing",
+      "description": "Simple pricing for CreatorForge — start free, upgrade to Pro when you need unlimited AI, competitor tracking, and advanced SEO tools."
+    },
+    "title": "Pricing that stays simple",
+    "subtitle": "Start free. Upgrade when you need more power for your channel.",
+    "highlight": "Most popular",
+    "finePrint": "You can start on the Free plan and upgrade anytime. Cancel from your billing portal.",
+    "free": {
+      "label": "Free",
+      "price": "$0",
+      "description": "Essentials to plan and publish consistently.",
+      "cta": "Start free",
+      "features": {
+        "0": "Dashboard & workflow board",
+        "1": "Basic calendar scheduling",
+        "2": "Limited AI requests per day",
+        "3": "Thumbnail analyzer",
+        "4": "Ideas bank & script outlines"
+      }
+    },
+    "pro": {
+      "label": "Pro",
+      "price": "$9/mo",
+      "description": "Unlimited AI, competitor tracking, and advanced SEO Lab.",
+      "features": {
+        "0": "Unlimited AI Assistant",
+        "1": "Competitor tracking & niche discovery",
+        "2": "Advanced SEO Lab & video analyzer",
+        "3": "Higher rate limits across tools",
+        "4": "Priority feature updates"
+      }
+    }
+  },
+  "billing": {
+    "title": "Billing",
+    "subtitle": "Manage your CreatorForge subscription.",
+    "currentPlan": "Current plan",
+    "planFree": "Free",
+    "planPro": "Pro",
+    "planFreeDescription": "You are on the Free plan. Upgrade to unlock Pro features.",
+    "planProDescription": "You have full access to Pro features.",
+    "statusLabel": "Subscription status",
+    "upgrade": "Upgrade to Pro",
+    "upgradeLoading": "Opening checkout…",
+    "upgradeError": "Could not start checkout. Please try again.",
+    "manage": "Manage subscription",
+    "manageLoading": "Opening portal…",
+    "manageError": "Could not open the billing portal.",
+    "loginRequired": "Sign in to upgrade your plan.",
+    "includedTitle": "What's included in your plan",
+    "included": {
+      "0": "Pro unlocks AI Assistant, Competitors, and SEO Lab.",
+      "1": "Manage payment method and invoices in the LemonSqueezy portal.",
+      "2": "Upgrades apply immediately after checkout.",
+      "3": "Downgrades take effect when your subscription ends."
+    }
+  }
+}
