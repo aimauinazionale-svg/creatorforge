@@ -2,15 +2,13 @@ import type { SVGProps } from "react";
 
 type SparkrollMarkProps = SVGProps<SVGSVGElement> & {
   gradientId?: string;
-  sparkId?: string;
-  glowId?: string;
+  shineId?: string;
 };
 
-/** Sparkroll icon mark: film-strip sprockets + rolling waves + lightning spark. */
+/** Sparkroll icon mark: rounded-square app icon with geometric S monogram. */
 export function SparkrollMark({
   gradientId = "sr-bg",
-  sparkId = "sr-spark",
-  glowId = "sr-glow",
+  shineId = "sr-shine",
   className,
   ...props
 }: SparkrollMarkProps) {
@@ -24,73 +22,28 @@ export function SparkrollMark({
       {...props}
     >
       <defs>
-        <linearGradient id={gradientId} x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+        <linearGradient id={gradientId} x1="5" y1="3" x2="27" y2="29" gradientUnits="userSpaceOnUse">
           <stop stopColor="#7c3aed" />
-          <stop offset="0.5" stopColor="#d946ef" />
-          <stop offset="1" stopColor="#f59e0b" />
+          <stop offset="1" stopColor="#d946ef" />
         </linearGradient>
-        <linearGradient id={sparkId} x1="12" y1="7" x2="22" y2="24" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#fff7ed" />
-          <stop offset="0.45" stopColor="#fde68a" />
-          <stop offset="1" stopColor="#fbbf24" />
+        <linearGradient id={shineId} x1="8" y1="6" x2="22" y2="20" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#ffffff" stopOpacity="0.18" />
+          <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
         </linearGradient>
-        <filter id={glowId} x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="0.6" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
       </defs>
       <rect width="32" height="32" rx="8" fill={`url(#${gradientId})`} />
-      <rect
-        x="5"
-        y="7"
-        width="22"
-        height="18"
-        rx="2"
-        stroke="white"
-        strokeOpacity="0.22"
-        strokeWidth="0.75"
-        fill="none"
-      />
-      <rect x="6.25" y="8.25" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.55" />
-      <rect x="6.25" y="11.5" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.45" />
-      <rect x="6.25" y="14.75" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.45" />
-      <rect x="6.25" y="18" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.45" />
-      <rect x="6.25" y="21.25" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.55" />
-      <rect x="24.25" y="8.25" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.55" />
-      <rect x="24.25" y="11.5" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.45" />
-      <rect x="24.25" y="14.75" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.45" />
-      <rect x="24.25" y="18" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.45" />
-      <rect x="24.25" y="21.25" width="1.5" height="1.5" rx="0.35" fill="white" fillOpacity="0.55" />
+      <rect width="32" height="32" rx="8" fill={`url(#${shineId})`} />
       <path
-        d="M9 12.5c2.2-1.4 4.4-1.4 6.6 0s4.4 1.4 6.6 0"
+        d="M21.2 11.2C21.2 8.7 18.7 7 16 7c-3.2 0-5.6 1.8-5.6 4.4 0 2.1 1.3 3.4 3.8 4l3.6.7c2.4.5 3.6 1.7 3.6 3.6 0 2.6-2.4 4.3-5.8 4.3-3.1 0-5.5-1.6-5.8-4.1"
         stroke="white"
-        strokeWidth="1.35"
+        strokeWidth="2.85"
         strokeLinecap="round"
-        fill="none"
-        strokeOpacity="0.85"
+        strokeLinejoin="round"
       />
       <path
-        d="M9 19.5c2.2-1.4 4.4-1.4 6.6 0s4.4 1.4 6.6 0"
-        stroke="white"
-        strokeWidth="1.35"
-        strokeLinecap="round"
-        fill="none"
-        strokeOpacity="0.55"
-      />
-      <path
-        d="M16 9.5 13.2 16h2.4L14.8 22.5 19.2 15h-2.3L16 9.5Z"
-        fill={`url(#${sparkId})`}
-        filter={`url(#${glowId})`}
-      />
-      <path
-        d="M16 9.5 13.2 16h2.4L14.8 22.5 19.2 15h-2.3L16 9.5Z"
-        stroke="white"
-        strokeOpacity="0.35"
-        strokeWidth="0.4"
-        fill="none"
+        d="M13.2 16.8 19.8 14.2 19.8 19.4Z"
+        fill="white"
+        fillOpacity="0.92"
       />
     </svg>
   );

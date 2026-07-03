@@ -31,8 +31,7 @@ export function BrandLogo({
 }: BrandLogoProps) {
   const s = sizeMap[size];
   const gradientId = useId();
-  const sparkId = useId();
-  const glowId = useId();
+  const shineId = useId();
 
   return (
     <div className={cn("inline-flex min-w-0 items-center gap-2", className)} {...props}>
@@ -40,8 +39,7 @@ export function BrandLogo({
         <SparkrollMark
           className="h-full w-full"
           gradientId={gradientId}
-          sparkId={sparkId}
-          glowId={glowId}
+          shineId={shineId}
         />
       </span>
       {showText ? (
@@ -49,7 +47,7 @@ export function BrandLogo({
           className={cn(
             "truncate font-semibold tracking-tight",
             s.text,
-            "bg-gradient-to-r from-violet-500 via-fuchsia-500 to-amber-400 bg-clip-text text-transparent",
+            "bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent",
             textClassName
           )}
         >
