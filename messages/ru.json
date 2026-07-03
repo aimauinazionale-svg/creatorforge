@@ -30,6 +30,7 @@
       "calendar": "Календарь",
       "ideas": "Идеи",
       "thumbnail": "Превью",
+      "tutorials": "Помощь и обучение",
       "settings": "Настройки",
       "onboarding": "Настройка"
     },
@@ -42,6 +43,7 @@
       "calendar": "Календарь",
       "ideas": "Идеи",
       "thumbnail": "Превью",
+      "tutorials": "Обучение",
       "settings": "Настройки",
       "dynamic": "{segment}",
       "onboarding": "Настройка"
@@ -1479,6 +1481,7 @@
       "aria": "Основная навигация",
       "features": "Возможности",
       "pricing": "Цены",
+      "tutorials": "Обучение",
       "blog": "Блог",
       "login": "Войти",
       "close": "Закрыть меню",
@@ -1682,6 +1685,7 @@
       "links": {
         "features": "Функции",
         "pricing": "Цены",
+        "tutorials": "Обучение",
         "blog": "Блог",
         "login": "Войти"
       },
@@ -1793,6 +1797,33 @@
     },
     "sample": {
       "title": "Sample comments"
+    }
+  },
+  "tutorials": {
+    "meta": { "title": "Обучение и руководства", "description": "Видеогиды и советы по Sparkroll — от начала работы до Pro-функций." },
+    "title": "Изучайте Sparkroll",
+    "subtitle": "Пошаговые видеоуроки для планирования, создания и роста на YouTube.",
+    "duration": "{minutes} мин",
+    "comingSoon": "Скоро",
+    "comingSoonDescription": "Мы записываем это видео. Загляните позже!",
+    "allCategories": "Все",
+    "filterAria": "Фильтр уроков по категории",
+    "empty": "В этой категории пока нет уроков.",
+    "categories": { "gettingStarted": "Начало работы", "aiTools": "ИИ-инструменты", "youtubeConnect": "Подключение YouTube", "dashboard": "Панель", "proFeatures": "Pro-функции", "tipsTricks": "Советы и хитрости" },
+    "items": {
+      "welcome": { "title": "Добро пожаловать в Sparkroll", "description": "Краткий обзор Sparkroll и его роли в рабочем процессе автора." },
+      "create-account": { "title": "Создание аккаунта", "description": "Регистрация через Google или email за минуту." },
+      "ai-assistant": { "title": "ИИ-ассистент", "description": "Чат с ИИ для идей, сценариев и советов автора." },
+      "ideas-generator": { "title": "Генератор идей", "description": "Идеи и углы видео для вашей ниши." },
+      "seo-lab-basics": { "title": "Основы SEO Lab", "description": "Оптимизация заголовков, тегов и описаний." },
+      "connect-youtube": { "title": "Подключить YouTube", "description": "Привяжите канал для аналитики, календаря и панели." },
+      "oauth-permissions": { "title": "Разрешения OAuth", "description": "Какие данные использует Sparkroll и как управлять доступом." },
+      "dashboard-overview": { "title": "Обзор панели", "description": "Статистика, активность и быстрые действия." },
+      "channel-health": { "title": "Оценка здоровья канала", "description": "Метрики здоровья и что улучшить дальше." },
+      "upgrade-pro": { "title": "Переход на Pro", "description": "Сравнение Free и Pro и апгрейд, когда будете готовы." },
+      "pro-features-tour": { "title": "Тур по Pro-функциям", "description": "Безлимитный ИИ, конкуренты и продвинутое SEO." },
+      "workflow-tips": { "title": "Советы по workflow", "description": "Лучшие практики от идеи до публикации." },
+      "productivity-shortcuts": { "title": "Горячие клавиши", "description": "Экономьте время с поиском и навигацией." }
     }
   },
   "legalPages": {

@@ -109,6 +109,7 @@
       "calendar": "Calendar",
       "ideas": "Ideas",
       "thumbnail": "Thumbnail",
+      "tutorials": "Help & Tutorials",
       "settings": "Settings"
     },
     "breadcrumb": {
@@ -120,6 +121,7 @@
       "calendar": "Calendar",
       "ideas": "Ideas",
       "thumbnail": "Thumbnail",
+      "tutorials": "Tutorials",
       "settings": "Settings",
       "onboarding": "Onboarding",
       "dynamic": "{segment}"
@@ -1579,6 +1581,7 @@
       "aria": "Primary navigation",
       "features": "Features",
       "pricing": "Pricing",
+      "tutorials": "Learn",
       "blog": "Blog",
       "login": "Login",
       "close": "Close menu",
@@ -1782,6 +1785,7 @@
       "links": {
         "features": "Features",
         "pricing": "Pricing",
+        "tutorials": "Tutorials",
         "blog": "Blog",
         "login": "Login"
       },
@@ -1854,6 +1858,82 @@
       "1": "Manage payment method and invoices in the LemonSqueezy portal.",
       "2": "Upgrades apply immediately after checkout.",
       "3": "Downgrades take effect when your subscription ends."
+    }
+  },
+  "tutorials": {
+    "meta": {
+      "title": "Tutorials & Learn",
+      "description": "Video guides and tips to master Sparkroll — from getting started to Pro features."
+    },
+    "title": "Learn Sparkroll",
+    "subtitle": "Step-by-step video tutorials to help you plan, create, and grow on YouTube.",
+    "duration": "{minutes} min",
+    "comingSoon": "Coming soon",
+    "comingSoonDescription": "We're recording this tutorial. Check back soon!",
+    "allCategories": "All",
+    "filterAria": "Filter tutorials by category",
+    "empty": "No tutorials in this category yet.",
+    "categories": {
+      "gettingStarted": "Getting Started",
+      "aiTools": "AI Tools",
+      "youtubeConnect": "YouTube Connect",
+      "dashboard": "Dashboard",
+      "proFeatures": "Pro Features",
+      "tipsTricks": "Tips & Tricks"
+    },
+    "items": {
+      "welcome": {
+        "title": "Welcome to Sparkroll",
+        "description": "A quick overview of what Sparkroll does and how it fits into your creator workflow."
+      },
+      "create-account": {
+        "title": "Create your account",
+        "description": "Sign up with Google or email and set up your profile in under a minute."
+      },
+      "ai-assistant": {
+        "title": "AI Assistant",
+        "description": "Chat with AI to brainstorm ideas, refine scripts, and get creator advice."
+      },
+      "ideas-generator": {
+        "title": "Idea generator",
+        "description": "Generate video ideas and angles tailored to your niche."
+      },
+      "seo-lab-basics": {
+        "title": "SEO Lab basics",
+        "description": "Optimize titles, tags, and descriptions for better discoverability."
+      },
+      "connect-youtube": {
+        "title": "Connect YouTube",
+        "description": "Link your channel to unlock analytics, calendar, and dashboard insights."
+      },
+      "oauth-permissions": {
+        "title": "OAuth permissions explained",
+        "description": "What data Sparkroll accesses and how to manage permissions safely."
+      },
+      "dashboard-overview": {
+        "title": "Dashboard overview",
+        "description": "Navigate your home base: stats, activity, and quick actions."
+      },
+      "channel-health": {
+        "title": "Channel health score",
+        "description": "Understand your health metrics and what to improve next."
+      },
+      "upgrade-pro": {
+        "title": "Upgrade to Pro",
+        "description": "Compare Free vs Pro and upgrade when you're ready."
+      },
+      "pro-features-tour": {
+        "title": "Pro features tour",
+        "description": "Deep dive into unlimited AI, competitors, and advanced SEO tools."
+      },
+      "workflow-tips": {
+        "title": "Workflow tips",
+        "description": "Best practices for planning videos from idea to publish."
+      },
+      "productivity-shortcuts": {
+        "title": "Productivity shortcuts",
+        "description": "Save time with search, navigation, and daily creator habits."
+      }
     }
   },
   "legalPages": {

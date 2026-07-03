@@ -48,6 +48,8 @@ function segmentLabelKey(seg: string): string | null {
       return "layout.breadcrumb.thumbnail";
     case "settings":
       return "layout.breadcrumb.settings";
+    case "tutorials":
+      return "layout.breadcrumb.tutorials";
     case "onboarding":
       return "layout.breadcrumb.onboarding";
     default:

@@ -30,6 +30,7 @@
       "calendar": "Calendario",
       "ideas": "Idee",
       "thumbnail": "Miniatura",
+      "tutorials": "Aiuto e tutorial",
       "settings": "Impostazioni",
       "onboarding": "Configurazione iniziale"
     },
@@ -42,6 +43,7 @@
       "calendar": "Calendario",
       "ideas": "Idee",
       "thumbnail": "Miniatura",
+      "tutorials": "Tutorial",
       "settings": "Impostazioni",
       "dynamic": "{segment}",
       "onboarding": "Configurazione iniziale"
@@ -1479,6 +1481,7 @@
       "aria": "Navigazione principale",
       "features": "Funzionalità",
       "pricing": "Prezzi",
+      "tutorials": "Impara",
       "blog": "Blog",
       "login": "Accedi",
       "close": "Chiudi menu",
@@ -1682,6 +1685,7 @@
       "links": {
         "features": "Funzionalità",
         "pricing": "Prezzi",
+        "tutorials": "Tutorial",
         "blog": "Blog",
         "login": "Accedi"
       },
@@ -1793,6 +1797,82 @@
     },
     "sample": {
       "title": "Sample comments"
+    }
+  },
+  "tutorials": {
+    "meta": {
+      "title": "Tutorial e guida",
+      "description": "Video guide e consigli per padroneggiare Sparkroll — dall'inizio alle funzioni Pro."
+    },
+    "title": "Impara Sparkroll",
+    "subtitle": "Tutorial video passo passo per pianificare, creare e crescere su YouTube.",
+    "duration": "{minutes} min",
+    "comingSoon": "Video in arrivo",
+    "comingSoonDescription": "Stiamo registrando questo tutorial. Torna presto!",
+    "allCategories": "Tutti",
+    "filterAria": "Filtra i tutorial per categoria",
+    "empty": "Nessun tutorial in questa categoria.",
+    "categories": {
+      "gettingStarted": "Per iniziare",
+      "aiTools": "Strumenti AI",
+      "youtubeConnect": "Collega YouTube",
+      "dashboard": "Dashboard",
+      "proFeatures": "Funzioni Pro",
+      "tipsTricks": "Consigli e trucchi"
+    },
+    "items": {
+      "welcome": {
+        "title": "Benvenuto su Sparkroll",
+        "description": "Panoramica rapida di cosa fa Sparkroll e come si integra nel tuo flusso da creator."
+      },
+      "create-account": {
+        "title": "Crea il tuo account",
+        "description": "Registrati con Google o email e configura il profilo in un minuto."
+      },
+      "ai-assistant": {
+        "title": "Assistente AI",
+        "description": "Chatta con l'AI per idee, script e consigli da creator."
+      },
+      "ideas-generator": {
+        "title": "Generatore di idee",
+        "description": "Genera idee e angoli video adatti alla tua nicchia."
+      },
+      "seo-lab-basics": {
+        "title": "Basi del Laboratorio SEO",
+        "description": "Ottimizza titoli, tag e descrizioni per essere trovato meglio."
+      },
+      "connect-youtube": {
+        "title": "Collega YouTube",
+        "description": "Collega il canale per sbloccare analytics, calendario e dashboard."
+      },
+      "oauth-permissions": {
+        "title": "Permessi OAuth spiegati",
+        "description": "Quali dati accede Sparkroll e come gestire i permessi in sicurezza."
+      },
+      "dashboard-overview": {
+        "title": "Panoramica dashboard",
+        "description": "Naviga la home: statistiche, attività e azioni rapide."
+      },
+      "channel-health": {
+        "title": "Punteggio salute canale",
+        "description": "Comprendi le metriche di salute e cosa migliorare."
+      },
+      "upgrade-pro": {
+        "title": "Passa a Pro",
+        "description": "Confronta Free e Pro e fai l'upgrade quando sei pronto."
+      },
+      "pro-features-tour": {
+        "title": "Tour funzioni Pro",
+        "description": "AI illimitata, competitor e SEO avanzato in dettaglio."
+      },
+      "workflow-tips": {
+        "title": "Consigli sul workflow",
+        "description": "Best practice per pianificare i video dall'idea alla pubblicazione."
+      },
+      "productivity-shortcuts": {
+        "title": "Scorciatoie di produttività",
+        "description": "Risparmia tempo con ricerca, navigazione e abitudini quotidiane."
+      }
     }
   },
   "legalPages": {

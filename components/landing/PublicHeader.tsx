@@ -17,6 +17,7 @@ export function PublicHeader() {
   const nav = [
     { href: "/#features", label: t("nav.features") },
     { href: "/pricing", label: t("nav.pricing") },
+    { href: "/tutorials", label: t("nav.tutorials") },
     { href: "/blog", label: t("nav.blog") },
     { href: "/login", label: t("nav.login") },
   ] as const;

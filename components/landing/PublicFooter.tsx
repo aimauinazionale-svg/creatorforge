@@ -12,6 +12,7 @@ export function PublicFooter() {
   const product = [
     { href: "/#features", label: t("links.features") },
     { href: "/#pricing", label: t("links.pricing") },
+    { href: "/tutorials", label: t("links.tutorials") },
     { href: "/blog", label: t("links.blog") },
     { href: "/dashboard", label: t("links.login") },
   ] as const;

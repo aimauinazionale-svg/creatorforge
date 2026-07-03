@@ -3,6 +3,7 @@
 import * as React from "react";
 import {
   Calendar,
+  GraduationCap,
   ImageIcon,
   LayoutDashboard,
   Lightbulb,
@@ -35,6 +36,7 @@ const NAV_ITEMS: NavItem[] = [
   { href: "/calendar", icon: Calendar, labelKey: "layout.nav.calendar" },
   { href: "/ideas", icon: Lightbulb, labelKey: "layout.nav.ideas" },
   { href: "/thumbnail", icon: ImageIcon, labelKey: "layout.nav.thumbnail" },
+  { href: "/tutorials", icon: GraduationCap, labelKey: "layout.nav.tutorials" },
   { href: "/settings", icon: Settings, labelKey: "layout.nav.settings" },
 ];
 

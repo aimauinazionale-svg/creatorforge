@@ -30,6 +30,7 @@
       "calendar": "日历",
       "ideas": "创意",
       "thumbnail": "缩略图",
+      "tutorials": "帮助与教程",
       "settings": "设置",
       "onboarding": "入门引导"
     },
@@ -42,6 +43,7 @@
       "calendar": "日历",
       "ideas": "创意",
       "thumbnail": "缩略图",
+      "tutorials": "教程",
       "settings": "设置",
       "dynamic": "{segment}",
       "onboarding": "入门引导"
@@ -1421,6 +1423,7 @@
       "aria": "主导航",
       "features": "功能",
       "pricing": "定价",
+      "tutorials": "学习",
       "blog": "博客",
       "login": "登录",
       "close": "关闭菜单",
@@ -1624,6 +1627,7 @@
       "links": {
         "features": "功能",
         "pricing": "定价",
+        "tutorials": "教程",
         "blog": "博客",
         "login": "登录"
       },
@@ -1794,6 +1798,33 @@
       "errorBody": "Please try again."
     },
     "loading": "Loading…"
+  },
+  "tutorials": {
+    "meta": { "title": "教程与学习", "description": "掌握 Sparkroll 的视频指南和技巧 — 从入门到 Pro 功能。" },
+    "title": "学习 Sparkroll",
+    "subtitle": "分步视频教程，帮助你在 YouTube 上规划、创作和成长。",
+    "duration": "{minutes} 分钟",
+    "comingSoon": "即将推出",
+    "comingSoonDescription": "我们正在录制本教程，请稍后再来查看。",
+    "allCategories": "全部",
+    "filterAria": "按类别筛选教程",
+    "empty": "该类别暂无教程。",
+    "categories": { "gettingStarted": "入门", "aiTools": "AI 工具", "youtubeConnect": "连接 YouTube", "dashboard": "仪表盘", "proFeatures": "Pro 功能", "tipsTricks": "技巧与窍门" },
+    "items": {
+      "welcome": { "title": "欢迎使用 Sparkroll", "description": "快速了解 Sparkroll 的功能及其如何融入创作者工作流。" },
+      "create-account": { "title": "创建账户", "description": "使用 Google 或邮箱注册，一分钟内完成设置。" },
+      "ai-assistant": { "title": "AI 助手", "description": "与 AI 聊天获取创意、脚本和创作者建议。" },
+      "ideas-generator": { "title": "创意生成器", "description": "为你的领域生成视频创意和角度。" },
+      "seo-lab-basics": { "title": "SEO Lab 基础", "description": "优化标题、标签和描述以提高可发现性。" },
+      "connect-youtube": { "title": "连接 YouTube", "description": "关联频道以解锁分析、日历和仪表盘洞察。" },
+      "oauth-permissions": { "title": "OAuth 权限说明", "description": "Sparkroll 访问哪些数据以及如何安全管理权限。" },
+      "dashboard-overview": { "title": "仪表盘概览", "description": "浏览主页：统计、活动和快捷操作。" },
+      "channel-health": { "title": "频道健康评分", "description": "了解健康指标以及下一步改进方向。" },
+      "upgrade-pro": { "title": "升级到 Pro", "description": "比较 Free 与 Pro，准备好后升级。" },
+      "pro-features-tour": { "title": "Pro 功能导览", "description": "深入了解无限 AI、竞品追踪和高级 SEO 工具。" },
+      "workflow-tips": { "title": "工作流技巧", "description": "从创意到发布的最佳实践。" },
+      "productivity-shortcuts": { "title": "效率快捷键", "description": "通过搜索、导航和日常习惯节省时间。" }
+    }
   },
   "legalPages": {
     "terms": {

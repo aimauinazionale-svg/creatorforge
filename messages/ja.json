@@ -30,6 +30,7 @@
       "calendar": "カレンダー",
       "ideas": "アイデア",
       "thumbnail": "サムネイル",
+      "tutorials": "ヘルプとチュートリアル",
       "settings": "設定",
       "onboarding": "オンボーディング"
     },
@@ -42,6 +43,7 @@
       "calendar": "カレンダー",
       "ideas": "アイデア",
       "thumbnail": "サムネイル",
+      "tutorials": "チュートリアル",
       "settings": "設定",
       "dynamic": "{segment}",
       "onboarding": "オンボーディング"
@@ -1479,6 +1481,7 @@
       "aria": "メインナビゲーション",
       "features": "機能",
       "pricing": "料金",
+      "tutorials": "学ぶ",
       "blog": "ブログ",
       "login": "ログイン",
       "close": "メニューを閉じる",
@@ -1682,6 +1685,7 @@
       "links": {
         "features": "機能",
         "pricing": "料金",
+        "tutorials": "チュートリアル",
         "blog": "ブログ",
         "login": "ログイン"
       },
@@ -1793,6 +1797,33 @@
     },
     "sample": {
       "title": "Sample comments"
+    }
+  },
+  "tutorials": {
+    "meta": { "title": "チュートリアルと学習", "description": "Sparkrollをマスターするための動画ガイドとヒント — はじめにからPro機能まで。" },
+    "title": "Sparkrollを学ぶ",
+    "subtitle": "YouTubeで計画・制作・成長するためのステップバイステップ動画チュートリアル。",
+    "duration": "{minutes}分",
+    "comingSoon": "近日公開",
+    "comingSoonDescription": "このチュートリアルを録画中です。もう一度ご確認ください。",
+    "allCategories": "すべて",
+    "filterAria": "カテゴリでチュートリアルを絞り込む",
+    "empty": "このカテゴリにはまだチュートリアルがありません。",
+    "categories": { "gettingStarted": "はじめに", "aiTools": "AIツール", "youtubeConnect": "YouTube連携", "dashboard": "ダッシュボード", "proFeatures": "Pro機能", "tipsTricks": "ヒントとコツ" },
+    "items": {
+      "welcome": { "title": "Sparkrollへようこそ", "description": "Sparkrollの概要とクリエイターワークフローへの組み込み方。" },
+      "create-account": { "title": "アカウント作成", "description": "Googleまたはメールで1分以内に登録。" },
+      "ai-assistant": { "title": "AIアシスタント", "description": "AIとチャットしてアイデア、脚本、クリエイター向けアドバイスを取得。" },
+      "ideas-generator": { "title": "アイデアジェネレーター", "description": "ニッチに合わせた動画アイデアと切り口を生成。" },
+      "seo-lab-basics": { "title": "SEO Labの基本", "description": "タイトル、タグ、説明文を最適化して発見されやすく。" },
+      "connect-youtube": { "title": "YouTubeを接続", "description": "チャンネルをリンクして分析、カレンダー、ダッシュボードを解放。" },
+      "oauth-permissions": { "title": "OAuth権限の説明", "description": "Sparkrollがアクセスするデータと安全な権限管理。" },
+      "dashboard-overview": { "title": "ダッシュボード概要", "description": "統計、アクティビティ、クイックアクションのホームベース。" },
+      "channel-health": { "title": "チャンネルヘルススコア", "description": "ヘルスメトリクスと次に改善すべき点を理解。" },
+      "upgrade-pro": { "title": "Proにアップグレード", "description": "FreeとProを比較し、準備ができたらアップグレード。" },
+      "pro-features-tour": { "title": "Pro機能ツアー", "description": "無制限AI、競合分析、高度なSEOツールの詳細。" },
+      "workflow-tips": { "title": "ワークフローのヒント", "description": "アイデアから公開までのベストプラクティス。" },
+      "productivity-shortcuts": { "title": "生産性ショートカット", "description": "検索、ナビゲーション、日々の習慣で時間を節約。" }
     }
   },
   "legalPages": {

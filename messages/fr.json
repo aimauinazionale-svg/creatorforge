@@ -30,6 +30,7 @@
       "calendar": "Calendrier",
       "ideas": "Idées",
       "thumbnail": "Miniature",
+      "tutorials": "Aide et tutoriels",
       "settings": "Paramètres",
       "onboarding": "Intégration"
     },
@@ -42,6 +43,7 @@
       "calendar": "Calendrier",
       "ideas": "Idées",
       "thumbnail": "Miniature",
+      "tutorials": "Tutoriels",
       "settings": "Paramètres",
       "dynamic": "{segment}",
       "onboarding": "Intégration"
@@ -1479,6 +1481,7 @@
       "aria": "Navigation principale",
       "features": "Fonctionnalités",
       "pricing": "Tarifs",
+      "tutorials": "Apprendre",
       "blog": "Blog",
       "login": "Connexion",
       "close": "Fermer le menu",
@@ -1682,6 +1685,7 @@
       "links": {
         "features": "Fonctionnalités",
         "pricing": "Tarifs",
+        "tutorials": "Tutoriels",
         "blog": "Blog",
         "login": "Connexion"
       },
@@ -1793,6 +1797,33 @@
     },
     "sample": {
       "title": "Sample comments"
+    }
+  },
+  "tutorials": {
+    "meta": { "title": "Tutoriels et apprentissage", "description": "Guides vidéo et astuces pour maîtriser Sparkroll — du démarrage aux fonctions Pro." },
+    "title": "Apprendre Sparkroll",
+    "subtitle": "Tutoriels vidéo pas à pas pour planifier, créer et grandir sur YouTube.",
+    "duration": "{minutes} min",
+    "comingSoon": "Bientôt disponible",
+    "comingSoonDescription": "Nous enregistrons ce tutoriel. Revenez bientôt !",
+    "allCategories": "Tous",
+    "filterAria": "Filtrer les tutoriels par catégorie",
+    "empty": "Aucun tutoriel dans cette catégorie pour l'instant.",
+    "categories": { "gettingStarted": "Premiers pas", "aiTools": "Outils IA", "youtubeConnect": "Connexion YouTube", "dashboard": "Tableau de bord", "proFeatures": "Fonctions Pro", "tipsTricks": "Astuces" },
+    "items": {
+      "welcome": { "title": "Bienvenue sur Sparkroll", "description": "Aperçu rapide de Sparkroll et de son intégration dans votre flux créateur." },
+      "create-account": { "title": "Créer votre compte", "description": "Inscrivez-vous avec Google ou e-mail en moins d'une minute." },
+      "ai-assistant": { "title": "Assistant IA", "description": "Discutez avec l'IA pour des idées, scripts et conseils créateur." },
+      "ideas-generator": { "title": "Générateur d'idées", "description": "Générez des idées et angles vidéo adaptés à votre niche." },
+      "seo-lab-basics": { "title": "Bases du labo SEO", "description": "Optimisez titres, tags et descriptions pour plus de visibilité." },
+      "connect-youtube": { "title": "Connecter YouTube", "description": "Liez votre chaîne pour analytics, calendrier et tableau de bord." },
+      "oauth-permissions": { "title": "Permissions OAuth expliquées", "description": "Données accessibles par Sparkroll et gestion sécurisée des permissions." },
+      "dashboard-overview": { "title": "Vue d'ensemble du tableau de bord", "description": "Votre base : stats, activité et actions rapides." },
+      "channel-health": { "title": "Score de santé de la chaîne", "description": "Comprenez vos métriques de santé et quoi améliorer ensuite." },
+      "upgrade-pro": { "title": "Passer à Pro", "description": "Comparez Free et Pro et passez à la version supérieure quand vous êtes prêt." },
+      "pro-features-tour": { "title": "Tour des fonctions Pro", "description": "IA illimitée, concurrents et SEO avancé en détail." },
+      "workflow-tips": { "title": "Conseils workflow", "description": "Bonnes pratiques de l'idée à la publication." },
+      "productivity-shortcuts": { "title": "Raccourcis productivité", "description": "Gagnez du temps avec recherche, navigation et habitudes quotidiennes." }
     }
   },
   "legalPages": {
