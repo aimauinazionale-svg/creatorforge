@@ -1,6 +1,6 @@
 # Piano video tutorial Sparkroll
 
-Documento di pianificazione per registrare i tutorial video dell'app Sparkroll (https://creatorforge-xi.vercel.app).
+Documento di pianificazione per registrare i tutorial video dell'app Sparkroll (https://sparkroll-maui-org.vercel.app).
 
 ---
 
@@ -27,7 +27,7 @@ Creare **10–12 video brevi** (3–7 minuti) che guidino i creator dall'iscrizi
 **Durata:** ~4 min | **Categoria:** Per iniziare
 
 **Outline:**
-- Aprire sparkroll.app / creatorforge-xi.vercel.app
+- Aprire sparkroll.app / sparkroll-maui-org.vercel.app
 - Registrazione con Google (consigliata)
 - Alternativa magic link via email
 - Primo accesso e scelta lingua
@@ -183,7 +183,7 @@ Creare **10–12 video brevi** (3–7 minuti) che guidino i creator dall'iscrizi
 - Taglia silenzi e errori
 - Aggiungi intro 3 sec con logo Sparkroll
 - Thumbnail coerente (viola/fucsia, titolo chiaro)
-- Descrizione YouTube con link a `https://creatorforge-xi.vercel.app/it/tutorials`
+- Descrizione YouTube con link a `https://sparkroll-maui-org.vercel.app/it/tutorials`
 
 ---
 

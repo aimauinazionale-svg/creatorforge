@@ -1,4 +1,4 @@
-# Generates CreatorForge public + extension PNG icons
+# Generates Sparkroll public + extension PNG icons
 $ErrorActionPreference = "Stop"
 $root = Split-Path -Parent $PSScriptRoot
 $publicDir = Join-Path $root "public"

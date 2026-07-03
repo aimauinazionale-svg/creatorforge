@@ -2,7 +2,7 @@
 
 CreatorForge uses **two separate Google OAuth flows**. Each flow needs the correct `redirect_uri` in **Google Cloud Console**.
 
-Production site: `https://creatorforge-xi.vercel.app`  
+Production site: `https://sparkroll-maui-org.vercel.app`  
 Supabase project ref: from `NEXT_PUBLIC_SUPABASE_URL` (e.g. `https://<ref>.supabase.co` → ref is `<ref>`).
 
 ---
@@ -14,7 +14,7 @@ Supabase project ref: from `NEXT_PUBLIC_SUPABASE_URL` (e.g. `https://<ref>.supab
 **Cosa invia il codice a Supabase (`redirectTo`, dopo il login):**
 
 ```
-https://creatorforge-xi.vercel.app/auth/callback?next=/{locale}/dashboard
+https://sparkroll-maui-org.vercel.app/auth/callback?next=/{locale}/dashboard
 ```
 
 **Cosa Google riceve come `redirect_uri` (obbligatorio in Google Console):**
@@ -43,7 +43,7 @@ https://avsccebyvjdfycrbhpkv.supabase.co/auth/v1/callback
    ```
 4. **Authorized JavaScript origins** (consigliato):
    ```
-   https://creatorforge-xi.vercel.app
+   https://sparkroll-maui-org.vercel.app
    https://avsccebyvjdfycrbhpkv.supabase.co
    ```
 5. Salva e attendi 1–5 minuti per la propagazione.
@@ -52,8 +52,8 @@ https://avsccebyvjdfycrbhpkv.supabase.co/auth/v1/callback
 
 | Impostazione | Valore |
 |--------------|--------|
-| **Authentication → URL Configuration → Site URL** | `https://creatorforge-xi.vercel.app` |
-| **Redirect URLs** | `https://creatorforge-xi.vercel.app/auth/callback**` |
+| **Authentication → URL Configuration → Site URL** | `https://sparkroll-maui-org.vercel.app` |
+| **Redirect URLs** | `https://sparkroll-maui-org.vercel.app/auth/callback**` |
 | **Providers → Google → Enabled** | On |
 | **Client ID / Secret** | Stessi del client OAuth in Google Console |
 | **Additional Scopes** | `https://www.googleapis.com/auth/youtube.readonly` |
@@ -62,7 +62,7 @@ https://avsccebyvjdfycrbhpkv.supabase.co/auth/v1/callback
 
 | Variabile | Valore |
 |-----------|--------|
-| `NEXT_PUBLIC_SITE_URL` | `https://creatorforge-xi.vercel.app` |
+| `NEXT_PUBLIC_SITE_URL` | `https://sparkroll-maui-org.vercel.app` |
 | `NEXT_PUBLIC_SUPABASE_URL` | `https://avsccebyvjdfycrbhpkv.supabase.co` |
 
 ---
@@ -74,7 +74,7 @@ https://avsccebyvjdfycrbhpkv.supabase.co/auth/v1/callback
 **`redirect_uri` inviato a Google:**
 
 ```
-https://creatorforge-xi.vercel.app/auth/youtube/callback
+https://sparkroll-maui-org.vercel.app/auth/youtube/callback
 ```
 
 (o il valore esplicito di `YOUTUBE_REDIRECT_URI` se impostato in Vercel)
@@ -86,14 +86,14 @@ https://creatorforge-xi.vercel.app/auth/youtube/callback
 **Authorized redirect URIs:**
 
 ```
-https://creatorforge-xi.vercel.app/auth/youtube/callback
+https://sparkroll-maui-org.vercel.app/auth/youtube/callback
 http://localhost:3000/auth/youtube/callback
 ```
 
 ### Vercel
 
 ```
-YOUTUBE_REDIRECT_URI=https://creatorforge-xi.vercel.app/auth/youtube/callback
+YOUTUBE_REDIRECT_URI=https://sparkroll-maui-org.vercel.app/auth/youtube/callback
 ```
 
 ---
@@ -109,7 +109,7 @@ https://avsccebyvjdfycrbhpkv.supabase.co/auth/v1/callback
 ### Client OAuth **app** (`GOOGLE_CLIENT_ID`, connect YouTube)
 
 ```
-https://creatorforge-xi.vercel.app/auth/youtube/callback
+https://sparkroll-maui-org.vercel.app/auth/youtube/callback
 http://localhost:3000/auth/youtube/callback
 ```
 

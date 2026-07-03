@@ -87,7 +87,7 @@ Add every variable from `.env.example` in **Project â†’ Settings â†’ E
 
 ### Deploy
 
-Click **Deploy**. Vercel builds and hosts the app. Note your production URL (e.g. `https://creatorforge.vercel.app`).
+Click **Deploy**. Vercel builds and hosts the app. Note your production URL (e.g. `https://sparkroll-maui-org.vercel.app`).
 
 ---
 

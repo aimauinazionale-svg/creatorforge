@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f0a1a"/>
+      <stop offset="0.55" stop-color="#1a1033"/>
+      <stop offset="1" stop-color="#2d1b4e"/>
+    </linearGradient>
+    <linearGradient id="logo-bg" x1="80" y1="80" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed"/>
+      <stop offset="0.5" stop-color="#d946ef"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="title" x1="340" y1="200" x2="900" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a78bfa"/>
+      <stop offset="0.45" stop-color="#e879f9"/>
+      <stop offset="1" stop-color="#fbbf24"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="180" cy="315" r="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7c3aed" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="180" cy="315" r="220" fill="url(#glow)"/>
+  <g transform="translate(80,155) scale(6.25)">
+    <rect width="32" height="32" rx="8" fill="url(#logo-bg)"/>
+    <rect x="5" y="7" width="22" height="18" rx="2" stroke="#fff" stroke-opacity="0.22" stroke-width="0.75" fill="none"/>
+    <rect x="6.25" y="8.25" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.55"/>
+    <rect x="6.25" y="11.5" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.45"/>
+    <rect x="6.25" y="14.75" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.45"/>
+    <rect x="6.25" y="18" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.45"/>
+    <rect x="6.25" y="21.25" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.55"/>
+    <rect x="24.25" y="8.25" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.55"/>
+    <rect x="24.25" y="11.5" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.45"/>
+    <rect x="24.25" y="14.75" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.45"/>
+    <rect x="24.25" y="18" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.45"/>
+    <rect x="24.25" y="21.25" width="1.5" height="1.5" rx="0.35" fill="#fff" fill-opacity="0.55"/>
+    <path d="M9 12.5c2.2-1.4 4.4-1.4 6.6 0s4.4 1.4 6.6 0" stroke="#fff" stroke-width="1.35" stroke-linecap="round" fill="none" stroke-opacity="0.85"/>
+    <path d="M9 19.5c2.2-1.4 4.4-1.4 6.6 0s4.4 1.4 6.6 0" stroke="#fff" stroke-width="1.35" stroke-linecap="round" fill="none" stroke-opacity="0.55"/>
+    <path d="M16 9.5 13.2 16h2.4L14.8 22.5 19.2 15h-2.3L16 9.5Z" fill="#fde68a"/>
+  </g>
+  <text x="340" y="290" fill="url(#title)" font-family="Segoe UI, system-ui, sans-serif" font-size="96" font-weight="700" letter-spacing="-2">Sparkroll</text>
+  <text x="342" y="370" fill="#c4b5fd" font-family="Segoe UI, system-ui, sans-serif" font-size="34" font-weight="500">Spark your ideas. Roll your content.</text>
+  <text x="342" y="430" fill="#a78bfa" fill-opacity="0.75" font-family="Segoe UI, system-ui, sans-serif" font-size="26">Free AI-powered YouTube creator toolkit</text>
+</svg>

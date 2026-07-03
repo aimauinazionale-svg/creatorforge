@@ -2,7 +2,7 @@
 
 Guida passo-passo per abilitare **utenti pubblici** (non solo tester) su Sparkroll, con scope YouTube sensibili.
 
-> **Produzione:** https://creatorforge-xi.vercel.app  
+> **Produzione:** https://sparkroll-maui-org.vercel.app  
 > **Brand:** Sparkroll
 
 ---
@@ -11,11 +11,11 @@ Guida passo-passo per abilitare **utenti pubblici** (non solo tester) su Sparkro
 
 | Uso | URL |
 |-----|-----|
-| Homepage app | `https://creatorforge-xi.vercel.app` |
-| Privacy Policy | `https://creatorforge-xi.vercel.app/en/privacy` |
-| Termini di servizio | `https://creatorforge-xi.vercel.app/en/terms` |
-| Callback auth Supabase | `https://creatorforge-xi.vercel.app/auth/callback` |
-| Callback YouTube OAuth (se usato) | `https://creatorforge-xi.vercel.app/auth/youtube/callback` |
+| Homepage app | `https://sparkroll-maui-org.vercel.app` |
+| Privacy Policy | `https://sparkroll-maui-org.vercel.app/en/privacy` |
+| Termini di servizio | `https://sparkroll-maui-org.vercel.app/en/terms` |
+| Callback auth Supabase | `https://sparkroll-maui-org.vercel.app/auth/callback` |
+| Callback YouTube OAuth (se usato) | `https://sparkroll-maui-org.vercel.app/auth/youtube/callback` |
 
 Per Google Cloud Console usa le versioni **/en/** (inglese) per privacy e termini — è la lingua predefinita per la verifica. Le altre 8 lingue sono disponibili cambiando il prefisso (`/it/privacy`, `/es/terms`, ecc.).
 
@@ -48,10 +48,10 @@ Per Google Cloud Console usa le versioni **/en/** (inglese) per privacy e termin
    - **App name:** `Sparkroll`
    - **User support email:** la tua email
    - **App logo:** carica `public/icon.svg` o PNG 120×120
-   - **Application home page:** `https://creatorforge-xi.vercel.app`
-   - **Application privacy policy link:** `https://creatorforge-xi.vercel.app/en/privacy`
-   - **Application terms of service link:** `https://creatorforge-xi.vercel.app/en/terms`
-   - **Authorized domains:** `creatorforge-xi.vercel.app`, `vercel.app`
+   - **Application home page:** `https://sparkroll-maui-org.vercel.app`
+   - **Application privacy policy link:** `https://sparkroll-maui-org.vercel.app/en/privacy`
+   - **Application terms of service link:** `https://sparkroll-maui-org.vercel.app/en/terms`
+   - **Authorized domains:** `sparkroll-maui-org.vercel.app`, `vercel.app`
 5. **Developer contact information:** email valida.
 6. Salva e passa a **Branding** (se disponibile come sezione separata).
 7. Clicca **Publish app** / **Submit for verification** quando branding e scope sono pronti.
@@ -68,8 +68,8 @@ Aggiungi **Authorized redirect URIs**:
 
 ```
 https://<TUO-PROGETTO>.supabase.co/auth/v1/callback
-https://creatorforge-xi.vercel.app/auth/callback
-https://creatorforge-xi.vercel.app/auth/youtube/callback
+https://sparkroll-maui-org.vercel.app/auth/callback
+https://sparkroll-maui-org.vercel.app/auth/youtube/callback
 ```
 
 Sostituisci `<TUO-PROGETTO>` con l'ID progetto Supabase reale.
@@ -77,7 +77,7 @@ Sostituisci `<TUO-PROGETTO>` con l'ID progetto Supabase reale.
 **Authorized JavaScript origins:**
 
 ```
-https://creatorforge-xi.vercel.app
+https://sparkroll-maui-org.vercel.app
 https://<TUO-PROGETTO>.supabase.co
 ```
 
@@ -89,8 +89,8 @@ https://<TUO-PROGETTO>.supabase.co
 
 | Campo | Valore |
 |-------|--------|
-| Site URL | `https://creatorforge-xi.vercel.app` |
-| Redirect URLs | `https://creatorforge-xi.vercel.app/auth/callback**` |
+| Site URL | `https://sparkroll-maui-org.vercel.app` |
+| Redirect URLs | `https://sparkroll-maui-org.vercel.app/auth/callback**` |
 
 **Authentication → Providers → Google**
 
@@ -106,7 +106,7 @@ https://<TUO-PROGETTO>.supabase.co
 ## 6. Variabili Vercel (Production)
 
 ```
-NEXT_PUBLIC_SITE_URL=https://creatorforge-xi.vercel.app
+NEXT_PUBLIC_SITE_URL=https://sparkroll-maui-org.vercel.app
 ```
 
 Non impostare URL localhost in produzione. `getSiteUrl()` ignora localhost su Vercel.
@@ -143,7 +143,7 @@ Fino al completamento, solo gli **utenti di test** elencati nella console posson
 - [ ] Privacy Policy live: `/en/privacy` (e altre lingue)
 - [ ] Termini di servizio live: `/en/terms`
 - [ ] Link privacy + termini nel footer e landing
-- [ ] Homepage `creatorforge-xi.vercel.app` accessibile
+- [ ] Homepage `sparkroll-maui-org.vercel.app` accessibile
 - [ ] Logo 120×120 caricato su Google Cloud
 - [ ] `NEXT_PUBLIC_SITE_URL` impostato su Vercel
 - [ ] Redirect URI Supabase + app configurati in Google Cloud
