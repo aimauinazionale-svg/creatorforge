@@ -2049,6 +2049,10 @@
     "manageError": "Could not open the billing portal.",
     "manageNotPro": "You need an active Pro subscription to manage billing.",
     "loginRequired": "Sign in to upgrade your plan.",
+    "checkoutSyncing": "Activating your Pro plan…",
+    "checkoutSuccess": "Welcome to Pro! Your subscription is active.",
+    "checkoutSyncPending": "Payment received — activation may take a moment.",
+    "checkoutSyncHint": "Refresh this page in a minute, or contact support if Pro does not appear.",
     "includedTitle": "What's included in your plan",
     "included": {
       "0": "Pro unlocks AI Assistant, Competitors, and SEO Lab.",

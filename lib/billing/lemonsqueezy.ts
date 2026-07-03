@@ -36,7 +36,7 @@ function formatLemonSqueezyApiDetail(cause: unknown): string {
 
 let isConfigured = false;
 
-function getBillingConfig() {
+export function getBillingConfig() {
   const apiKey = process.env.LEMONSQUEEZY_API_KEY;
   const storeId = process.env.LEMONSQUEEZY_STORE_ID;
   const variantId = process.env.LEMONSQUEEZY_VARIANT_ID;
@@ -99,7 +99,7 @@ export async function getCheckoutUrl(
       },
     },
     productOptions: {
-      redirectUrl: `${siteUrl}/settings/billing?checkout=success`,
+      redirectUrl: `${siteUrl}/en/settings/billing?checkout=success`,
       receiptButtonText: "Go to billing",
       receiptThankYouNote: `Thank you for upgrading to ${SITE_NAME} Pro!`,
     },

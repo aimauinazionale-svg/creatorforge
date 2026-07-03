@@ -10,6 +10,7 @@ import {
   LemonSqueezyCheckoutError,
 } from "@/lib/billing/lemonsqueezy";
 import { PRO_PLAN, type PlanType } from "@/lib/billing/constants";
+import { syncUserPlanFromLemonSqueezy } from "@/lib/billing/sync-plan";
 import type {
   BillingActionResult,
   CheckoutActionData,
@@ -98,6 +99,60 @@ export async function getUserSubscriptionStatus(): Promise<
     };
   } catch (err) {
     console.error("[server-action:getUserSubscriptionStatus]", err);
+    return billingErr("UNKNOWN", err instanceof Error ? err.message : undefined);
+  }
+}
+
+export type SyncSubscriptionData = {
+  planType: PlanType;
+  subscriptionStatus: string | null;
+  synced: boolean;
+};
+
+/**
+ * Pulls subscription state from LemonSqueezy and updates Supabase.
+ * Called after checkout success when the webhook may be delayed or misconfigured.
+ */
+export async function syncSubscriptionAction(): Promise<BillingActionResult<SyncSubscriptionData>> {
+  try {
+    if (!isLemonSqueezyConfigured()) {
+      return billingErr("MISSING_CONFIG");
+    }
+
+    const user = await getServerUser();
+    if (!user?.email) {
+      return billingErr("UNAUTHENTICATED");
+    }
+
+    const sync = await syncUserPlanFromLemonSqueezy(user.id, user.email);
+
+    if (!sync.ok) {
+      if (sync.reason === "no_subscription") {
+        const status = await getUserSubscriptionStatus();
+        if (status.ok) {
+          return {
+            ok: true,
+            data: {
+              planType: status.data.planType,
+              subscriptionStatus: status.data.subscriptionStatus,
+              synced: false,
+            },
+          };
+        }
+      }
+      return billingErr("UNKNOWN", sync.message ?? sync.reason);
+    }
+
+    return {
+      ok: true,
+      data: {
+        planType: sync.planType,
+        subscriptionStatus: sync.subscriptionStatus,
+        synced: true,
+      },
+    };
+  } catch (err) {
+    console.error("[server-action:syncSubscriptionAction]", err);
     return billingErr("UNKNOWN", err instanceof Error ? err.message : undefined);
   }
 }

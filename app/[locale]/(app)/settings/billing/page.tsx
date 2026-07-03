@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Crown } from "lucide-react";
 
 import { getUserSubscriptionStatus } from "@/app/actions/billing";
+import { CheckoutSuccessSync } from "@/components/billing/CheckoutSuccessSync";
 import { ManageSubscriptionButton } from "@/components/billing/ManageSubscriptionButton";
 import { UpgradeButton } from "@/components/billing/UpgradeButton";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -19,6 +20,8 @@ export default async function BillingSettingsPage() {
   return (
     <div className="mx-auto w-full max-w-2xl space-y-6">
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
+
+      <CheckoutSuccessSync />
 
       <Card>
         <CardHeader className="flex flex-row items-start justify-between gap-4 space-y-0">

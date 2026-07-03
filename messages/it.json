@@ -2088,6 +2088,10 @@
     "manageError": "Impossibile aprire il portale di fatturazione.",
     "manageNotPro": "Serve un abbonamento Pro attivo per gestire la fatturazione.",
     "loginRequired": "Accedi per passare al piano superiore.",
+    "checkoutSyncing": "Attivazione del piano Pro in corso…",
+    "checkoutSuccess": "Benvenuto in Pro! Il tuo abbonamento è attivo.",
+    "checkoutSyncPending": "Pagamento ricevuto — l'attivazione potrebbe richiedere un momento.",
+    "checkoutSyncHint": "Aggiorna questa pagina tra un minuto, o contatta il supporto se Pro non compare.",
     "includedTitle": "Cosa include il tuo piano",
     "included": {
       "0": "Pro sblocca AI Assistant, Competitor e SEO Lab.",

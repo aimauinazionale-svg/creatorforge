@@ -12,6 +12,8 @@ export async function GET() {
     "LEMONSQUEEZY_STORE_ID",
     "LEMONSQUEEZY_VARIANT_ID",
     "LEMONSQUEEZY_WEBHOOK_SECRET",
+    "SUPABASE_SERVICE_ROLE_KEY",
+    "NEXT_PUBLIC_SUPABASE_URL",
   ] as const;
 
   const lengths = Object.fromEntries(

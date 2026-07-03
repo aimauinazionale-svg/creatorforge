@@ -10,92 +10,76 @@ import {
   parseWebhookPayload,
   verifyWebhook,
 } from "@/lib/billing/lemonsqueezy";
-import { tryCreateSupabaseAdminClient } from "@/lib/supabase/admin";
-import type { Database } from "@/types/database";
+import { applyUserPlanUpdate, findUserIdByEmail } from "@/lib/billing/update-user-plan";
+import { getBillingEnvDiagnostics, logWebhook } from "@/lib/billing/webhook-log";
 
 export const dynamic = "force-dynamic";
 
-type UserUpdate = Database["public"]["Tables"]["users"]["Update"];
+const PRO_GRANT_EVENTS = new Set([
+  "subscription_created",
+  "order_created",
+  "subscription_payment_success",
+  "subscription_resumed",
+]);
 
-async function findUserIdByEmail(email: string): Promise<string | null> {
-  const admin = tryCreateSupabaseAdminClient();
-  if (!admin) return null;
-
-  const { data } = await admin.from("users").select("id").eq("email", email).maybeSingle();
-  return data?.id ?? null;
-}
-
-async function updateUserPlan(
-  userId: string,
-  planType: typeof FREE_PLAN | typeof PRO_PLAN,
-  extras?: {
-    customerId?: string | null;
-    subscriptionId?: string | null;
-    subscriptionStatus?: string | null;
-  }
-): Promise<void> {
-  const admin = tryCreateSupabaseAdminClient();
-  if (!admin) {
-    console.error("[webhook:lemonsqueezy] Admin client unavailable — cannot update plan.");
-    return;
-  }
-
-  const patch: UserUpdate = { plan_type: planType };
-
-  if (extras?.customerId) {
-    patch.lemonsqueezy_customer_id = extras.customerId;
-  }
-  if (extras?.subscriptionId) {
-    patch.lemonsqueezy_subscription_id = extras.subscriptionId;
-  }
-  if (extras?.subscriptionStatus !== undefined) {
-    patch.subscription_status = extras.subscriptionStatus;
-  }
-
-  const { error } = await admin.from("users").update(patch).eq("id", userId);
-
-  if (error) {
-    console.error("[webhook:lemonsqueezy] Failed to update user plan:", error.message);
-  }
-}
+const PRO_REVOKE_EVENTS = new Set(["subscription_cancelled", "subscription_expired"]);
 
 async function resolveUserId(
-  payload: ReturnType<typeof parseWebhookPayload> extends infer T ? NonNullable<T> : never
-): Promise<string | null> {
+  payload: NonNullable<ReturnType<typeof parseWebhookPayload>>
+): Promise<{ userId: string | null; source: string }> {
   const fromCustom = getUserIdFromWebhook(payload);
-  if (fromCustom) return fromCustom;
+  if (fromCustom) return { userId: fromCustom, source: "custom_data" };
 
-  const email = payload.data.attributes.user_email;
+  const email = payload.data.attributes.user_email?.trim();
   if (email) {
-    return findUserIdByEmail(email);
+    const userId = await findUserIdByEmail(email);
+    if (userId) return { userId, source: "email" };
   }
 
-  return null;
+  return { userId: null, source: "none" };
 }
 
 /** LemonSqueezy billing webhook — always returns 200 to avoid retry storms. */
 export async function POST(request: Request) {
+  const envDiag = getBillingEnvDiagnostics();
+
   try {
     const rawBody = await request.text();
     const signature = request.headers.get("X-Signature");
+    const hasSignature = Boolean(signature);
 
     if (!verifyWebhook(rawBody, signature)) {
-      console.error("[webhook:lemonsqueezy] Invalid webhook signature.");
+      logWebhook("error", "Invalid webhook signature or missing secret", {
+        hasSignature,
+        ...envDiag,
+      });
       return NextResponse.json({ received: true });
     }
 
     const payload = parseWebhookPayload(rawBody);
     if (!payload) {
-      console.error("[webhook:lemonsqueezy] Invalid webhook payload.");
+      logWebhook("error", "Invalid webhook payload");
       return NextResponse.json({ received: true });
     }
 
     const eventName = payload.meta.event_name;
     const attrs = payload.data.attributes;
-    const userId = await resolveUserId(payload);
+    const { userId, source } = await resolveUserId(payload);
+
+    logWebhook("info", "Webhook received", {
+      eventName,
+      dataType: payload.data.type,
+      userSource: source,
+      hasUserId: Boolean(userId),
+      userEmailPresent: Boolean(attrs.user_email),
+      ...envDiag,
+    });
 
     if (!userId) {
-      console.error("[webhook:lemonsqueezy] Could not resolve user for event:", eventName);
+      logWebhook("error", "Could not resolve user for event", {
+        eventName,
+        userEmailPresent: Boolean(attrs.user_email),
+      });
       return NextResponse.json({ received: true });
     }
 
@@ -103,46 +87,72 @@ export async function POST(request: Request) {
     const subscriptionId =
       payload.data.type === "subscriptions" ? payload.data.id : null;
 
-    switch (eventName) {
-      case "subscription_created":
-      case "order_created": {
-        await updateUserPlan(userId, PRO_PLAN, {
-          customerId,
-          subscriptionId,
-          subscriptionStatus: attrs.status ?? "active",
-        });
-        break;
-      }
+    if (PRO_GRANT_EVENTS.has(eventName)) {
+      const result = await applyUserPlanUpdate(userId, PRO_PLAN, {
+        customerId,
+        subscriptionId,
+        subscriptionStatus: attrs.status ?? "active",
+      });
 
-      case "subscription_updated": {
-        const status = attrs.status ?? "unknown";
-        const planType = PRO_SUBSCRIPTION_STATUSES.has(status) ? PRO_PLAN : FREE_PLAN;
-        await updateUserPlan(userId, planType, {
-          customerId,
-          subscriptionId,
-          subscriptionStatus: status,
+      if (!result.ok) {
+        logWebhook("error", "Failed to grant Pro plan", {
+          eventName,
+          reason: result.reason,
+          detail: result.message,
         });
-        break;
+      } else {
+        logWebhook("info", "Pro plan granted", { eventName, userId, source });
       }
-
-      case "subscription_cancelled":
-      case "subscription_expired": {
-        await updateUserPlan(userId, FREE_PLAN, {
-          customerId,
-          subscriptionId,
-          subscriptionStatus: attrs.status ?? eventName.replace("subscription_", ""),
-        });
-        break;
-      }
-
-      default:
-        break;
+      return NextResponse.json({ received: true });
     }
+
+    if (eventName === "subscription_updated") {
+      const status = attrs.status ?? "unknown";
+      const planType = PRO_SUBSCRIPTION_STATUSES.has(status) ? PRO_PLAN : FREE_PLAN;
+      const result = await applyUserPlanUpdate(userId, planType, {
+        customerId,
+        subscriptionId,
+        subscriptionStatus: status,
+      });
+
+      if (!result.ok) {
+        logWebhook("error", "Failed to update subscription", {
+          eventName,
+          status,
+          reason: result.reason,
+          detail: result.message,
+        });
+      } else {
+        logWebhook("info", "Subscription updated", { eventName, userId, planType, status });
+      }
+      return NextResponse.json({ received: true });
+    }
+
+    if (PRO_REVOKE_EVENTS.has(eventName)) {
+      const result = await applyUserPlanUpdate(userId, FREE_PLAN, {
+        customerId,
+        subscriptionId,
+        subscriptionStatus: attrs.status ?? eventName.replace("subscription_", ""),
+      });
+
+      if (!result.ok) {
+        logWebhook("error", "Failed to revoke Pro plan", {
+          eventName,
+          reason: result.reason,
+          detail: result.message,
+        });
+      } else {
+        logWebhook("info", "Pro plan revoked", { eventName, userId });
+      }
+      return NextResponse.json({ received: true });
+    }
+
+    logWebhook("info", "Unhandled event (ignored)", { eventName });
   } catch (err) {
-    console.error(
-      "[webhook:lemonsqueezy] Handler error:",
-      err instanceof Error ? err.message : "unknown"
-    );
+    logWebhook("error", "Handler error", {
+      detail: err instanceof Error ? err.message : "unknown",
+      ...envDiag,
+    });
   }
 
   return NextResponse.json({ received: true });
