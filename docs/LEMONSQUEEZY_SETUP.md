@@ -11,8 +11,12 @@ Guida per configurare abbonamenti Pro (€9,99/mese) su Sparkroll in produzione.
 1. [LemonSqueezy Dashboard](https://app.lemonsqueezy.com) → **Products** → crea o apri **Sparkroll Pro**
 2. Imposta prezzo **€9,99/mese** (subscription)
 3. Copia:
-   - **Store ID** (Settings → Stores)
+   - **Store ID** (Settings → Stores) — **non** confondere con il Product ID
    - **Variant ID** del piano Pro (Products → variant)
+
+> **Attenzione:** Store ID e Product ID sono entrambi numerici ma diversi.  
+> Esempio reale: Store `423181` (CreatorForge), Product `1193853` (Sparkroll Pro), Variant `1866511`.  
+> In `LEMONSQUEEZY_STORE_ID` va solo lo **Store ID**.
 
 ---
 
@@ -123,7 +127,7 @@ Se il piano non si aggiorna entro ~1 minuto:
 | Problema | Soluzione |
 |----------|-----------|
 | "Billing is not configured" | Mancano env LS su Vercel; ridistribuisci dopo l'aggiunta |
-| Checkout non si apre | Verifica `LEMONSQUEEZY_VARIANT_ID` e API key |
+| Checkout non si apre | Verifica `LEMONSQUEEZY_STORE_ID` (store, non product) e `LEMONSQUEEZY_VARIANT_ID` |
 | Webhook 200 ma plan resta free | Controlla `SUPABASE_SERVICE_ROLE_KEY`; webhook usa admin client |
 | User id non risolto | Checkout deve includere `user_id` in custom data (automatico via app) |
 | Redirect checkout errato | Imposta `NEXT_PUBLIC_SITE_URL` alla URL produzione |

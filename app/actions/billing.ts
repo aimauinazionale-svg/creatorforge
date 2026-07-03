@@ -7,6 +7,7 @@ import {
   getCustomerPortalUrl,
   getDefaultVariantId,
   isLemonSqueezyConfigured,
+  LemonSqueezyCheckoutError,
 } from "@/lib/billing/lemonsqueezy";
 import { PRO_PLAN, type PlanType } from "@/lib/billing/constants";
 import type {
@@ -51,6 +52,13 @@ export async function createCheckoutAction(): Promise<BillingActionResult<Checko
 
     return { ok: true, data: { url } };
   } catch (err) {
+    if (err instanceof LemonSqueezyCheckoutError) {
+      console.error("[server-action:createCheckoutAction] CHECKOUT_FAILED", {
+        statusCode: err.statusCode,
+        apiDetail: err.apiDetail,
+      });
+      return billingErr("CHECKOUT_FAILED", err.apiDetail);
+    }
     console.error("[server-action:createCheckoutAction]", err);
     return billingErr("UNKNOWN", err instanceof Error ? err.message : undefined);
   }

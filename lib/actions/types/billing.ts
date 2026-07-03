@@ -6,6 +6,7 @@ export type BillingActionResult<T = undefined> =
         code:
           | "UNAUTHENTICATED"
           | "MISSING_CONFIG"
+          | "CHECKOUT_FAILED"
           | "NOT_PRO"
           | "NOT_FOUND"
           | "UNKNOWN";

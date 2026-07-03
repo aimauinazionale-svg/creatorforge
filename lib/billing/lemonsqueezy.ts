@@ -9,6 +9,31 @@ import {
   lemonSqueezySetup,
 } from "@lemonsqueezy/lemonsqueezy.js";
 
+/** Lemon Squeezy checkout/API failure (safe to log server-side). */
+export class LemonSqueezyCheckoutError extends Error {
+  readonly statusCode: number | null;
+  readonly apiDetail: string;
+
+  constructor(message: string, statusCode: number | null, apiDetail: string) {
+    super(message);
+    this.name = "LemonSqueezyCheckoutError";
+    this.statusCode = statusCode;
+    this.apiDetail = apiDetail;
+  }
+}
+
+function formatLemonSqueezyApiDetail(cause: unknown): string {
+  if (!cause) return "unknown";
+  if (typeof cause === "string") return cause.slice(0, 200);
+  if (Array.isArray(cause)) {
+    const first = cause[0] as { title?: string; detail?: string; status?: string } | undefined;
+    if (first?.detail) return first.detail.slice(0, 200);
+    if (first?.title) return first.title.slice(0, 200);
+  }
+  if (cause instanceof Error) return cause.message.slice(0, 200);
+  return "unknown";
+}
+
 let isConfigured = false;
 
 function getBillingConfig() {
@@ -80,9 +105,28 @@ export async function getCheckoutUrl(
     },
   });
 
+  if (checkout.error) {
+    const apiDetail = formatLemonSqueezyApiDetail(checkout.error.cause);
+    console.error("[lemonsqueezy] createCheckout failed", {
+      statusCode: checkout.statusCode,
+      storeIdLen: storeId.length,
+      variantIdLen: variantId.length,
+      apiDetail,
+    });
+    throw new LemonSqueezyCheckoutError(
+      "Lemon Squeezy checkout creation failed.",
+      checkout.statusCode,
+      apiDetail
+    );
+  }
+
   const url = checkout.data?.data.attributes.url;
   if (!url) {
-    throw new Error("Checkout URL missing from LemonSqueezy response.");
+    throw new LemonSqueezyCheckoutError(
+      "Checkout URL missing from LemonSqueezy response.",
+      checkout.statusCode,
+      "empty checkout url"
+    );
   }
 
   return url;
