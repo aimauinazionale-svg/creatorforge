@@ -6,7 +6,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 
 
-import { isLocale, routing } from "@/i18n/routing";
+import { isLocale, routing } from "./i18n/routing";
 
 import {
 
@@ -18,17 +18,17 @@ import {
 
   type PlanType,
 
-} from "@/lib/billing/constants";
+} from "./lib/billing/constants";
 
-import { getPlanFromCookie, isProPlan, planTypeToCookieValue, resolvePlanType } from "@/lib/billing/plan";
+import { getPlanFromCookie, isProPlan, planTypeToCookieValue, resolvePlanType } from "./lib/billing/plan";
 
-import { isProProtectedPath } from "@/lib/billing/pro-routes";
+import { isProProtectedPath } from "./lib/billing/pro-routes";
 
-import { getSupabaseConfig } from "@/lib/supabase/env";
+import { getSupabaseConfig } from "./lib/supabase/env";
 
-import { updateSupabaseSession } from "@/lib/supabase/middleware";
+import { updateSupabaseSession } from "./lib/supabase/middleware";
 
-import type { Database } from "@/types/database";
+import type { Database } from "./types/database";
 
 
 

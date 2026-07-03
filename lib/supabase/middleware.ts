@@ -1,8 +1,8 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-import { getSupabaseConfig } from "@/lib/supabase/env";
-import type { Database } from "@/types/database";
+import { getSupabaseConfig } from "./env";
+import type { Database } from "../../types/database";
 
 /**
  * Next.js middleware helper to keep the Supabase auth session in sync.

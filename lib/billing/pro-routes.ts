@@ -1,6 +1,6 @@
-import { isLocale } from "@/i18n/routing";
+import { isLocale } from "../../i18n/routing";
 
-import { PROTECTED_PRO_ROUTES, type ProtectedProRoute } from "@/lib/billing/constants";
+import { PROTECTED_PRO_ROUTES, type ProtectedProRoute } from "./constants";
 
 /** Strips locale prefix from pathname and returns the first app segment, if any. */
 export function getAppRouteSegment(pathname: string): string | null {

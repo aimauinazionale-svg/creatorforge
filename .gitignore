@@ -53,3 +53,6 @@ supabase/.branches
 # Misc
 *.swp
 *.swo
+
+.vercel
+.env*
