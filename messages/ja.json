@@ -4,7 +4,7 @@
   },
   "layout": {
     "brand": {
-      "name": "VidPulse"
+      "name": "Sparkroll"
     },
     "header": {
       "breadcrumb": "パンくず",
@@ -68,7 +68,7 @@
     }
   },
   "auth": {
-    "title": "VidPulseにサインイン",
+    "title": "Sparkrollにサインイン",
     "subtitle": "クリエイター向け無料。クレジットカード不要。",
     "cardTitle": "おかえりなさい",
     "cardSubtitle": "サインイン方法を選んでください。",
@@ -838,7 +838,7 @@
     "settings": "設定"
   },
   "header": {
-    "brand": "VidPulse",
+    "brand": "Sparkroll",
     "aria": {
       "breadcrumb": "パンくずリスト",
       "language": "言語",
@@ -1050,7 +1050,7 @@
     }
   },
   "onboarding": {
-    "title": "VidPulseへようこそ",
+    "title": "Sparkrollへようこそ",
     "subtitle": "数ステップでワークスペースを設定しましょう。",
     "progress": {
       "welcome": "ようこそ",
@@ -1410,7 +1410,7 @@
   "emails": {
     "settings": {
       "title": "Settings",
-      "subtitle": "Manage your VidPulse preferences.",
+      "subtitle": "Manage your Sparkroll preferences.",
       "unauthenticated": "Please sign in to manage settings.",
       "emailLink": "Email notifications",
       "emailTitle": "Email notifications",
@@ -1466,13 +1466,13 @@
     "loading": "Loading…"
   },
   "landing": {
-    "brand": "VidPulse",
+    "brand": "Sparkroll",
     "meta": {
-      "title": "VidPulse — 無料のAI YouTubeクリエイターツールキット",
+      "title": "Sparkroll — 無料のAI YouTubeクリエイターツールキット",
       "description": "無料ツールで動画を企画・調査・公開：アイデア生成、ワークフロー、競合追跡、スケジュール、サムネイル分析。"
     },
     "structuredData": {
-      "name": "VidPulse",
+      "name": "Sparkroll",
       "description": "YouTubeクリエイター向け無料AIツールキット：アイデア、計画、最適化。"
     },
     "nav": {
@@ -1490,10 +1490,10 @@
     "hero": {
       "kicker": "より良い動画を、より速く",
       "title": "無料のAIクリエイターツールキット",
-      "subtitle": "アイデアからスケジュールまで：VidPulseは計画・最適化・継続的な公開を支援—10個のツールは不要です。",
+      "subtitle": "アイデアからスケジュールまで：Sparkrollは計画・最適化・継続的な公開を支援—10個のツールは不要です。",
       "primaryCta": "無料で始める",
       "secondaryCta": "料金を見る",
-      "mockAlt": "VidPulseダッシュボードのプレビュー",
+      "mockAlt": "Sparkrollダッシュボードのプレビュー",
       "bullets": {
         "0": "無料で開始",
         "1": "スピード重視",
@@ -1501,186 +1501,186 @@
       }
     },
     "features": {
-      "title": "Everything you need to grow",
-      "subtitle": "A focused set of tools for modern YouTube workflows—simple, fast, and cost-aware.",
+      "title": "成長に必要なすべて",
+      "subtitle": "現代のYouTubeワークフロー向けの厳選ツール—シンプル、高速、コスト意識。",
       "items": {
         "ideas": {
-          "title": "AI idea generator",
-          "description": "Generate video ideas and angles in seconds, then iterate with prompts."
+          "title": "AIアイデア生成",
+          "description": "数秒で動画のアイデアと切り口を生成し、プロンプトで反復改善。"
         },
         "seo": {
-          "title": "SEO-ready titles",
-          "description": "Craft better titles, tags, and descriptions with structured guidance."
+          "title": "SEO対応タイトル",
+          "description": "構造化ガイドでより良いタイトル、タグ、説明文を作成。"
         },
         "competitors": {
-          "title": "Competitor tracking",
-          "description": "Follow channels you admire and learn from what’s working."
+          "title": "競合チャンネル追跡",
+          "description": "憧れのチャンネルをフォローし、成功パターンを学ぶ。"
         },
         "workflow": {
-          "title": "Production workflow",
-          "description": "Keep scripts, notes, and status in one place—from draft to publish."
+          "title": "制作ワークフロー",
+          "description": "脚本、メモ、ステータスを一箇所で管理—下書きから公開まで。"
         },
         "calendar": {
-          "title": "Scheduling calendar",
-          "description": "Plan uploads, reschedule with drag & drop, and stay consistent."
+          "title": "公開スケジュール",
+          "description": "アップロードを計画し、ドラッグ＆ドロップで変更、継続的に公開。"
         },
         "thumbnails": {
-          "title": "Thumbnail checks",
-          "description": "Quickly analyze thumbnails and get actionable improvements."
+          "title": "サムネイルチェック",
+          "description": "サムネイルを素早く分析し、実行可能な改善点を取得。"
         }
       }
     },
     "how": {
-      "title": "How it works",
-      "subtitle": "A simple loop you can repeat every week.",
+      "title": "使い方",
+      "subtitle": "毎週繰り返せるシンプルなループ。",
       "steps": {
         "connect": {
-          "label": "Step 1",
-          "title": "Connect your channel",
-          "description": "Sign in and link YouTube to unlock analytics and scheduling."
+          "label": "ステップ 1",
+          "title": "チャンネルを接続",
+          "description": "サインインしてYouTubeを連携し、分析とスケジュールを解放。"
         },
         "build": {
-          "label": "Step 2",
-          "title": "Plan with AI + workflow",
-          "description": "Generate ideas, organize tasks, and track competitors in one hub."
+          "label": "ステップ 2",
+          "title": "AIとワークフローで計画",
+          "description": "アイデア生成、タスク整理、競合追跡を一つのハブで。"
         },
         "publish": {
-          "label": "Step 3",
-          "title": "Schedule and improve",
-          "description": "Schedule uploads and refine thumbnails with quick feedback."
+          "label": "ステップ 3",
+          "title": "スケジュールと改善",
+          "description": "アップロードを予定し、迅速なフィードバックでサムネイルを改善。"
         }
       }
     },
     "comparison": {
-      "title": "VidPulse vs. alternatives",
-      "subtitle": "Stop stitching together free tools and spreadsheets.",
+      "title": "Sparkroll vs. 代替ツール",
+      "subtitle": "無料ツールとスプレッドシートの寄せ集めはもう終わり。",
       "table": {
-        "feature": "Feature",
-        "vidPulse": "VidPulse",
-        "alternatives": "Other tools"
+        "feature": "機能",
+        "brand": "Sparkroll",
+        "alternatives": "他のツール"
       },
       "rows": {
-        "freeTools": "Free core toolkit",
-        "aiCredits": "AI assistance built-in",
-        "workflow": "Workflow + notes",
-        "competitors": "Competitor tracking",
-        "calendar": "Scheduling calendar",
-        "thumbnails": "Thumbnail analysis"
+        "freeTools": "無料コアツールキット",
+        "aiCredits": "組み込みAIアシスト",
+        "workflow": "ワークフロー＋メモ",
+        "competitors": "競合追跡",
+        "calendar": "公開カレンダー",
+        "thumbnails": "サムネイル分析"
       }
     },
     "testimonials": {
-      "title": "Creators love the focus",
-      "subtitle": "Less clutter, more output.",
+      "title": "クリエイターに好評の集中設計",
+      "subtitle": "雑然としすぎず、成果を出す。",
       "items": {
         "0": {
-          "quote": "I replaced three spreadsheets and two apps in one afternoon.",
+          "quote": "午後のうちにスプレッドシート3つとアプリ2つを置き換えました。",
           "name": "Ava",
-          "role": "Education creator"
+          "role": "教育系クリエイター"
         },
         "1": {
-          "quote": "The workflow view keeps my uploads consistent—even when I’m busy.",
+          "quote": "ワークフロー画面で忙しくても安定してアップロードできています。",
           "name": "Noah",
-          "role": "Gaming creator"
+          "role": "ゲーム系クリエイター"
         },
         "2": {
-          "quote": "Thumbnail feedback is quick and actionable. My CTR improved.",
+          "quote": "サムネイルのフィードバックが速く具体的。CTRが改善しました。",
           "name": "Mia",
-          "role": "Vlog creator"
+          "role": "Vlogクリエイター"
         }
       }
     },
     "pricing": {
-      "title": "Pricing that stays simple",
-      "subtitle": "Start free. Upgrade when you need more.",
-      "highlight": "Most popular",
-      "finePrint": "You can start on the Free plan and upgrade anytime.",
+      "title": "シンプルな料金",
+      "subtitle": "無料で開始。必要になったらアップグレード。",
+      "highlight": "人気No.1",
+      "finePrint": "Freeプランから始めていつでもアップグレードできます。",
       "plans": {
         "free": {
           "label": "Free",
           "price": "$0",
-          "description": "Essentials to plan and publish consistently.",
-          "cta": "Start free",
+          "description": "継続的に計画・公開するための基本機能。",
+          "cta": "無料で開始",
           "features": {
-            "0": "AI idea generation (limited)",
-            "1": "Workflow board",
-            "2": "Basic scheduling",
-            "3": "Core creator tools"
+            "0": "AIアイデア生成（制限あり）",
+            "1": "ワークフローボード",
+            "2": "基本スケジュール",
+            "3": "コアクリエイターツール"
           }
         },
         "pro": {
           "label": "Pro",
-          "price": "$9/mo",
-          "description": "More automation and deeper planning.",
-          "cta": "Try Pro",
+          "price": "$9/月",
+          "description": "より多くの自動化と深い計画機能。",
+          "cta": "Proを試す",
           "features": {
-            "0": "Higher AI limits",
-            "1": "Competitor tracking",
-            "2": "Advanced calendar views",
-            "3": "Priority improvements"
+            "0": "より高いAI上限",
+            "1": "競合追跡",
+            "2": "高度なカレンダービュー",
+            "3": "優先的な改善"
           }
         },
         "creator": {
           "label": "Creator",
-          "price": "$19/mo",
-          "description": "For teams and serious creators.",
-          "cta": "Go Creator",
+          "price": "$19/月",
+          "description": "チームや本格的なクリエイター向け。",
+          "cta": "Creatorへ",
           "features": {
-            "0": "Team-ready workflows",
-            "1": "More channels (coming soon)",
-            "2": "Enhanced analytics (coming soon)",
-            "3": "Best-in-class support"
+            "0": "チーム対応ワークフロー",
+            "1": "複数チャンネル（近日）",
+            "2": "高度な分析（近日）",
+            "3": "最高水準のサポート"
           }
         }
       }
     },
     "faq": {
-      "title": "Frequently asked questions",
-      "subtitle": "Everything you need to know before you start.",
+      "title": "よくある質問",
+      "subtitle": "始める前に知っておきたいこと。",
       "items": {
         "0": {
-          "q": "Is VidPulse really free?",
-          "a": "Yes. The Free plan includes the core toolkit and limited AI usage."
+          "q": "Sparkrollは本当に無料ですか？",
+          "a": "はい。Freeプランにはコアツールキットと制限付きAI利用が含まれます。"
         },
         "1": {
-          "q": "Do I need to connect YouTube?",
-          "a": "You can explore the landing experience without connecting. Connecting unlocks analytics and scheduling."
+          "q": "YouTubeの接続は必要ですか？",
+          "a": "接続なしでランディングを確認できます。接続すると分析とスケジュールが使えます。"
         },
         "2": {
-          "q": "Which languages are supported?",
-          "a": "VidPulse supports 9 languages including English, Italian, Spanish, German, French, Portuguese, Russian, Japanese, and Chinese."
+          "q": "対応言語は？",
+          "a": "Sparkrollは英語、イタリア語、スペイン語、ドイツ語、フランス語、ポルトガル語、ロシア語、日本語、中国語の9言語に対応しています。"
         },
         "3": {
-          "q": "Can I use my own workflow?",
-          "a": "Yes. You can adapt the workflow to match your production process and update statuses as you go."
+          "q": "自分のワークフローを使えますか？",
+          "a": "はい。制作プロセスに合わせてワークフローを調整し、ステータスを更新できます。"
         },
         "4": {
-          "q": "Is this optimized for mobile?",
-          "a": "Yes. The landing page and core app screens are responsive and dark-mode friendly."
+          "q": "モバイル最適化されていますか？",
+          "a": "はい。ランディングと主要画面はレスポンシブでダークモード対応です。"
         },
         "5": {
-          "q": "How do I get started?",
-          "a": "Click “Get Started Free” to open the app and begin planning your next upload."
+          "q": "始め方は？",
+          "a": "「無料で開始」をクリックしてアプリを開き、次のアップロードを計画しましょう。"
         }
       }
     },
     "finalCta": {
-      "title": "Ready to publish consistently?",
-      "subtitle": "Start free and ship your next video with less friction.",
-      "primaryCta": "Get started free",
-      "secondaryCta": "View pricing"
+      "title": "継続的に公開する準備はできましたか？",
+      "subtitle": "無料で始めて、次の動画をよりスムーズに公開。",
+      "primaryCta": "無料で開始",
+      "secondaryCta": "料金を見る"
     },
     "footer": {
-      "brand": "VidPulse",
-      "tagline": "A free toolkit for modern YouTube creators.",
+      "brand": "Sparkroll",
+      "tagline": "現代のYouTubeクリエイター向け無料ツールキット。",
       "sections": {
-        "product": "Product",
-        "social": "Social"
+        "product": "プロダクト",
+        "social": "ソーシャル"
       },
       "links": {
-        "features": "Features",
-        "pricing": "Pricing",
-        "blog": "Blog",
-        "login": "Login"
+        "features": "機能",
+        "pricing": "料金",
+        "blog": "ブログ",
+        "login": "ログイン"
       },
       "social": {
         "github": "GitHub",
@@ -1688,10 +1688,10 @@
         "youtube": "YouTube"
       },
       "legal": {
-        "terms": "Terms",
-        "privacy": "Privacy"
+        "terms": "利用規約",
+        "privacy": "プライバシー"
       },
-      "copyright": "© {year} VidPulse. All rights reserved."
+      "copyright": "© {year} Sparkroll. All rights reserved."
     }
   },
   "common": {
@@ -1738,7 +1738,7 @@
     "dismiss": "Dismiss"
   },
   "login": {
-    "pageTitle": "Sign in to VidPulse",
+    "pageTitle": "Sign in to Sparkroll",
     "pageSubtitle": "Use Google or a magic link to access your creator toolkit.",
     "title": "Welcome back",
     "subtitle": "Choose how you'd like to sign in.",
@@ -1795,24 +1795,24 @@
   "legalPages": {
     "terms": {
       "title": "Terms of Service",
-      "description": "VidPulse terms of service.",
-      "body": "VidPulse is provided as-is for creators. By using the service you agree to use it responsibly and comply with applicable laws. We may update these terms; continued use constitutes acceptance."
+      "description": "Sparkroll terms of service.",
+      "body": "Sparkroll is provided as-is for creators. By using the service you agree to use it responsibly and comply with applicable laws. We may update these terms; continued use constitutes acceptance."
     },
     "privacy": {
       "title": "Privacy Policy",
-      "description": "How VidPulse handles your data.",
+      "description": "How Sparkroll handles your data.",
       "body": "We store account data and workspace content to provide the service. We do not sell personal data. You can request deletion by contacting support. Third-party providers (Supabase, Google, YouTube) process data according to their policies."
     },
     "blog": {
       "title": "Blog",
-      "description": "VidPulse updates and creator tips.",
+      "description": "Sparkroll updates and creator tips.",
       "comingSoon": "Our blog is coming soon. Check back for product updates and YouTube growth tips."
     }
   },
   "pricing": {
     "meta": {
       "title": "Pricing",
-      "description": "Simple pricing for VidPulse — start free, upgrade to Pro when you need unlimited AI, competitor tracking, and advanced SEO tools."
+      "description": "Simple pricing for Sparkroll — start free, upgrade to Pro when you need unlimited AI, competitor tracking, and advanced SEO tools."
     },
     "title": "Pricing that stays simple",
     "subtitle": "Start free. Upgrade when you need more power for your channel.",
@@ -1846,7 +1846,7 @@
   },
   "billing": {
     "title": "Billing",
-    "subtitle": "Manage your VidPulse subscription.",
+    "subtitle": "Manage your Sparkroll subscription.",
     "currentPlan": "Current plan",
     "planFree": "Free",
     "planPro": "Pro",
@@ -1869,7 +1869,7 @@
     }
   },
   "register": {
-    "pageTitle": "Create your VidPulse account",
+    "pageTitle": "Create your Sparkroll account",
     "pageSubtitle": "Start free with Google — no credit card required.",
     "title": "Get started",
     "subtitle": "Create your account in seconds."

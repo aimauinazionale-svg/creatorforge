@@ -1,10 +1,10 @@
 {
-  "name": "VidPulse",
-  "short_name": "VidPulse",
+  "name": "Sparkroll",
+  "short_name": "Sparkroll",
   "description": "Free AI-powered YouTube creator toolkit",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#0f0a1a",
   "theme_color": "#7c3aed",
   "orientation": "portrait-primary",
   "icons": [

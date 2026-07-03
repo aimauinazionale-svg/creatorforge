@@ -2,7 +2,7 @@
   "name": "creatorforge",
   "version": "1.0.0",
   "private": true,
-  "description": "VidPulse - AI-powered YouTube creator toolkit",
+  "description": "Sparkroll - AI-powered YouTube creator toolkit",
   "directories": {
     "doc": "docs",
     "lib": "lib"
@@ -13,7 +13,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "i18n:merge": "node ./scripts/merge-messages.mjs"
+    "i18n:merge": "node ./scripts/merge-messages.mjs",
+    "i18n:landing": "node ./scripts/patch-landing-i18n.mjs"
   },
   "keywords": [],
   "author": "",

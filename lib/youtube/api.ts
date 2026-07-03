@@ -1,4 +1,5 @@
 import type { ParsedChannelRef } from "@/lib/youtube/parse";
+import { getSiteUrl } from "@/lib/site";
 import { CACHE_TTL, revalidateOptions } from "@/lib/utils/cache";
 
 export type YouTubeChannelStats = {
@@ -460,7 +461,7 @@ export function isYouTubeOAuthConfigured(): boolean {
   return Boolean(
     process.env.GOOGLE_CLIENT_ID &&
       process.env.GOOGLE_CLIENT_SECRET &&
-      (process.env.YOUTUBE_REDIRECT_URI || process.env.NEXT_PUBLIC_SITE_URL)
+      (process.env.YOUTUBE_REDIRECT_URI || getSiteUrl())
   );
 }
 
@@ -469,7 +470,7 @@ export function getYouTubeOAuthUrl(state: string): string | null {
   const clientId = process.env.GOOGLE_CLIENT_ID!;
   const redirectUri =
     process.env.YOUTUBE_REDIRECT_URI ??
-    `${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}/auth/youtube/callback`;
+    `${getSiteUrl()}/auth/youtube/callback`;
 
   const params = new URLSearchParams({
     client_id: clientId,

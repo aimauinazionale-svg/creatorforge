@@ -19,7 +19,8 @@ export type BrandLogoProps = {
   textClassName?: string;
 } & Omit<ComponentPropsWithoutRef<"div">, "children">;
 
-function LogoMark({ className, gradientId }: { className?: string; gradientId: string }) {
+/** Sparkroll mark: film-roll arcs with a central spark. */
+function LogoMark({ className, gradientId, sparkId }: { className?: string; gradientId: string; sparkId: string }) {
   return (
     <svg
       viewBox="0 0 32 32"
@@ -30,21 +31,44 @@ function LogoMark({ className, gradientId }: { className?: string; gradientId: s
     >
       <defs>
         <linearGradient id={gradientId} x1="4" y1="4" x2="28" y2="28" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#8b5cf6" />
-          <stop offset="0.5" stopColor="#d946ef" />
+          <stop stopColor="#7c3aed" />
+          <stop offset="0.55" stopColor="#d946ef" />
           <stop offset="1" stopColor="#fbbf24" />
+        </linearGradient>
+        <linearGradient id={sparkId} x1="14" y1="8" x2="22" y2="18" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#fef3c7" />
+          <stop offset="1" stopColor="#fde68a" />
         </linearGradient>
       </defs>
       <rect width="32" height="32" rx="8" fill={`url(#${gradientId})`} />
+      <circle cx="16" cy="16" r="9" stroke="white" strokeWidth="1.5" strokeOpacity="0.35" fill="none" />
       <path
-        d="M9 22V10h4.2c2.4 0 3.9 1.3 3.9 3.2 0 1.4-.7 2.4-1.9 2.9l2.6 5.9h-2.5l-2.3-5.4H11.4V22H9zm2.4-7.4h1.7c1.1 0 1.7-.6 1.7-1.5s-.6-1.4-1.7-1.4h-1.7v2.9zM20.2 22l3.8-12h2.3L23.5 22h-3.3z"
-        fill="white"
+        d="M16 7.5a8.5 8.5 0 0 1 0 17"
+        stroke="white"
+        strokeWidth="2.25"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path
+        d="M16 24.5a8.5 8.5 0 0 1 0-17"
+        stroke="white"
+        strokeWidth="2.25"
+        strokeLinecap="round"
+        strokeOpacity="0.7"
+        fill="none"
+      />
+      <circle cx="16" cy="16" r="2.75" fill={`url(#${sparkId})`} />
+      <path
+        d="M16 10.5v1.5M16 20v1.5M10.5 16h1.5M20 16h1.5M12.2 12.2l1.1 1.1M18.7 18.7l1.1 1.1M19.8 12.2l-1.1 1.1M13.3 18.7l-1.1 1.1"
+        stroke="#fef9c3"
+        strokeWidth="1.25"
+        strokeLinecap="round"
       />
     </svg>
   );
 }
 
-/** VidPulse logo mark with optional wordmark. Works in light and dark themes. */
+/** Sparkroll logo mark with optional wordmark. Works in light and dark themes. */
 export function BrandLogo({
   label,
   showText = true,
@@ -55,11 +79,12 @@ export function BrandLogo({
 }: BrandLogoProps) {
   const s = sizeMap[size];
   const gradientId = useId();
+  const sparkId = useId();
 
   return (
     <div className={cn("inline-flex min-w-0 items-center gap-2", className)} {...props}>
       <span className={cn("relative shrink-0 overflow-hidden shadow-sm", s.box)}>
-        <LogoMark className="h-full w-full" gradientId={gradientId} />
+        <LogoMark className="h-full w-full" gradientId={gradientId} sparkId={sparkId} />
       </span>
       {showText ? (
         <span

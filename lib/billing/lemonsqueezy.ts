@@ -1,4 +1,4 @@
-import { SITE_NAME } from "@/lib/site";
+import { getSiteUrl, SITE_NAME } from "@/lib/site";
 
 import crypto from "node:crypto";
 
@@ -64,10 +64,7 @@ export async function getCheckoutUrl(
     throw new Error("LEMONSQUEEZY_STORE_ID is not configured.");
   }
 
-  const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    process.env.NEXT_PUBLIC_APP_URL ??
-    "http://localhost:3000";
+  const siteUrl = getSiteUrl();
 
   const checkout = await createCheckout(storeId, variantId, {
     checkoutData: {
