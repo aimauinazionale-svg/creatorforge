@@ -4,8 +4,8 @@
   "description": "Free AI-powered YouTube creator toolkit",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f0a1a",
-  "theme_color": "#7c3aed",
+  "background_color": "#07162A",
+  "theme_color": "#FF5830",
   "orientation": "portrait-primary",
   "icons": [
     {

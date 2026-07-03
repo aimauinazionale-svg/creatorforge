@@ -7,9 +7,9 @@ import { SparkrollMark } from "@/components/logo/SparkrollMark";
 import { cn } from "@/lib/utils";
 
 const sizeMap = {
-  sm: { box: "h-8 w-8 rounded-lg", icon: "h-4 w-4", text: "text-sm" },
-  md: { box: "h-9 w-9 rounded-xl", icon: "h-5 w-5", text: "text-base" },
-  lg: { box: "h-11 w-11 rounded-xl", icon: "h-6 w-6", text: "text-lg" },
+  sm: { box: "h-8 w-8 rounded-lg", text: "text-sm" },
+  md: { box: "h-9 w-9 rounded-xl", text: "text-base" },
+  lg: { box: "h-11 w-11 rounded-xl", text: "text-lg" },
 } as const;
 
 export type BrandLogoProps = {
@@ -31,7 +31,6 @@ export function BrandLogo({
 }: BrandLogoProps) {
   const s = sizeMap[size];
   const gradientId = useId();
-  const shineId = useId();
 
   return (
     <div className={cn("inline-flex min-w-0 items-center gap-2", className)} {...props}>
@@ -39,7 +38,7 @@ export function BrandLogo({
         <SparkrollMark
           className="h-full w-full"
           gradientId={gradientId}
-          shineId={shineId}
+          showBackground
         />
       </span>
       {showText ? (
@@ -47,7 +46,7 @@ export function BrandLogo({
           className={cn(
             "truncate font-semibold tracking-tight",
             s.text,
-            "bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text text-transparent",
+            "bg-gradient-to-r from-[#FF7426] via-[#FF5830] to-[#FF1172] bg-clip-text text-transparent",
             textClassName
           )}
         >

@@ -1,0 +1,134 @@
+#!/usr/bin/env node
+/**
+ * Builds SparkrollMark path + brand SVG assets from traced logo geometry.
+ */
+import { readFileSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const publicDir = join(root, "public");
+
+const BRAND = {
+  bg: "#07162A",
+  orange: "#FF7426",
+  red: "#FF5830",
+  magenta: "#FF1172",
+};
+
+const tracedPath = readFileSync(join(publicDir, "brand/logo-traced.svg"), "utf8");
+const pathMatch = tracedPath.match(/d="([^"]+)"/);
+if (!pathMatch) throw new Error("Missing traced path");
+const rawPath = pathMatch[1];
+
+/** Scale path from 400×400 canvas into a target box inside 32×32. */
+function scalePath(d, srcBox, dstBox) {
+  const [sx0, sy0, sx1, sy1] = srcBox;
+  const [dx0, dy0, dx1, dy1] = dstBox;
+  const sw = sx1 - sx0;
+  const sh = sy1 - sy0;
+  const dw = dx1 - dx0;
+  const dh = dy1 - dy0;
+  const scaleX = dw / sw;
+  const scaleY = dh / sh;
+
+  const nums = d.match(/-?\d*\.?\d+/g);
+  if (!nums) return d;
+
+  let i = 0;
+  return d.replace(/-?\d*\.?\d+/g, () => {
+    const n = parseFloat(nums[i]);
+    const isX = i % 2 === 0;
+    i += 1;
+    if (isX) return String(Number((dx0 + (n - sx0) * scaleX).toFixed(3)));
+    return String(Number((dy0 + (n - sy0) * scaleY).toFixed(3)));
+  });
+}
+
+// Mark bbox from logo analysis (400×400 trace canvas)
+const markBox = [148, 143, 251, 254];
+const iconMarkBox = [3.5, 3, 28.5, 29];
+const markPath32 = scalePath(rawPath, markBox, iconMarkBox);
+
+const markOnlyBox = [0, 0, 24, 24];
+const markPath24 = scalePath(rawPath, markBox, [1, 1, 23, 23]);
+
+const gradientDefs = (id, units = "objectBoundingBox") => {
+  const attrs =
+    units === "objectBoundingBox"
+      ? 'x1="0%" y1="0%" x2="100%" y2="100%"'
+      : 'x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse"';
+  return `<linearGradient id="${id}" ${attrs}>
+      <stop stop-color="${BRAND.orange}"/>
+      <stop offset="0.45" stop-color="${BRAND.red}"/>
+      <stop offset="1" stop-color="${BRAND.magenta}"/>
+    </linearGradient>`;
+};
+
+const iconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+  <defs>
+    ${gradientDefs("sr-mark")}
+  </defs>
+  <rect width="32" height="32" rx="7" fill="${BRAND.bg}"/>
+  <path d="${markPath32}" fill="url(#sr-mark)" fill-rule="evenodd"/>
+</svg>`;
+
+const markSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <defs>
+    ${gradientDefs("sr-mark", "userSpaceOnUse")}
+  </defs>
+  <path d="${markPath24}" fill="url(#sr-mark)" fill-rule="evenodd"/>
+</svg>`;
+
+const ogSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050A18"/>
+      <stop offset="0.55" stop-color="${BRAND.bg}"/>
+      <stop offset="1" stop-color="#0c1f3d"/>
+    </linearGradient>
+    <linearGradient id="logo-mark" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="${BRAND.orange}"/>
+      <stop offset="0.45" stop-color="${BRAND.red}"/>
+      <stop offset="1" stop-color="${BRAND.magenta}"/>
+    </linearGradient>
+    <linearGradient id="title" x1="340" y1="200" x2="900" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="${BRAND.orange}"/>
+      <stop offset="0.55" stop-color="${BRAND.red}"/>
+      <stop offset="1" stop-color="${BRAND.magenta}"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="180" cy="315" r="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="${BRAND.red}" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="${BRAND.red}" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="180" cy="315" r="220" fill="url(#glow)"/>
+  <g transform="translate(80,155) scale(6.25)">
+    <rect width="32" height="32" rx="7" fill="${BRAND.bg}"/>
+    <path d="${markPath32}" fill="url(#logo-mark)" fill-rule="evenodd"/>
+  </g>
+  <text x="340" y="290" fill="url(#title)" font-family="Segoe UI, system-ui, sans-serif" font-size="96" font-weight="700" letter-spacing="-2">Sparkroll</text>
+  <text x="342" y="370" fill="#ffb899" font-family="Segoe UI, system-ui, sans-serif" font-size="34" font-weight="500">Spark your ideas. Roll your content.</text>
+  <text x="342" y="430" fill="#ff8a80" fill-opacity="0.75" font-family="Segoe UI, system-ui, sans-serif" font-size="26">Free AI-powered YouTube creator toolkit</text>
+</svg>`;
+
+writeFileSync(join(publicDir, "icon.svg"), iconSvg);
+writeFileSync(join(publicDir, "brand/sparkroll-mark.svg"), markSvg);
+writeFileSync(join(publicDir, "og-image.svg"), ogSvg);
+
+// Export path constants for SparkrollMark.tsx
+const tsContent = `/** Auto-generated by scripts/build-sparkroll-mark.mjs — do not edit manually. */
+export const SPARKROLL_BRAND = {
+  bg: "${BRAND.bg}",
+  orange: "${BRAND.orange}",
+  red: "${BRAND.red}",
+  magenta: "${BRAND.magenta}",
+} as const;
+
+export const SPARKROLL_MARK_PATH_32 = ${JSON.stringify(markPath32)};
+export const SPARKROLL_MARK_PATH_24 = ${JSON.stringify(markPath24)};
+`;
+
+writeFileSync(join(root, "components/logo/sparkroll-mark-paths.ts"), tsContent);
+console.log("Wrote icon.svg, brand/sparkroll-mark.svg, og-image.svg, sparkroll-mark-paths.ts");

@@ -75,7 +75,7 @@ export function buildMetadata({
       images: [ogImage],
     },
     other: {
-      "theme-color": "#7c3aed",
+      "theme-color": "#FF5830",
     },
     robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
   };
