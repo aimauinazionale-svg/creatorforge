@@ -9,13 +9,12 @@ export const PLAN_COOKIE_NAME = "cf_plan_type";
 
 /**
  * App routes that require an active Pro subscription.
- * Paths are without locale prefix (e.g. `ai-assistant`, not `/en/ai-assistant`).
+ * Paths are without locale prefix (e.g. `competitors`, not `/en/competitors`).
+ *
+ * AI tools (`ai-assistant`, `seo-lab`, `ideas`, dashboard insights) stay on the
+ * free tier with monthly limits — see `lib/ai/rate-limit.ts`.
  */
-export const PROTECTED_PRO_ROUTES = [
-  "ai-assistant",
-  "competitors",
-  "seo-lab",
-] as const;
+export const PROTECTED_PRO_ROUTES = ["competitors"] as const;
 
 export type ProtectedProRoute = (typeof PROTECTED_PRO_ROUTES)[number];
 

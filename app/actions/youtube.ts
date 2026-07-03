@@ -556,7 +556,10 @@ export async function disconnectChannelAction(): Promise<
 
       await supabase.from("channels").delete().eq("user_id", userId);
 
-      await supabase.from("users").update({ youtube_channel_id: null }).eq("id", userId);
+      await supabase
+        .from("users")
+        .update({ youtube_channel_id: null, youtube_tokens: null })
+        .eq("id", userId);
 
     }
 

@@ -25,6 +25,10 @@ function isAuthCallbackPath(pathname: string): boolean {
   return Boolean(match?.[1] && isLocale(match[1]));
 }
 
+function isYouTubeCallbackPath(pathname: string): boolean {
+  return pathname === "/auth/youtube/callback" || pathname === "/auth/youtube/callback/";
+}
+
 /** Server Actions POST to the page URL with this header — must not be rewritten by i18n middleware. */
 function isServerActionRequest(request: NextRequest): boolean {
   return (
@@ -105,7 +109,7 @@ async function syncPlanCookie(
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (isServerActionRequest(request) || isAuthCallbackPath(pathname)) {
+  if (isServerActionRequest(request) || isAuthCallbackPath(pathname) || isYouTubeCallbackPath(pathname)) {
     return refreshSupabaseSession(request);
   }
 
