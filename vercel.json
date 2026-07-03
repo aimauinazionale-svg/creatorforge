@@ -1,6 +1,26 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "creatorforge-xi.vercel.app" }],
+      "destination": "https://sparkroll-maui-org.vercel.app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "creatorforge-maui-org.vercel.app" }],
+      "destination": "https://sparkroll-maui-org.vercel.app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "creatorforge-aimauinazionale-svg-maui-org.vercel.app" }],
+      "destination": "https://sparkroll-maui-org.vercel.app/:path*",
+      "permanent": true
+    }
+  ],
   "crons": [
     {
       "path": "/api/cron/emails",
