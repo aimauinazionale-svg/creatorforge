@@ -30,8 +30,15 @@ function normalizePlanType(value: string | null | undefined): PlanType {
 /** Creates a LemonSqueezy checkout session for the authenticated user. */
 export async function createCheckoutAction(): Promise<BillingActionResult<CheckoutActionData>> {
   try {
+    const envLengths = {
+      apiKey: (process.env.LEMONSQUEEZY_API_KEY ?? "").length,
+      storeId: (process.env.LEMONSQUEEZY_STORE_ID ?? "").length,
+      variantId: (process.env.LEMONSQUEEZY_VARIANT_ID ?? "").length,
+    };
+
     if (!isLemonSqueezyConfigured()) {
-      return billingErr("MISSING_CONFIG", "LemonSqueezy billing is not configured.");
+      console.error("[server-action:createCheckoutAction] MISSING_CONFIG", envLengths);
+      return billingErr("MISSING_CONFIG");
     }
 
     const user = await getServerUser();
@@ -91,7 +98,7 @@ export async function getUserSubscriptionStatus(): Promise<
 export async function getCustomerPortalAction(): Promise<BillingActionResult<PortalActionData>> {
   try {
     if (!isLemonSqueezyConfigured()) {
-      return billingErr("MISSING_CONFIG", "LemonSqueezy billing is not configured.");
+      return billingErr("MISSING_CONFIG");
     }
 
     const user = await getServerUser();
