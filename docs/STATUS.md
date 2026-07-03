@@ -151,14 +151,18 @@ For **automatic channel connect** on Google sign-in:
 2. Add scope in **Additional Scopes**: `https://www.googleapis.com/auth/youtube.readonly`
 3. **Google Cloud Console** → APIs & Services → OAuth consent screen → add scope `youtube.readonly`
 4. Enable **YouTube Data API v3** for the project
-5. Redirect URLs must include `{NEXT_PUBLIC_SITE_URL}/auth/callback`
+5. **Google Cloud Console** (OAuth client used in Supabase → Providers → Google): add  
+   `https://<SUPABASE_PROJECT_REF>.supabase.co/auth/v1/callback`  
+   (not the app `/auth/callback` — that goes in Supabase only). See `docs/OAUTH_GOOGLE.md`.
 
-**Production redirect URIs (Google Cloud Console → Credentials → OAuth client):**
+**Production redirect URIs:**
 
-- `{NEXT_PUBLIC_SITE_URL}/auth/callback`
-- `{NEXT_PUBLIC_SITE_URL}/auth/youtube/callback` (if using standalone YouTube OAuth)
-- Supabase Dashboard → Authentication → URL Configuration → Site URL = `NEXT_PUBLIC_SITE_URL`
-- Supabase redirect allow list: `{NEXT_PUBLIC_SITE_URL}/auth/callback`
+| Where | URI |
+|-------|-----|
+| Google Console (Supabase login) | `https://<ref>.supabase.co/auth/v1/callback` |
+| Google Console (YouTube connect, optional) | `{NEXT_PUBLIC_SITE_URL}/auth/youtube/callback` |
+| Supabase → Site URL | `{NEXT_PUBLIC_SITE_URL}` |
+| Supabase → Redirect URLs | `{NEXT_PUBLIC_SITE_URL}/auth/callback**` |
 
 The app requests `youtube.readonly` in `signInWithGoogle` and uses `provider_token` from the Supabase session in `/auth/callback` to call `channels?mine=true`.
 

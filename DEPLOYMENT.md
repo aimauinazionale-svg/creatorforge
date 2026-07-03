@@ -110,17 +110,20 @@ Replace `YOUR_DOMAIN` with your Vercel URL or custom domain.
 ### Google Cloud Console
 
 1. **APIs & Services â†’ Credentials** â†’ your OAuth 2.0 Client
-2. Add **Authorized redirect URIs:**
-   - `https://YOUR_DOMAIN/auth/callback`
+2. Add **Authorized redirect URIs** (Supabase Google login — fixes `redirect_uri_mismatch`):
+   - `https://YOUR_SUPABASE_PROJECT_REF.supabase.co/auth/v1/callback`
+   - (from `NEXT_PUBLIC_SUPABASE_URL`; **not** `https://YOUR_DOMAIN/auth/callback`)
+3. For standalone YouTube OAuth (`GOOGLE_CLIENT_ID` in Vercel), also add:
    - `https://YOUR_DOMAIN/auth/youtube/callback`
-3. **OAuth consent screen** â†’ add scope: `https://www.googleapis.com/auth/youtube.readonly`
+   - `http://localhost:3000/auth/youtube/callback`
+4. **OAuth consent screen** â†’ add scope: `https://www.googleapis.com/auth/youtube.readonly`
 4. Enable **YouTube Data API v3** for the project
 
 ### Supabase Auth
 
 1. Supabase Dashboard â†’ **Authentication â†’ URL Configuration**
 2. **Site URL:** `https://YOUR_DOMAIN`
-3. **Redirect URLs:** add `https://YOUR_DOMAIN/auth/callback`
+3. **Redirect URLs:** `https://YOUR_DOMAIN/auth/callback**`
 4. **Authentication â†’ Providers â†’ Google** â†’ enable, paste Client ID and Secret
 5. **Additional Scopes:** `https://www.googleapis.com/auth/youtube.readonly`
 

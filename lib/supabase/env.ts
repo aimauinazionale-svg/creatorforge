@@ -21,3 +21,13 @@ export function getSupabaseConfig(): SupabaseConfig {
 export function isSupabaseConfigured(): boolean {
   return getSupabaseConfig().isConfigured;
 }
+
+/**
+ * `redirect_uri` sent to Google when users sign in via Supabase Auth.
+ * Add this exact URL to Google Cloud Console → OAuth client → Authorized redirect URIs.
+ */
+export function getSupabaseAuthCallbackUrl(): string | null {
+  const { url, isConfigured } = getSupabaseConfig();
+  if (!isConfigured) return null;
+  return `${url.replace(/\/$/, "")}/auth/v1/callback`;
+}

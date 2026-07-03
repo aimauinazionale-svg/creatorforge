@@ -26,10 +26,21 @@ Google OAuth shows the Supabase project hostname (`*.supabase.co`) during sign-i
 - **Supabase custom domain** (paid add-on): serves auth from `auth.yourdomain.com` instead of `*.supabase.co`.
 - Alternatively, implement a **custom OAuth flow** with Google directly (more engineering; bypasses Supabase-hosted consent redirect).
 
+## Google Console redirect URI (login)
+
+For Supabase Google sign-in, add this to the OAuth client configured in Supabase (not the app `/auth/callback`):
+
+```
+https://avsccebyvjdfycrbhpkv.supabase.co/auth/v1/callback
+```
+
+Full checklist: `docs/OAUTH_GOOGLE.md`.
+
 ## Code-side mitigations (already applied)
 
 - `getSiteUrl()` prefers `NEXT_PUBLIC_SITE_URL` / `NEXT_PUBLIC_APP_URL`, but **ignores localhost values on Vercel/production** and falls back to `VERCEL_PROJECT_PRODUCTION_URL` or `VERCEL_URL`.
 - OAuth `redirectTo` points to `https://creatorforge-xi.vercel.app/auth/callback?next=/{locale}/dashboard`.
+- `getSupabaseAuthCallbackUrl()` in `lib/supabase/env.ts` returns the URI Google expects for Supabase login.
 
 ## What Supabase `queryParams` cannot change
 
